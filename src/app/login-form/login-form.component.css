@@ -1,0 +1,24 @@
+
+
+.r-me {
+  color: bisque;
+}
+
+button {
+  background-color: slategray !important;
+  border-radius: 50px !important;
+  height: 50px !important;
+  
+}
+input {
+  color: whitesmoke !important;
+  background: rgba(112, 128, 144, 0.274) !important;
+  border-radius: 50px !important;
+  height: 50px !important;
+  border: 0px solid slategray !important;
+
+}
+button:hover{
+  background-color: bisque !important;
+}
+
