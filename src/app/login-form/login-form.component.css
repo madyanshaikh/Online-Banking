@@ -21,4 +21,7 @@ input {
 button:hover{
   background-color: bisque !important;
 }
+.row{
+  width: 100% !important;
+}
 

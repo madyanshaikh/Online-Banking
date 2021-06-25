@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'index1',
@@ -13,9 +13,15 @@ export class Index1Component implements OnInit {
 
 
 
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
   
+  onLogout()
+  {
+    sessionStorage.removeItem('isLogedIn')
+    this.router.navigate(['login'])
+  }
 }

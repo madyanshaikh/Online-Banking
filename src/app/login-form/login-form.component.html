@@ -1,6 +1,60 @@
+<!-- ------------------------------------ Background image ------------------------------------------ -->
+
 <img src="./assets/images/1.jpg" alt="image" style="position: absolute; width: 100%; height: 100%; z-index: -100;">
-<div class="container-fluid p-0 img">
-    <section class="ftco-section" style="position: relative;top: 17em;">
+
+
+<!-- --------------------------------------------------------- Navigations ---------------------------------- -->
+
+<div class="container-fluid p-0">
+
+    <div class="row">
+        <div class="col-md-3 text-right pt-3 ">
+            <a href="" class="text-secondary font-weight-bold h6 nav-link" style="letter-spacing: 1px;">info@muslimbank.com</a>
+           
+        </div>
+        <div class="col-md-3 pt-3"><a href="" class="text-secondary font-weight-bold h6 nav-link"><i class="fas fa-phone"> </i> +92 111 897 897-2</a></div>
+        <div class="col-md-4 pt-3 d-flex ml-auto">
+            <a href="" class="text-secondary font-weight-bold pr-2 h5"><i class="fab fa-facebook-f"></i> </a>
+            <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-instagram"></i> </a>
+            <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-twitter"></i> </a>
+            <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-linkedin-in"></i> </a>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-muted bg-muted" style="border-top: 1px ridge rgb(84, 90, 97); border-style: ;">
+        <a class="nav-link text-secondary h4" href="#">Muslim Bank</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse  pr-5" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto pr-5">
+                <li class="nav-item active">
+                    <a class="nav-link h6 text-secondary" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h6 text-secondary" href="#">Branches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h6 text-secondary" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown h6">
+                    <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- --------------------------------------------- Login - Form -------------------------------------------------------- -->
+
+    <section class="ftco-section" style="position: relative;top: 10em;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
@@ -13,18 +67,18 @@
                         <h2 class="mb-4 text-center text-muted">Have an account?</h2>
                         <form action="#" class="signin-form">
                             <div class="form-group">
-                                <input type="text" class="form-control text-center" placeholder="Username" required=""
-                                    matinput [(ngModel)]="username">
+                                <input type="text" [(ngModel)]="username" class="form-control text-center" placeholder="Username" required=""
+                                    >
                                 <small id="emailHelp" class="form-text text-muted pl-2">We'll never share your email
                                     with anyone
                                     else.</small>
                             </div>
 
                             <div class="form-group">
-                                <input id="password-field" type="password" class="form-control text-center"
-                                    placeholder="Password" required="" matinput [(ngModel)]="Password">
-                                <span toggle="#password-field"
-                                    class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                <input id="password-field" type="password" [(ngModel)]="password" class="form-control text-center"
+                                    placeholder="Password" required="" >
+                                <span toggle="#password-field" class="mr-auto" >
+                                    <i class="fa fa-fw fa-eye field-icon toggle-password text-secondary ml-3 pt-1"></i></span>
                             </div>
                             <div class="form-group pt-2">
                                 <button type="submit" class="form-control btn" (click)="onlogin()">Sign In</button>
@@ -39,7 +93,7 @@
                                     </label>
                                 </div>
                                 <div class="w-50 text-md-right">
-                                    <a href="#" style="color: #fff">Forgot Password</a>
+                                    <a class="text-muted" href="#" style="color: #fff">Forgot Password</a>
                                 </div>
                             </div>
                         </form>
@@ -53,4 +107,5 @@
             </div>
         </div>
     </section>
+     <!-- --------------------------------------------- Login -Ends - Form -------------------------------------------------------- -->
 </div>

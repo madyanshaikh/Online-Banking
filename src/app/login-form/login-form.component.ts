@@ -10,17 +10,17 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class LoginFormComponent implements OnInit {
 
   username = ''
-  Password = ''
+  password = ''
 
-  constructor(private snackbar: MatSnackBar, private router: Router) { }
+  constructor(private snackbar:MatSnackBar,private router:Router) { }
 
 
   ngOnInit(): void {
   }
   onlogin() {
-    if (this.username == 'admin' && this.Password == 'admin') {
-
-      sessionStorage.setItem("isloggedin","True")
+    if(this.username=='admin' && this.password=='admin123')
+    {
+      sessionStorage.setItem("isLogedIn","true")
       this.router.navigate(['index1'])
     }
     else {
