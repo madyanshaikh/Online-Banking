@@ -1,6 +1,4 @@
-<!-- ------------------------------------ Background image ------------------------------------------ -->
 
-<img src="./assets/images/1.jpg" alt="image" style="position: absolute; width: 100%; height: 100%; z-index: -100;">
 
 
 <!-- --------------------------------------------------------- Navigations ---------------------------------- -->
@@ -10,7 +8,7 @@
     <div class="row">
         <div class="col-md-3 text-right pt-3 ">
             <a href="" class="text-secondary font-weight-bold h6 nav-link" style="letter-spacing: 1px;">info@muslimbank.com</a>
-           
+
         </div>
         <div class="col-md-3 pt-3"><a href="" class="text-secondary font-weight-bold h6 nav-link"><i class="fas fa-phone"> </i> +92 111 897 897-2</a></div>
         <div class="col-md-4 pt-3 d-flex ml-auto">
@@ -24,7 +22,7 @@
         <a class="nav-link text-secondary h4" href="#">Muslim Bank</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fas fa-bars text-secondary"></i>
         </button>
         <div class="collapse navbar-collapse  pr-5" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto pr-5">
@@ -40,9 +38,9 @@
                 <li class="nav-item dropdown h6">
                     <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown link
+                        Optional
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu bg-light " aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
@@ -54,7 +52,7 @@
 
     <!-- --------------------------------------------- Login - Form -------------------------------------------------------- -->
 
-    <section class="ftco-section" style="position: relative;top: 10em;">
+    <section class="ftco-section" style="position: relative;top: 7em;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
@@ -65,7 +63,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
                         <h2 class="mb-4 text-center text-muted">Have an account?</h2>
-                        <form action="#" class="signin-form">
+
                             <div class="form-group">
                                 <input type="text" [(ngModel)]="username" class="form-control text-center" placeholder="Username" required=""
                                     >
@@ -81,7 +79,7 @@
                                     <i class="fa fa-fw fa-eye field-icon toggle-password text-secondary ml-3 pt-1"></i></span>
                             </div>
                             <div class="form-group pt-2">
-                                <button type="submit" class="form-control btn" (click)="onlogin()">Sign In</button>
+                                <button type="submit" id="btn-1" class="form-control btn" (click)="onlogin()">Sign In</button>
                             </div>
                             <div class="form-group d-md-flex">
                                 <div class="w-50">
@@ -96,7 +94,7 @@
                                     <a class="text-muted" href="#" style="color: #fff">Forgot Password</a>
                                 </div>
                             </div>
-                        </form>
+
                         <p class="w-100 text-center text-white">— Or Sign up —</p>
                         <div class="social d-flex text-center">
                             <button class="btn rounded-pil pl-5 pr-5 m-auto">Sign

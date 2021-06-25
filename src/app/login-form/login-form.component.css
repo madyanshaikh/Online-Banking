@@ -1,10 +1,9 @@
 
-
 .r-me {
   color: bisque;
 }
 
-button {
+#btn-1 {
   background-color: slategray !important;
   border-radius: 50px !important;
   height: 50px !important;
@@ -24,4 +23,8 @@ button:hover{
 .row{
   width: 100% !important;
 }
+.dropdown-item{
+color:slategray;
+}
+
 

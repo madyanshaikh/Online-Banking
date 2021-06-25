@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Online-Banking';
 
+
 constructor(private router:Router){
   var status =sessionStorage.getItem("isloggedin")
   if (status == null || status!='True')
@@ -17,5 +18,6 @@ constructor(private router:Router){
     router.navigate(['login-form'])
   }
 }
+
 
 }
