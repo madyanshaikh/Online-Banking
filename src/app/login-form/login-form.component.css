@@ -26,5 +26,10 @@ button:hover{
 .dropdown-item{
 color:slategray;
 }
-
+#hideShowBtn{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  
+}
 
