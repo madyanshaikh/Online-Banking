@@ -1,31 +1,49 @@
-
-
-
 <!-- --------------------------------------------------------- Navigations ---------------------------------- -->
 
 <div class="container-fluid p-0">
+    <div class="row row-media">
+        <div class="col-md-6 ml-5">
+            <i class="fas fa-envelope-open-text text-secondary pr-5"></i>
+            <i class="fas fa-phone text-secondary"></i>
 
-    <div class="row">
-        <div class="col-md-3 text-right pt-3 ">
-            <a href="" class="text-secondary font-weight-bold h6 nav-link" style="letter-spacing: 1px;">info@muslimbank.com</a>
-
+          
         </div>
-        <div class="col-md-3 pt-3"><a href="" class="text-secondary font-weight-bold h6 nav-link"><i class="fas fa-phone"> </i> +92 111 897 897-2</a></div>
-        <div class="col-md-4 pt-3 d-flex ml-auto">
+        <div class="col-md-6 text-right">
             <a href="" class="text-secondary font-weight-bold pr-2 h5"><i class="fab fa-facebook-f"></i> </a>
             <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-instagram"></i> </a>
             <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-twitter"></i> </a>
             <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-linkedin-in"></i> </a>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-muted bg-muted" style="border-top: 1px ridge rgb(84, 90, 97); border-style: ;">
-        <a class="nav-link text-secondary h4" href="#">Muslim Bank</a>
+    <div class="row">
+        <div class="col-md-3 text-right pt-3 ">
+            <a href="" class="text-secondary font-weight-bold h6 nav-link email-hide"
+                style="letter-spacing: 1px;">info@muslimbank.com</a>
+
+        </div>
+        <div class="col-md-3 pt-3">
+            <a href="" class="text-secondary font-weight-bold h6 nav-link phone-hide">
+                <i class="fas fa-phone"></i> +92 111 897 897-2
+            </a>
+
+        </div>
+        <div class="col-md-4 pt-3 d-flex ml-auto contact-media-hidden">
+            <a href="" class="text-secondary font-weight-bold pr-2 h5"><i class="fab fa-facebook-f"></i> </a>
+            <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-instagram"></i> </a>
+            <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-twitter"></i> </a>
+            <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-linkedin-in"></i> </a>
+        </div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-muted bg-muted" style="border-top: 1px ridge rgb(84, 90, 97);">
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars text-secondary"></i>
         </button>
-        <div class="collapse navbar-collapse  pr-5" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto pr-5">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <a class="nav-link text-secondary h4 m-auto" href="#">Muslim Bank</a>
+            <ul class="navbar-nav m-auto pt-3 ">
                 <li class="nav-item active">
                     <a class="nav-link h6 text-secondary" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -35,9 +53,18 @@
                 <li class="nav-item">
                     <a class="nav-link h6 text-secondary" href="#">About</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link h6 text-secondary" href="#">Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h6 text-secondary" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link h6 text-secondary" href="#">Security Tips</a>
+                </li>
                 <li class="nav-item dropdown h6">
-                    <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdownMenuLink"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Optional
                     </a>
                     <div class="dropdown-menu bg-light " aria-labelledby="navbarDropdownMenuLink">
@@ -62,16 +89,18 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
-                        <h2 class="mb-4 text-center text-muted">Have an account?</h2>
+                        <h3 class="mb-4 text-center text-muted">Have an account?</h3>
 
-                            <div class="form-group">
-                                <input type="text" [(ngModel)]="username" class="form-control text-center" placeholder="Username" required=""
-                                    >
-                                <small id="emailHelp" class="form-text text-muted pl-2">We'll never share your email
-                                    with anyone
-                                    else.</small>
-                            </div>
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="username" class="form-control text-center"
+                                placeholder="Username" required="">
+                            <small id="emailHelp" class="form-text text-muted pl-2">We'll never share your email
+                                with anyone
+                                else.
+                            </small>
+                        </div>
 
+<<<<<<< HEAD
                             <div class="form-group" id="show_hide_password">
                                 <input id="password-field" type="password" [(ngModel)]="password" class="form-control text-center"
                                     placeholder="Password" required="" >
@@ -87,18 +116,37 @@
                                     <label class="checkbox-wrap checkbox-secondary r-me">Remember Me
                                         <input type="checkbox" style="height: auto !important;">
                                         <span class="checkmark">
+=======
+                        <div class="form-group">
+                            <input id="password-field" type="password" [(ngModel)]="password"
+                                class="form-control text-center" placeholder="Password" required="">
+                            <span toggle="#password-field" class="mr-auto">
+                                <i
+                                    class="fa fa-fw fa-eye field-icon toggle-password text-secondary ml-3 pt-1"></i></span>
+                        </div>
+                        <div class="form-group pt-2">
+                            <button type="button" id="btn-1" class="form-control btn" (click)="onlogin()">Sign
+                                In</button>
+                        </div>
+                        <div class="form-group d-md-flex">
+                            <div class="w-50">
+                                <label class="checkbox-wrap checkbox-secondary r-me">Remember Me
+                                    <input type="checkbox" style="height: auto !important;">
+                                    <span class="checkmark">
+>>>>>>> cd98895fe874e2affd72595c7f984815503e2d33
 
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="w-50 text-md-right">
-                                    <a class="text-muted" href="#" style="color: #fff">Forgot Password</a>
-                                </div>
+                                    </span>
+                                </label>
                             </div>
+                            <div class="w-50 text-md-right">
+                                <a class="text-muted f-p" href="#" style="color: #fff">Forgot Password</a>
+                            </div>
+                        </div>
 
                         <p class="w-100 text-center text-white">— Or Sign up —</p>
                         <div class="social d-flex text-center">
-                            <button class="btn rounded-pil pl-5 pr-5 m-auto">Sign
+                            <button class="btn pl-5 pr-5 m-auto"
+                                style="background-color: slategray; border-radius: 50px;">Sign
                                 Up</button>
                         </div>
                     </div>
@@ -106,5 +154,5 @@
             </div>
         </div>
     </section>
-     <!-- --------------------------------------------- Login -Ends - Form -------------------------------------------------------- -->
+    <!-- --------------------------------------------- Login -Ends - Form -------------------------------------------------------- -->
 </div>

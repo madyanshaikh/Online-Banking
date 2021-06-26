@@ -17,7 +17,10 @@ input {
   border: 0px solid slategray !important;
 
 }
-button:hover{
+input:hover{
+  background-color: rgba(78, 104, 110, 0.281) !important;
+}
+#btn-1:hover,button:hover{
   background-color: bisque !important;
 }
 .row{
@@ -26,10 +29,27 @@ button:hover{
 .dropdown-item{
 color:slategray;
 }
+<<<<<<< HEAD
 #hideShowBtn{
   position: relative;
   display: flex;
   justify-content: flex-end;
   
+=======
+.f-p:hover{
+  color: bisque !important  ;
+}
+
+@media only screen and (max-width: 770px){
+  
+  .media-phone,.media-email{
+    display: block !important ;
+  
+  }
+  .phone-hide,.email-hide,.contact-media-hidden{
+    display: none !important;
+    
+  }
+>>>>>>> cd98895fe874e2affd72595c7f984815503e2d33
 }
 
