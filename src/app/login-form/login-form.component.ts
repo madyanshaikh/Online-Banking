@@ -33,9 +33,9 @@ export class LoginFormComponent implements OnInit {
 
  
   onlogin() {
-    if (this.username == 'admin' && this.password == 'admin123') {
+    if (this.username == 'admin' && this.password == 'admin') {
       sessionStorage.setItem("isLogedIn", "true")
-      this.router.navigate(['index1'])
+      this.router.navigate(['admin-dashboard'])
     }
     else {
       this.snackbar.open("Invalid Username Or Password", "okay", { duration: 3000 })
