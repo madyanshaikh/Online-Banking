@@ -1,91 +1,43 @@
-*{
-    outline: none;
+
+.nv-color{
+    background-color: rgba(219, 230, 243, 0.295); 
 }
-#img-resize {
-    width: 45px;
+.row{
+    width: 100% !important;
 }
 
-#btn-toggle1, #btn-toggle2, #btn-toggle3, #btn-toggle4, #btn-toggle5, #btn-toggle6, #btn-toggle7, #btn-toggle8, #btn-toggle9 {
-    font-size: 15px;
-    outline: none;
-    border: none;
-    width: 1px;
-    transform: translate(12em, -2em);
-}
-
-#fonts-size {
-    font-size: 14px;
-}
-
-#font1-size {
-    font-size: 12px;
-}
-
-#font-resize {
-    transform: translate(0.50em, -0.65em);
-    text-align: center;
-    font-size: 13px;
-    color: whitesmoke;
-    letter-spacing: 1px;
-}
-
-#nav-resize {
-    
-    background: linear-gradient(to right, black, rgb(72, 78, 78));
-    width: 235px;
-    z-index: 2;
-    
-   
-}
-#nav-2nd{
-    background: linear-gradient(to right, rgb(54, 53, 53), rgb(72, 78, 78));
-    
-}
-
-#navbar-size{
-    z-index: 1;
-  position: absolute;
-    top: 0;
-    width: 111%;
-    height: 65px;
-    
-    
+.small{
+    color: rgb(152, 166, 190);
+    font-weight: 500;
+    transition: 0.30s ease;
 
 }
-#row3rd{
-    margin-left: 60px;
-    padding-left: 10.50em;
-    top: 0;
-    position: absolute;
-    transform: translatey(4em);
-    width: 100%;
-    background-color: rgb(245, 245, 245);
-    
-    
-    height: 150px;
-}
-#bars{
+/* .btn-toggle1{
     cursor: pointer;
-    margin-left: 12em;
+    transition: .8s ease;
+
+} */
+.hover-only:hover,.cl:hover,.small:hover{
+   
+    color: white !important;
     
-
 }
-#work1{
-    border-left: 2px solid;    
+.hover-only{
+    transition: 0.30s ease;
 }
-
-#floatright{
-    position: absolute;
-    right: 10px;
-    /* margin-right: 35px; */
+/* .rotated { 
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+} */
+.z-depth-5 {
+    -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
-#number-heading{
-    font-size: 40px;
-    font-weight: bold;
-    display: block;
-    transform: translate(0.35em,-0.40em);
-}
-#percentage{
-    display: block;
-    transform: translate(1.30em,-1.75em);
+.hover-only:hover{
+    background-color: rgb(174, 189, 204);
+    -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }

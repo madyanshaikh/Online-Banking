@@ -10,7 +10,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 
 const routes: Routes = [
   { path: 'login-form', component: LoginFormComponent},
-  { path: 'admin-dashboard',component:AdminDashboardComponent}
+  { path: 'admin-dashboard',component:AdminDashboardComponent},
+
 ];
 
 @NgModule({
