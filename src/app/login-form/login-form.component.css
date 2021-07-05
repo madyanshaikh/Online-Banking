@@ -29,27 +29,10 @@ input:hover{
 .dropdown-item{
 color:slategray;
 }
-<<<<<<< HEAD
 #hideShowBtn{
   position: relative;
   display: flex;
   justify-content: flex-end;
-  
-=======
-.f-p:hover{
-  color: bisque !important  ;
 }
 
-@media only screen and (max-width: 770px){
-  
-  .media-phone,.media-email{
-    display: block !important ;
-  
-  }
-  .phone-hide,.email-hide,.contact-media-hidden{
-    display: none !important;
-    
-  }
->>>>>>> cd98895fe874e2affd72595c7f984815503e2d33
-}
 

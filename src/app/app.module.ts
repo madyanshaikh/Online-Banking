@@ -7,17 +7,25 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+
+
 
 const routes: Routes = [
   { path: 'login-form', component: LoginFormComponent},
-  { path: 'index1',component:Index1Component}
+  { path: 'dashboard',component:DashboardComponent},
+  
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     Index1Component,
-    LoginFormComponent
+    LoginFormComponent,
+    DashboardComponent,
+
+    
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
