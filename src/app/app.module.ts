@@ -13,8 +13,9 @@ import { AccountListComponent } from './account-list/account-list.component'
 
 
 const routes: Routes = [
-  { path: 'admin', component: LoginFormComponent},
-  { path: 'user',component:DashboardComponent},
+  { path: 'login-form', component: LoginFormComponent},
+  { path: 'admin-dashboard', component: AdminDashboardComponent},
+  { path: 'user-dashboard',component:DashboardComponent},
   {path: 'Account-List',component:AccountListComponent}
   
 ];

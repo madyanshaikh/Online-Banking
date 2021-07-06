@@ -69,6 +69,13 @@ button.collapse:focus{
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+.slide-left{
+    min-width: 0px !important;
+    width: 0px !important;
+    display: none !important;
+    transition: 0.30s;
+    background-color: bisque !important;
+}
 .z-depth-5 {
     -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);

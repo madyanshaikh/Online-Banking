@@ -37,7 +37,7 @@ export class LoginFormComponent implements OnInit {
       sessionStorage.setItem("isLogedIn", "true")
       this.router.navigate(['admin-dashboard'])
     }
-    else if (this.username == 'user' && this.password == 'user123') {
+    else if (this.username == 'user' && this.password == 'user') {
       sessionStorage.setItem("isLogedIn", "true")
       this.router.navigate(['user-dashboard'])
     }

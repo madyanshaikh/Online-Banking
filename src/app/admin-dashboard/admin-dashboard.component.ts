@@ -39,8 +39,11 @@ export class AdminDashboardComponent implements OnInit {
     $(".hover-only").mouseleave(function(){
       $('i').css('color','lightgray');
   });
+  $(".bars").click(()=>{
+    $(".main-toggle").slideToggle("slow")
+});
 
-})
+});
 
 
   
