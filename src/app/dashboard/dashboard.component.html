@@ -1,89 +1,89 @@
 <div class="wrapper">
     <nav id="sidebar" class="sidebar">
-        <div class="sidebar-content js-simplebar">
+        <div class="sidebar-content js-simplebar" id="sideBarContent">
             <a class="sidebar-brand" href="index.html">
                 <span class="align-middle">Muslim Bank</span>
             </a>
 
-            <ul class="sidebar-nav mt-5 ">
+            <ul class="sidebar-nav mt-5 " id="mainList">
                 <li class="sidebar-header">
                     General
                 </li>
 
-                <li class="sidebar-item active">
-                    <a class="sidebar-link" href="index.html">
+                <li class="sidebar-item active" id="myHome">
+                    <a class="sidebar-link">
                         <i class="align-items" data-feather="home"></i> <span class="align-middle">Home</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item">
+                <li class="sidebar-item" id="myAcc">
                     <a href="#HL" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">My Accounts</span>
                     </a>
                     <ul id="HL" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Account List</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Account Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link">Account List</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Account Management</a></li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item">
+                <li class="sidebar-item" id="myCard">
                     <a href="#CL" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">My Cards</span>
                     </a>
                     <ul id="CL" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Card List</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Card Management</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Cradit Card Payment</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link">Card List</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Card Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Cradit Card Payment</a></li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item">
+                <li class="sidebar-item" id="myTrans">
                     <a href="#Trans" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="navigation"></i> <span class="align-middle">Transfers</span>
                     </a>
                     <ul id="Trans" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Fund Transfer</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">InterBank Fund Tranfser</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Beneficiary Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Fund Transfer</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >InterBank Fund Tranfser</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Beneficiary Management</a></li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item">
+                <li class="sidebar-item" id="myPay">
                     <a href="#Pay" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="info"></i> <span class="align-middle">Payments</span>
                     </a>
                     <ul id="Pay" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Bill Payments</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Beneficiary Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Bill Payments</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Beneficiary Management</a></li>
                     </ul>
                 </li>
 
-                <li class="sidebar-item">
+                <li class="sidebar-item" id="myServ">
                     <a href="#SR" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="mail"></i> <span class="align-middle">Service Request</span>
                     </a>
                     <ul id="SR" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Chaque Book Request</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">E-Statement Request</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Stop Cheque</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">SMS Subscription</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Chaque Book Request</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >E-Statement Request</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Stop Cheque</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >SMS Subscription</a></li>
                     </ul>
                 </li>
                 
-                <li class="sidebar-item">
+                <li class="sidebar-item" id="mySet">
                     <a href="#Set" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
                     </a>
                     <ul id="Set" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">My Profile</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Setup Alert & Notifications</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Extract Activity Logs</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Session History</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >My Profile</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Setup Alert & Notifications</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Extract Activity Logs</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Session History</a></li>
                     </ul>
                 </li>
             </ul>
 
-            
+
         </div>
     </nav>
 
@@ -125,7 +125,7 @@
                                             <i class="text-danger" data-feather="alert-circle"></i>
                                         </div>
                                         <div class="col-10">
-                                            <div class="text-dark">Update completed</div>
+                                            <div class="text-dark">Your Security</div>
                                             <div class="text-muted small mt-1">Restart server 12 to complete the
                                                 update.</div>
                                             <div class="text-muted small mt-1">30m ago</div>
@@ -138,9 +138,8 @@
                                             <i class="text-warning" data-feather="bell"></i>
                                         </div>
                                         <div class="col-10">
-                                            <div class="text-dark">Lorem ipsum</div>
-                                            <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate
-                                                hendrerit et.</div>
+                                            <div class="text-dark">Password Protection</div>
+                                            <div class="text-muted small mt-1">Your Password Should Be Unique</div>
                                             <div class="text-muted small mt-1">2h ago</div>
                                         </div>
                                     </div>
@@ -151,7 +150,7 @@
                                             <i class="text-primary" data-feather="home"></i>
                                         </div>
                                         <div class="col-10">
-                                            <div class="text-dark">Login from 192.186.1.8</div>
+                                            <div class="text-dark">Your Login Address</div>
                                             <div class="text-muted small mt-1">5h ago</div>
                                         </div>
                                     </div>
@@ -162,8 +161,8 @@
                                             <i class="text-success" data-feather="user-plus"></i>
                                         </div>
                                         <div class="col-10">
-                                            <div class="text-dark">New connection</div>
-                                            <div class="text-muted small mt-1">Christina accepted your request.
+                                            <div class="text-dark">Loan Alert</div>
+                                            <div class="text-muted small mt-1">Information About Loan
                                             </div>
                                             <div class="text-muted small mt-1">14h ago</div>
                                         </div>
@@ -192,13 +191,13 @@
                                 <a href="#" class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
-                                            <img src="img/avatars/avatar-5.jpg"
-                                                class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+                                            <img src="img"
+                                                class="avatar img-fluid rounded-circle" >
                                         </div>
                                         <div class="col-10 pl-2">
-                                            <div class="text-dark">Vanessa Tucker</div>
-                                            <div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu
-                                                tortor.</div>
+                                            <div class="text-dark">Sir Subhan</div>
+                                            <div class="text-muted small mt-1">This is for Temporary Check
+                                                </div>
                                             <div class="text-muted small mt-1">15m ago</div>
                                         </div>
                                     </div>
@@ -206,13 +205,13 @@
                                 <a href="#" class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
-                                            <img src="img/avatars/avatar-2.jpg"
-                                                class="avatar img-fluid rounded-circle" alt="William Harris">
+                                            <img src="img"
+                                                class="avatar img-fluid rounded-circle" >
                                         </div>
                                         <div class="col-10 pl-2">
-                                            <div class="text-dark">William Harris</div>
-                                            <div class="text-muted small mt-1">Curabitur ligula sapien euismod
-                                                vitae.</div>
+                                            <div class="text-dark">Shaikh Madyan</div>
+                                            <div class="text-muted small mt-1">This Is For Tamporary Check
+                                                </div>
                                             <div class="text-muted small mt-1">2h ago</div>
                                         </div>
                                     </div>
@@ -220,12 +219,12 @@
                                 <a href="#" class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
-                                            <img src="img/avatars/avatar-4.jpg"
-                                                class="avatar img-fluid rounded-circle" alt="Christina Mason">
+                                            <img src="img"
+                                                class="avatar img-fluid rounded-circle" >
                                         </div>
                                         <div class="col-10 pl-2">
-                                            <div class="text-dark">Christina Mason</div>
-                                            <div class="text-muted small mt-1">Pellentesque auctor neque nec urna.
+                                            <div class="text-dark">Muslim Bank</div>
+                                            <div class="text-muted small mt-1">Welcome To Our Online Banking
                                             </div>
                                             <div class="text-muted small mt-1">4h ago</div>
                                         </div>
@@ -234,13 +233,13 @@
                                 <a href="#" class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
-                                            <img src="img/avatars/avatar-3.jpg"
-                                                class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+                                            <img src="img"
+                                                class="avatar img-fluid rounded-circle" >
                                         </div>
                                         <div class="col-10 pl-2">
-                                            <div class="text-dark">Sharon Lessman</div>
-                                            <div class="text-muted small mt-1">Aenean tellus metus, bibendum sed,
-                                                posuere ac, mattis non.</div>
+                                            <div class="text-dark">Security Alert</div>
+                                            <div class="text-muted small mt-1">Ye karlo Bhai Secure Hojaoge
+                                                </div>
                                             <div class="text-muted small mt-1">5h ago</div>
                                         </div>
                                     </div>
@@ -260,7 +259,7 @@
                         <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
                             data-toggle="dropdown">
                             <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1"
-                                alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+                                 /> <span class="text-dark">Sheikh Farzaib</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1"
@@ -285,17 +284,7 @@
 
                 <div class="row mb-2 mb-xl-3">
                     <div class="col-auto d-none d-sm-block">
-                        <h3><strong>Analytics</strong> Dashboard</h3>
-                    </div>
-
-                    <div class="col-auto ml-auto text-right mt-n1">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
-                                <li class="breadcrumb-item"><a href="#">AdminKit</a></li>
-                                <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Analytics</li>
-                            </ol>
-                        </nav>
+                        <h3><strong>Welcome</strong></h3>
                     </div>
                 </div>
                 <div class="row">
@@ -305,23 +294,23 @@
                                 <div class="col-sm-6">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-4">Sales</h5>
-                                            <h1 class="display-5 mt-1 mb-3">2.382</h1>
+                                            <h5 class="card-title mb-4">Account Holder</h5>
+                                            <h1 class="display-5 mt-1 mb-3">Sheikh Farzaib</h1>
                                             <div class="mb-1">
-                                                <span class="text-danger"> <i
-                                                        class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-                                                <span class="text-muted">Since last week</span>
+                                                <span class="text-muted"> <i
+                                                        class="mdi mdi-arrow-bottom-right"></i>Last Login:</span>
+                                                <span class="text-danger"> 1/1/2021</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-4">Visitors</h5>
-                                            <h1 class="display-5 mt-1 mb-3">14.212</h1>
+                                            <h5 class="card-title mb-4">Account Number</h5>
+                                            <h1 class="display-5 mt-1 mb-3">1234567891234567</h1>
                                             <div class="mb-1">
                                                 <span class="text-success"> <i
-                                                        class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
-                                                <span class="text-muted">Since last week</span>
+                                                        class="mdi mdi-arrow-bottom-right"></i><strong>Active</strong></span>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -329,23 +318,23 @@
                                 <div class="col-sm-6">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-4">Earnings</h5>
-                                            <h1 class="display-5 mt-1 mb-3">$21.300</h1>
+                                            <h5 class="card-title mb-4">Account Amount</h5>
+                                            <h1 class="display-5 mt-1 mb-3">21,300 PKR</h1>
                                             <div class="mb-1">
-                                                <span class="text-success"> <i
-                                                        class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
+                                                <!-- <span class="text-success"> <i
+                                                        class="mdi mdi-arrow-bottom-right"></i></span> -->
                                                 <span class="text-muted">Since last week</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title mb-4">Orders</h5>
-                                            <h1 class="display-5 mt-1 mb-3">64</h1>
+                                            <h5 class="card-title mb-4">CNIC</h5>
+                                            <h1 class="display-5 mt-1 mb-3">42201-1234567-1</h1>
                                             <div class="mb-1">
-                                                <span class="text-danger"> <i
-                                                        class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
-                                                <span class="text-muted">Since last week</span>
+                                                <span class="text-success"> <i
+                                                        class="mdi mdi-arrow-bottom-right"></i><strong>Valid</strong></span>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -358,7 +347,7 @@
                         <div class="card flex-fill w-100">
                             <div class="card-header">
 
-                                <h5 class="card-title mb-0">Recent Movement</h5>
+                                <h5 class="card-title mb-0">Weekly Transaction Graph</h5>
                             </div>
                             <div class="card-body py-3">
                                 <div class="chart chart-sm">
@@ -370,56 +359,23 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3">
-                        <div class="card flex-fill w-100">
-                            <div class="card-header">
-
-                                <h5 class="card-title mb-0">Browser Usage</h5>
-                            </div>
-                            <div class="card-body d-flex">
-                                <div class="align-self-center w-100">
-                                    <div class="py-3">
-                                        <div class="chart chart-xs">
-                                            <canvas id="chartjs-dashboard-pie"></canvas>
-                                        </div>
-                                    </div>
-
-                                    <table class="table mb-0">
-                                        <tbody>
-                                            <tr>
-                                                <td>Chrome</td>
-                                                <td class="text-right">4306</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Firefox</td>
-                                                <td class="text-right">3801</td>
-                                            </tr>
-                                            <tr>
-                                                <td>IE</td>
-                                                <td class="text-right">1689</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
                         <div class="card flex-fill w-100">
                             <div class="card-header">
 
-                                <h5 class="card-title mb-0">Real-Time</h5>
+                                <h5 class="card-title mb-0"></h5>
                             </div>
                             <div class="card-body px-4">
                                 <div id="world_map" style="height:350px;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
+                    <div class="col-12 col-md-6 col-xxl-6 d-flex order-1 order-xxl-1">
                         <div class="card flex-fill">
                             <div class="card-header">
 
-                                <h5 class="card-title mb-0">Calendar</h5>
+                                <h5 class="card-title mb-0">Recent Transactions</h5>
                             </div>
                             <div class="card-body d-flex">
                                 <div class="align-self-center w-100">
@@ -432,98 +388,7 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-12 col-lg-8 col-xxl-9 d-flex">
-                        <div class="card flex-fill">
-                            <div class="card-header">
-
-                                <h5 class="card-title mb-0">Latest Projects</h5>
-                            </div>
-                            <table class="table table-hover my-0">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th class="d-none d-xl-table-cell">Start Date</th>
-                                        <th class="d-none d-xl-table-cell">End Date</th>
-                                        <th>Status</th>
-                                        <th class="d-none d-md-table-cell">Assignee</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Project Apollo</td>
-                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                        <td><span class="badge badge-success">Done</span></td>
-                                        <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project Fireball</td>
-                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                        <td><span class="badge badge-danger">Cancelled</span></td>
-                                        <td class="d-none d-md-table-cell">William Harris</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project Hades</td>
-                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                        <td><span class="badge badge-success">Done</span></td>
-                                        <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project Nitro</td>
-                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                        <td><span class="badge badge-warning">In progress</span></td>
-                                        <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project Phoenix</td>
-                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                        <td><span class="badge badge-success">Done</span></td>
-                                        <td class="d-none d-md-table-cell">William Harris</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project X</td>
-                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                        <td><span class="badge badge-success">Done</span></td>
-                                        <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project Romeo</td>
-                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                        <td><span class="badge badge-success">Done</span></td>
-                                        <td class="d-none d-md-table-cell">Christina Mason</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Project Wombat</td>
-                                        <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                        <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                        <td><span class="badge badge-warning">In progress</span></td>
-                                        <td class="d-none d-md-table-cell">William Harris</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 col-xxl-3 d-flex">
-                        <div class="card flex-fill w-100">
-                            <div class="card-header">
-
-                                <h5 class="card-title mb-0">Monthly Sales</h5>
-                            </div>
-                            <div class="card-body d-flex w-100">
-                                <div class="align-self-center chart chart-lg">
-                                    <canvas id="chartjs-dashboard-bar"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
             </div>
         </main>
@@ -533,7 +398,7 @@
                 <div class="row text-muted">
                     <div class="col-6 text-left">
                         <p class="mb-0">
-                            <a href="index.html" class="text-muted"><strong>AdminKit Demo</strong></a> &copy;
+                            <a class="text-muted"><strong>Muslim Bank</strong></a> &copy;
                         </p>
                     </div>
                     <div class="col-6 text-right">

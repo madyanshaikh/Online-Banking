@@ -1,38 +1,61 @@
+.image {
+  background-image: url(../../assets/images/3.jpg);
+  background-size: cover;
+}
 
-.r-me {
-  color: bisque;
+.main-div {
+  height: 100% !important;
 }
 
 #btn-1 {
   background-color: slategray !important;
   border-radius: 50px !important;
   height: 50px !important;
-  
 }
+
 input {
   color: whitesmoke !important;
   background: rgba(112, 128, 144, 0.274) !important;
   border-radius: 50px !important;
   height: 50px !important;
   border: 0px solid slategray !important;
-
 }
-input:hover{
+
+input:hover {
   background-color: rgba(78, 104, 110, 0.281) !important;
 }
-#btn-1:hover,button:hover{
-  background-color: bisque !important;
+
+#btn-1:hover, button:hover {
+  background-color: white !important;
 }
-.row{
+
+#f-p:hover {
+  color: slategray !important;
+}
+
+.row {
   width: 100% !important;
 }
-.dropdown-item{
-color:slategray;
+
+.dropdown-item {
+  color: slategray;
 }
-#hideShowBtn{
+
+#hideShowBtn {
   position: relative;
   display: flex;
   justify-content: flex-end;
 }
 
+.row-media {
+  display: none;
+}
 
+@media only screen and (max-width:890px) {
+  .row-media {
+    display: block;
+  }
+  .main-row-media {
+    display: none !important;
+  }
+}

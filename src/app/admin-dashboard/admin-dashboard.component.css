@@ -1,0 +1,43 @@
+
+.nv-color{
+    background-color: rgba(219, 230, 243, 0.295); 
+}
+.row{
+    width: 100% !important;
+}
+
+.small{
+    color: rgb(152, 166, 190);
+    font-weight: 500;
+    transition: 0.30s ease;
+
+}
+/* .btn-toggle1{
+    cursor: pointer;
+    transition: .8s ease;
+
+} */
+.hover-only:hover,.cl:hover,.small:hover{
+   
+    color: white !important;
+    
+}
+.hover-only{
+    transition: 0.30s ease;
+}
+/* .rotated { 
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+} */
+.z-depth-5 {
+    -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+.hover-only:hover{
+    background-color: rgb(174, 189, 204);
+    -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}

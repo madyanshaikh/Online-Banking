@@ -1,7 +1,20 @@
 <!-- --------------------------------------------------------- Navigations ---------------------------------- -->
 
-<div class="container-fluid p-0">
-    <div class="row">
+<div class="container-fluid p-0 image main-div">
+    <div class="row row-media">
+        <div class="col-md-6 pl-5 d-flex p-3">
+            <a href="" class=" text-secondary pl-5" ><i class="fas fa-envelope-open-text pl-3"></i></a>
+            <a href="" class=" text-secondary pl-5" ><i class="fas fa-phone pl-3"></i></a>
+
+            <div class="col-md-12 pl-5 text-right">
+                <a href="" class="text-secondary font-weight-bold pl-5 pr-2 h5"><i class="fab fa-facebook-f"></i> </a>
+                <a href="" class="text-secondary font-weight-bold pl-4 h5"><i class="fab fa-instagram"></i> </a>
+                <a href="" class="text-secondary font-weight-bold pl-4 h5"><i class="fab fa-twitter"></i> </a>
+                <a href="" class="text-secondary font-weight-bold pl-4 h5"><i class="fab fa-linkedin-in"></i> </a>
+            </div>
+        </div>
+    </div>
+    <div class="row main-row-media">
         <div class="col-md-3 text-right pt-3 ">
             <a href="" class="text-secondary font-weight-bold h6 nav-link email-hide"
                 style="letter-spacing: 1px;"><i class="fas fa-envelope-open-text text-secondary"></i> info@muslimbank.com</a>
@@ -31,7 +44,8 @@
             <a class="nav-link text-secondary h4 m-auto" href="#">Muslim Bank</a>
             <ul class="navbar-nav m-auto pt-3 ">
                 <li class="nav-item">
-                    <a class="nav-link h6 text-secondary" href="#"><i class="fas fa-info-circle"></i> Features</a>
+                    <a class="nav-link h6 text-secondary" href="#"><i class="fas fa-map-marker-alt"></i> Branch
+                        Locations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link h6 text-secondary" href="#"><i class="fas fa-user-shield"></i> Security Tips</a>
@@ -80,27 +94,26 @@
                             </small>
                         </div>
 
-                            <div class="form-group" id="show_hide_password">
-                                <input id="password-field" type="password" [(ngModel)]="password" class="form-control text-center"
-                                    placeholder="Password" required="" >
-                                <span id="hideShowBtn" class="pr-3">
-                                    <a href="#" class="text-white"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
-                                    </span>
-                            </div>
-                            <div class="form-group pt-2">
-                                <button type="submit" id="btn-1" class="form-control btn" (click)="onlogin()">Sign In</button>
-                            </div>
-                            <div class="form-group d-md-flex">
-                                <div class="w-50">
-                                    <label class="checkbox-wrap checkbox-secondary r-me">Remember Me
-                                        <input type="checkbox" style="height: auto !important;">
-                                        <span class="checkmark">
-
-                                    </span>
+                        <div class="form-group" id="show_hide_password">
+                            <input id="password-field" type="password" [(ngModel)]="password"
+                                class="form-control text-center" placeholder="Password" required="">
+                            <span id="hideShowBtn" class="pr-3">
+                                <a href="#" class="text-white"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
+                        <div class="form-group pt-2">
+                            <button type="submit" id="btn-1" class="form-control btn" (click)="onlogin()">Sign
+                                In</button>
+                        </div>
+                        <div class="form-group d-md-flex">
+                            <div class="w-50">
+                                <label class="checkbox-wrap font-weight-bold text-secondary pl-3 r-me">Remember Me
+                                    <input type="checkbox" style="height: auto !important;">
+                                  
                                 </label>
                             </div>
-                            <div class="w-50 text-md-right">
-                                <a class="text-muted f-p" href="#" style="color: #fff">Forgot Password</a>
+                            <div class="ml-auto pr-3">
+                                <a class="text-white" href="#" id="f-p">Forgot Password</a>
                             </div>
                         </div>
 
