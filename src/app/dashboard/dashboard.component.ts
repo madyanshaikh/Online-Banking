@@ -1,7 +1,6 @@
 import { Identifiers } from '@angular/compiler';
 import { Component, OnInit, Query, } from '@angular/core';
-declare var $: any;
-declare const feather: any;
+
 
 
 
