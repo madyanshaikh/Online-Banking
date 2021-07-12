@@ -15,7 +15,7 @@ constructor(private router:Router){
   var status =sessionStorage.getItem("isloggedin")
   if (status == null || status!='True')
   {
-    router.navigate(['login-form'])
+    router.navigate(['welcome'])
   }
 }
 

@@ -2,41 +2,30 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
-import { LoginFormComponent } from './login-form/login-form.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { AccountListComponent } from './account-list/account-list.component'
+import { AppRoutingModule,routingcomponents } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
-const routes: Routes = [
-  { path: 'login-form', component: LoginFormComponent},
-  { path: 'admin-dashboard', component: AdminDashboardComponent},
-  { path: 'user-dashboard',component:DashboardComponent},
-  {path: 'Account-List',component:AccountListComponent}
-  
-];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent,
-    DashboardComponent,
-    AdminDashboardComponent,
-    AccountListComponent
-
+    routingcomponents
+    
+    
     
   ],
   imports: [
     BrowserModule,
     MaterialModule,
-    RouterModule.forRoot(routes),
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    RouterModule,
     FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

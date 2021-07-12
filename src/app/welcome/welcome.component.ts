@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-admin-dashboard',
-  templateUrl: './admin-dashboard.component.html',
-  styleUrls: ['./admin-dashboard.component.css'],
+  selector: 'app-welcome',
+  templateUrl: './welcome.component.html',
+  styleUrls: ['./welcome.component.css']
 })
-export class AdminDashboardComponent implements OnInit {
+export class WelcomeComponent implements OnInit {
   navigate: any;
 
   constructor(private router: Router) { }
@@ -15,11 +14,8 @@ export class AdminDashboardComponent implements OnInit {
   ngOnInit(): void {
     
   }
-dprt(){
+welcome(){
   sessionStorage.setItem("isLogedIn", "true")
-  this.router.navigate(['department'])
+  this.router.navigate(['login-form'])
 }
-
 }
-
-
