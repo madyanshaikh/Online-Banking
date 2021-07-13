@@ -1,6 +1,7 @@
 
 
-$(document).ready(function () {
+$( document ).ready(function() {
+   
     $("#show_hide_password a").click(function (event) {
 
         event.preventDefault();
@@ -33,5 +34,6 @@ $(document).ready(function () {
 
     });
 
+    
   
 });

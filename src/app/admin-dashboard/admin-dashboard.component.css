@@ -64,13 +64,7 @@ button.collapse:focus{
 
 }
 
-/* .rotated {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-} */
+
 .slide-left{
     height: 98% !important;
     min-width: 0px !important;

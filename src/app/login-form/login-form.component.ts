@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-  ngOnInit(): void{ }
+  ngOnInit(): void{
+   
+   }
   username = ''
   password = ''
 
@@ -33,3 +35,7 @@ export class LoginFormComponent implements OnInit {
   }
   
 }
+function showpass() {
+  throw new Error('Function not implemented.');
+}
+

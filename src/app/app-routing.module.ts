@@ -6,15 +6,15 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AccountListComponent } from './account-list/account-list.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DepartmentComponent } from './department/department.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent},
   { path: 'login-form', component: LoginFormComponent},
-  { path: 'admin-dashboard', component: AdminDashboardComponent,
-    children :[ {path: 'dapartment',component: DepartmentComponent}]
-  },
+  { path: 'admin-dashboard', component: AdminDashboardComponent},
+  { path: 'dapartment',component: DepartmentComponent},
   { path: 'user-dashboard',component:DashboardComponent},
   { path: 'Account-List',component:AccountListComponent},
 
@@ -33,4 +33,8 @@ export  const routingcomponents =[
     WelcomeComponent,
     DepartmentComponent
    
-  ]; 
+  ];
+  export const reactivemodule =[
+
+    ReactiveFormsModule, FormsModule
+  ] ;
