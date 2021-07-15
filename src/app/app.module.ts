@@ -2,41 +2,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
-import { LoginFormComponent } from './login-form/login-form.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { AccountListComponent } from './account-list/account-list.component'
-
-
-
-const routes: Routes = [
-  { path: 'login-form', component: LoginFormComponent},
-  { path: 'admin-dashboard', component: AdminDashboardComponent},
-  { path: 'user-dashboard',component:DashboardComponent},
-  {path: 'Account-List',component:AccountListComponent}
-  
-];
+import { AppRoutingModule,routingcomponents } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { reactivemodule } from './app-routing.module';
+import * as $ from 'jquery'
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent,
-    DashboardComponent,
-    AdminDashboardComponent,
-    AccountListComponent
-
+    routingcomponents
+    
+    
     
   ],
   imports: [
     BrowserModule,
     MaterialModule,
-    RouterModule.forRoot(routes),
-    ReactiveFormsModule,
     BrowserAnimationsModule,
-    FormsModule,
+    RouterModule,
+    reactivemodule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
