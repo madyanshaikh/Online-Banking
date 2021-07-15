@@ -1,10 +1,12 @@
 .image {
   background-image: url(../../assets/images/3.jpg);
   background-size: cover;
+  /* height: 100vh !important; */
 }
 
 .main-div {
   height: 100% !important;
+  min-height: 122vh !important;
 }
 
 #btn-1 {
