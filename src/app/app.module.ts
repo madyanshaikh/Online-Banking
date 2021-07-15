@@ -6,19 +6,29 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AccountListComponent } from './account-list/account-list.component'
+
+
 
 const routes: Routes = [
   { path: 'login-form', component: LoginFormComponent},
-  { path: 'admin-dashboard',component:AdminDashboardComponent},
-
+  { path: 'admin-dashboard', component: AdminDashboardComponent},
+  { path: 'user-dashboard',component:DashboardComponent},
+  {path: 'Account-List',component:AccountListComponent}
+  
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    AdminDashboardComponent
+    DashboardComponent,
+    AdminDashboardComponent,
+    AccountListComponent
+
+    
   ],
   imports: [
     BrowserModule,
@@ -26,7 +36,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

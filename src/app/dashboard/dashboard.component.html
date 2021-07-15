@@ -1,0 +1,424 @@
+<div class="wrapper">
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-content js-simplebar" id="sideBarContent">
+            <a class="sidebar-brand" href="index.html">
+                <span class="align-middle">Muslim Bank</span>
+            </a>
+
+            <ul class="sidebar-nav mt-5 " id="mainList">
+                <li class="sidebar-header">
+                    General
+                </li>
+
+                <li class="sidebar-item active" id="myHome">
+                    <a class="sidebar-link">
+                        <i class="align-items" data-feather="home"></i> <span class="align-middle">Home</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item" id="myAcc">
+                    <a href="#HL" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">My Accounts</span>
+                    </a>
+                    <ul id="HL" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link">Account List</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Account Management</a></li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item" id="myCard">
+                    <a href="#CL" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">My Cards</span>
+                    </a>
+                    <ul id="CL" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link">Card List</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Card Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Cradit Card Payment</a></li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item" id="myTrans">
+                    <a href="#Trans" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="navigation"></i> <span class="align-middle">Transfers</span>
+                    </a>
+                    <ul id="Trans" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" >Fund Transfer</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >InterBank Fund Tranfser</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Beneficiary Management</a></li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item" id="myPay">
+                    <a href="#Pay" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="info"></i> <span class="align-middle">Payments</span>
+                    </a>
+                    <ul id="Pay" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" >Bill Payments</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Beneficiary Management</a></li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item" id="myServ">
+                    <a href="#SR" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="mail"></i> <span class="align-middle">Service Request</span>
+                    </a>
+                    <ul id="SR" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" >Chaque Book Request</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >E-Statement Request</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Stop Cheque</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >SMS Subscription</a></li>
+                    </ul>
+                </li>
+                
+                <li class="sidebar-item" id="mySet">
+                    <a href="#Set" data-toggle="collapse" class="sidebar-link collapsed">
+                        <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+                    </a>
+                    <ul id="Set" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" >My Profile</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Setup Alert & Notifications</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Extract Activity Logs</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" >Session History</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+        </div>
+    </nav>
+
+    <div class="main">
+        <nav class="navbar navbar-expand navbar-light navbar-bg">
+            <a class="sidebar-toggle d-flex">
+                <i class="hamburger align-self-center"></i>
+            </a>
+
+            <form class="form-inline d-none d-sm-inline-block">
+                <div class="input-group input-group-navbar">
+                    <input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn" type="button">
+                            <i class="align-middle" data-feather="search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav navbar-align">
+                    <li class="nav-item dropdown">
+                        <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-toggle="dropdown">
+                            <div class="position-relative">
+                                <i class="align-middle" data-feather="bell"></i>
+                                <span class="indicator">4</span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
+                            aria-labelledby="alertsDropdown">
+                            <div class="dropdown-menu-header">
+                                4 New Notifications
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-danger" data-feather="alert-circle"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Your Security</div>
+                                            <div class="text-muted small mt-1">Restart server 12 to complete the
+                                                update.</div>
+                                            <div class="text-muted small mt-1">30m ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-warning" data-feather="bell"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Password Protection</div>
+                                            <div class="text-muted small mt-1">Your Password Should Be Unique</div>
+                                            <div class="text-muted small mt-1">2h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-primary" data-feather="home"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Your Login Address</div>
+                                            <div class="text-muted small mt-1">5h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <i class="text-success" data-feather="user-plus"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="text-dark">Loan Alert</div>
+                                            <div class="text-muted small mt-1">Information About Loan
+                                            </div>
+                                            <div class="text-muted small mt-1">14h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-menu-footer">
+                                <a href="#" class="text-muted">Show all notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-toggle="dropdown">
+                            <div class="position-relative">
+                                <i class="align-middle" data-feather="message-square"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
+                            aria-labelledby="messagesDropdown">
+                            <div class="dropdown-menu-header">
+                                <div class="position-relative">
+                                    4 New Messages
+                                </div>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <img src="img"
+                                                class="avatar img-fluid rounded-circle" >
+                                        </div>
+                                        <div class="col-10 pl-2">
+                                            <div class="text-dark">Sir Subhan</div>
+                                            <div class="text-muted small mt-1">This is for Temporary Check
+                                                </div>
+                                            <div class="text-muted small mt-1">15m ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <img src="img"
+                                                class="avatar img-fluid rounded-circle" >
+                                        </div>
+                                        <div class="col-10 pl-2">
+                                            <div class="text-dark">Shaikh Madyan</div>
+                                            <div class="text-muted small mt-1">This Is For Tamporary Check
+                                                </div>
+                                            <div class="text-muted small mt-1">2h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <img src="img"
+                                                class="avatar img-fluid rounded-circle" >
+                                        </div>
+                                        <div class="col-10 pl-2">
+                                            <div class="text-dark">Muslim Bank</div>
+                                            <div class="text-muted small mt-1">Welcome To Our Online Banking
+                                            </div>
+                                            <div class="text-muted small mt-1">4h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-2">
+                                            <img src="img"
+                                                class="avatar img-fluid rounded-circle" >
+                                        </div>
+                                        <div class="col-10 pl-2">
+                                            <div class="text-dark">Security Alert</div>
+                                            <div class="text-muted small mt-1">Ye karlo Bhai Secure Hojaoge
+                                                </div>
+                                            <div class="text-muted small mt-1">5h ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-menu-footer">
+                                <a href="#" class="text-muted">Show all messages</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
+                            data-toggle="dropdown">
+                            <i class="align-middle" data-feather="settings"></i>
+                        </a>
+
+                        <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
+                            data-toggle="dropdown">
+                            <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1"
+                                 /> <span class="text-dark">Sheikh Farzaib</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1"
+                                    data-feather="user"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="align-middle mr-1"
+                                    data-feather="pie-chart"></i> Analytics</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="pages-settings.html"><i class="align-middle mr-1"
+                                    data-feather="settings"></i> Settings & Privacy</a>
+                            <a class="dropdown-item" href="#"><i class="align-middle mr-1"
+                                    data-feather="help-circle"></i> Help Center</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Log out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="content">
+            <div class="container-fluid p-0">
+
+                <div class="row mb-2 mb-xl-3">
+                    <div class="col-auto d-none d-sm-block">
+                        <h3><strong>Welcome</strong></h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-xxl-5 d-flex">
+                        <div class="w-100">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-4">Account Holder</h5>
+                                            <h1 class="display-5 mt-1 mb-3">Sheikh Farzaib</h1>
+                                            <div class="mb-1">
+                                                <span class="text-muted"> <i
+                                                        class="mdi mdi-arrow-bottom-right"></i>Last Login:</span>
+                                                <span class="text-danger"> 1/1/2021</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-4">Account Number</h5>
+                                            <h1 class="display-5 mt-1 mb-3">1234567891234567</h1>
+                                            <div class="mb-1">
+                                                <span class="text-success"> <i
+                                                        class="mdi mdi-arrow-bottom-right"></i><strong>Active</strong></span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-4">Account Amount</h5>
+                                            <h1 class="display-5 mt-1 mb-3">21,300 PKR</h1>
+                                            <div class="mb-1">
+                                                <!-- <span class="text-success"> <i
+                                                        class="mdi mdi-arrow-bottom-right"></i></span> -->
+                                                <span class="text-muted">Since last week</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-4">CNIC</h5>
+                                            <h1 class="display-5 mt-1 mb-3">42201-1234567-1</h1>
+                                            <div class="mb-1">
+                                                <span class="text-success"> <i
+                                                        class="mdi mdi-arrow-bottom-right"></i><strong>Valid</strong></span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-xxl-7">
+                        <div class="card flex-fill w-100">
+                            <div class="card-header">
+
+                                <h5 class="card-title mb-0">Weekly Transaction Graph</h5>
+                            </div>
+                            <div class="card-body py-3">
+                                <div class="chart chart-sm">
+                                    <canvas id="chartjs-dashboard-line"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    
+                    <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
+                        <div class="card flex-fill w-100">
+                            <div class="card-header">
+
+                                <h5 class="card-title mb-0"></h5>
+                            </div>
+                            <div class="card-body px-4">
+                                <div id="world_map" style="height:350px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xxl-6 d-flex order-1 order-xxl-1">
+                        <div class="card flex-fill">
+                            <div class="card-header">
+
+                                <h5 class="card-title mb-0">Recent Transactions</h5>
+                            </div>
+                            <div class="card-body d-flex">
+                                <div class="align-self-center w-100">
+                                    <div class="chart">
+                                        <div id="datetimepicker-dashboard"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row text-muted">
+                    <div class="col-6 text-left">
+                        <p class="mb-0">
+                            <a class="text-muted"><strong>Muslim Bank</strong></a> &copy;
+                        </p>
+                    </div>
+                    <div class="col-6 text-right">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="#">Support</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="#">Help Center</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="#">Privacy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-muted" href="#">Terms</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
