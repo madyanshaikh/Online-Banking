@@ -12,12 +12,13 @@ button {
 }
 
 .nv-color {
+
     background-color: whitesmoke;
     /* background-color: rgb(46, 51, 59); */
 }
 
 li {
-    height: 50px;
+    
     box-sizing: border-box !important;
     padding-top: 10px !important;
 }
@@ -28,7 +29,7 @@ li {
 
 i {
     font-size: 17px;
-    color: black;
+    color: skyblue;
     transition: .1s;
 }
 
@@ -122,28 +123,105 @@ button.collapse:focus {
 
 
 .dprt {
-    transform: translate(-5em, -3em) !important;
-    background-color: goldenrod !important;
+    transform: translate(-5em, -2em) !important;
+    background-color: grey !important;
+    height: 80px;
+    width: 100px;
 }
 
+
 .dprt1 {
-    transform: translate(-5em, -3em) !important;
-    background-color: cornflowerblue !important;
+    transform: translate(-5em, -2em) !important;
+    background-color: grey !important;
+    height: 80px;
+    width: 100px;
 }
 
 .dprt2 {
-    transform: translate(-5em, -3em) !important;
-    background-color: tomato !important;
+    transform: translate(-5em, -2em) !important;
+    background-color: grey !important;
+    height: 80px;
+    width: 100px;
 }
 .dprt3 {
-    transform: translate(-5em, -3em) !important;
-    background-color: yellowgreen !important;
+    transform: translate(-5em, -2em) !important;
+    background-color: grey !important;
+
+    height: 80px;
+    width: 100px;
 }
 .fa-address-card, .fa-laptop-house, .fa-diagnoses,.fa-users-class {
     font-size: 50px;
     color: lightgray;
 }
 
-.dprt:focus, .dprt1:focus, .dprt2:focus, .dprt3:focus {
+.dprt:focus {
     background-color: green !important;
+        background-color: goldenrod !important;
+
+}
+.dprt1:focus{    
+    background-color: cornflowerblue !important;
+
+
+}
+.dprt2:focus{    
+    background-color: tomato !important;
+
+
+}
+.dprt3:focus{    
+    background-color: yellowgreen !important;
+} 
+.box-1{
+    margin-top: 50px !important;
+    height: 15vh !important;
+    /* margin-left: 20px !important; */
+}
+
+
+@media only screen and (max-width:1370px){
+    .fa-address-card, .fa-laptop-house, .fa-diagnoses,.fa-users-class {
+        font-size: 40px;
+        color: lightgray;
+    }
+
+    .box-1{
+        max-height: 15vh !important;
+
+    }
+    .dprt {
+        transform: translate(-6em, -2em) !important;
+        background-color: goldenrod !important;
+        height: 60px;
+        width: 80px;
+        position: absolute;
+    }   
+    
+    
+    .dprt1 {
+        transform: translate(-6em, -2em) !important;
+        background-color: cornflowerblue !important;
+        height: 60px;
+        width: 80px;
+        position: absolute;
+    }
+    
+    .dprt2 {
+        transform: translate(-6em, -2em) !important;
+        background-color: tomato !important;
+        height: 60px;
+        width: 80px;
+        position: absolute;
+    }
+    .dprt3 {
+        transform: translate(-6em, -2em) !important;
+        background-color: yellowgreen !important;
+        height: 60px;
+        width: 80px;
+        position: absolute;
+    }
+    .dpr-text{
+        margin-top: 40px;
+    }
 }
