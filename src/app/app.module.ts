@@ -4,14 +4,26 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.component';
 import { AppRoutingModule,routingcomponents } from './app-routing.module';
-import { RouterModule } from '@angular/router';
-import { reactivemodule } from './app-routing.module';
-import * as $ from 'jquery'
+import { RouterModule, Routes } from '@angular/router';
+import { MainAppRoutingModule,mainroutingcomponent} from './admin-dashboard/main-app-routing.module';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { HomeComponent } from './admin-dashboard/home/home.component';
+import * as $ from 'jquery';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingcomponents
+    routingcomponents,
+    mainroutingcomponent
+   
+  
+   
     
     
     
@@ -20,9 +32,11 @@ import * as $ from 'jquery'
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
-    RouterModule,
-    reactivemodule,
-    AppRoutingModule
+    
+    AppRoutingModule,
+    MainAppRoutingModule,
+    FormsModule,ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

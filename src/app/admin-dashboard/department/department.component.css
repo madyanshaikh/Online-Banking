@@ -57,13 +57,6 @@ i {
     transition: .3s linear !important;
 }
 
-button.collapse:focus {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
 
 .hover-only {
     transition: 0.30s ease;
@@ -75,6 +68,7 @@ button.collapse:focus {
     max-width: 0px !important;
     transition: .3s linear;
     position: absolute !important;
+    z-index: 100;
 }
 
 .z-depth-5 {
@@ -192,7 +186,7 @@ button.collapse:focus {
     }
     .dprt {
         transform: translate(-6em, -2em) !important;
-        background-color: goldenrod !important;
+        background-color: gray !important;
         height: 60px;
         width: 80px;
         position: absolute;
@@ -201,7 +195,7 @@ button.collapse:focus {
     
     .dprt1 {
         transform: translate(-6em, -2em) !important;
-        background-color: cornflowerblue !important;
+        background-color: gray !important;
         height: 60px;
         width: 80px;
         position: absolute;
@@ -209,14 +203,14 @@ button.collapse:focus {
     
     .dprt2 {
         transform: translate(-6em, -2em) !important;
-        background-color: tomato !important;
+        background-color: gray !important;
         height: 60px;
         width: 80px;
         position: absolute;
     }
     .dprt3 {
         transform: translate(-6em, -2em) !important;
-        background-color: yellowgreen !important;
+        background-color: gray !important;
         height: 60px;
         width: 80px;
         position: absolute;

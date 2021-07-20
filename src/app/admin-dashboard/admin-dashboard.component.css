@@ -3,7 +3,12 @@
     outline: none !important;
     /* transition: .3s !important; */
 }
-
+.row{
+    width: 100% !important;
+}
+.for-bg{
+    background-color: rgba(235, 230, 230, 0.274);
+}
 button {
     outline: none !important;
     border: none !important;
@@ -27,7 +32,7 @@ li {
     width: 100% !important;
 }
 
-i {
+.clr-icon {
     font-size: 17px;
     color: skyblue;
     transition: .1s;
@@ -57,24 +62,18 @@ i {
     transition: .3s linear !important;
 }
 
-button.collapse:focus {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
 
 .hover-only {
     transition: 0.30s ease;
 }
 
-.slide-left {
+.sliderr-left {
     height: 98% !important;
     min-width: 0px !important;
     max-width: 0px !important;
     transition: .3s linear;
     position: absolute !important;
+    z-index: 100;
 }
 
 .z-depth-5 {
@@ -84,7 +83,8 @@ button.collapse:focus {
 
 .hover-only:hover {
     color: white !important;
-    background-color: rgb(174, 189, 204);
+    /* background-color: rgb(174, 189, 204); */
+    background-color: skyblue;
     -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
@@ -172,12 +172,14 @@ button.collapse:focus {
 }
 .dprt3:focus{    
     background-color: yellowgreen !important;
+  
 } 
 .box-1{
     margin-top: 50px !important;
     height: 15vh !important;
     /* margin-left: 20px !important; */
 }
+
 
 
 @media only screen and (max-width:1370px){
@@ -224,4 +226,42 @@ button.collapse:focus {
     .dpr-text{
         margin-top: 40px;
     }
+
+    .c-gap-1{
+        column-gap: 10px !important;
+    }
+    #myChart3{
+      height: 300px !important;
+    }
 }
+.d-row{
+    column-gap: 30px;
+    margin: 0 !important;
+
+}
+.c-gap-1{
+    column-gap: 10px !important;
+}
+.row{
+    width: 100% !important;
+}
+
+.brdr-left{
+background-color: white;
+    border-left:5px solid skyblue ;
+}
+/* -------------------------------------------------------------dashboard-------------------------------- */
+.icon-size{
+    font-size: 25px;
+    color: skyblue;
+ }
+
+div canvas{
+    width: 100% !important;
+    min-width: 400px !important;
+}
+
+div #myChart3{
+    height: 100%;
+  }  
+   

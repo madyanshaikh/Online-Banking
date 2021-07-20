@@ -35,12 +35,16 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "node_modules/font-awesome/css/font-awesome.css"
+         
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "src/assets/custom/custom.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js"
+             
               
+              
+
               
               ]
           },
