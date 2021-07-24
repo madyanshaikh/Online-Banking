@@ -1,0 +1,56 @@
+
+.icon-lg{
+    font-size: 100px;
+    color: skyblue;
+}
+.txt{
+    color :slategrey;
+}
+.hover:hover{
+    background-color: skyblue;
+    -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+.hover:hover .icon-lg{
+    color: whitesmoke;
+}
+.hover:hover .txt{
+    color: whitesmoke;
+    /* font-size: 50px !important; */
+}
+.hover{
+    padding: 60px;
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2);
+    transition: .7s ease;
+}
+.row{
+    padding: 7em !important;
+    column-gap: 100px;
+    width: 100%;
+    margin: 0px !important;
+}
+@media only screen and (max-width:1370px){
+    .row{
+        
+        padding:7em 0px 0px 0px !important;
+        column-gap: 20px;
+        width: 100%;
+        margin: 0px !important;
+    }
+    .hover{
+        padding: 20px !important;
+        
+    }
+    .row{
+        padding-top:4em !important ;
+    }
+}
+.hover:hover .check-1{
+    font-size: 15px !important;
+}
+.hover:hover .check-2{
+    font-size: 10px !important ;
+}
+.check-1,.check-2{
+transition: .5s ease;
+}

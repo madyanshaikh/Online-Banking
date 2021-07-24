@@ -1,0 +1,66 @@
+.border-bottom-1{
+
+    padding: 20px;
+    /* font-size: 15px; */
+    font-weight: 500;
+    color: rgb(132, 171, 187);
+    
+}
+.border-right{
+    
+    padding-left: 10px !important;
+}
+.for-pd div{
+    color: slategray;    
+}
+i{
+    
+    
+    color: skyblue;
+    font-size: 20px;
+}
+
+.text-right-1{
+    
+    border: 1px solid skyblue;
+}
+mat-input,mat-form-field{
+    width: 100% !important;
+}
+.btn-account {
+    padding: 10px;
+    background-color: skyblue;
+    width: 200px;
+    color: rgb(241, 248, 255);
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    cursor: pointer!important;
+    transition: .3s ease;
+    border-radius: 2px;
+  }
+  
+  .btn-account:hover {
+    background-color: slategrey!important;
+    box-shadow: 0px 22px 24px rgba(0, 0, 0, 0.11);
+    letter-spacing: 1px;
+  }
+
+  .btn-gen {
+    padding: 10px;
+    background-color: slategray;
+    width: 200px;
+    color: rgb(241, 248, 255);
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    cursor: pointer!important;
+    transition: .3s ease;
+  }
+  
+  .btn-gen:hover {
+    background-color: rgb(147, 164, 182) !important;
+    letter-spacing: 1px;
+  }

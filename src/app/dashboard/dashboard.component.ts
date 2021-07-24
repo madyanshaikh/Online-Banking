@@ -1,9 +1,13 @@
 import { Identifiers } from '@angular/compiler';
 import { Component, OnInit, Query, } from '@angular/core';
+<<<<<<< HEAD
 declare var $: any;
 declare const feather: any;
 declare const myActive: any;
 declare const togleBar: any;
+=======
+
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
 
 
@@ -17,6 +21,7 @@ declare const togleBar: any;
 
 export class DashboardComponent implements OnInit {
 
+<<<<<<< HEAD
   constructor() {
     
    }
@@ -45,5 +50,13 @@ export class DashboardComponent implements OnInit {
     document.getElementsByTagName("head")[0].appendChild(node);
   }
 
+=======
+  constructor() { }
+
+  ngOnInit(): any {
+    
+    
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
  
+}
 }

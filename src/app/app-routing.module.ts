@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginFormComponent } from './login-form/login-form.component';
+<<<<<<< HEAD
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DepartmentComponent } from './department/department.component';
@@ -11,6 +12,25 @@ import { AccountListComponent } from './dashboard/MyAccounts/account-list/accoun
 import { CardListComponent } from './dashboard/MyCard/card-list/card-list.component';
 import { AccountManagementComponent } from './dashboard/MyAccounts/account-management/account-management.component';
 
+=======
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AccountListComponent } from './account-list/account-list.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+
+
+
+
+
+const routes: Routes = [
+  { path: 'welcome', component: WelcomeComponent},
+  { path: 'login-form', component: LoginFormComponent},
+  { path: 'admin-dashboard', component: AdminDashboardComponent},
+  { path: 'user-dashboard',component:DashboardComponent},
+  
+
+];
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent},
@@ -36,6 +56,7 @@ export  const routingcomponents =[
     LoginFormComponent,
     DashboardComponent,
     AdminDashboardComponent,
+<<<<<<< HEAD
     WelcomeComponent,
     DepartmentComponent,
     MyHomeComponent,
@@ -49,3 +70,12 @@ export  const routingcomponents =[
     ReactiveFormsModule, 
     FormsModule
   ] ;
+=======
+    AccountListComponent,
+    WelcomeComponent,
+ 
+  
+    
+   
+  ];
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86

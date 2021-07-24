@@ -1,0 +1,140 @@
+<div class="row row-me text-center">
+    <h1 class="p-3 pb-5 mt-3 m-auto text-center" style="color: lightslategray; font-weight: 500;">Account Settings</h1>
+</div>
+<div class="row pt-5" style="width: 100%;">
+    <div class="col-md-5 border-right">
+        <div class="row p-0" style="width: 100%;">
+            <div class="col-md-7 p-0 for-pd">
+                <div class="row border-bottom-1">
+
+                    <div class="col-md-2 text-right"><i class="far fa-user"></i></div>
+                    <div class="col-md-10 p-0 border-right border-right">First Name</div>
+                </div>
+                <div class="row border-bottom-1">
+
+                    <div class="col-md-2 text-right"><i class="fas fa-user"></i></div>
+                    <div class="col-md-10 p-0 border-right">Lirst Name</div>
+                </div>
+
+                <div class="row border-bottom-1">
+
+                    <div class="col-md-2 text-right"><i class="fas fa-phone"></i></div>
+                    <div class="col-md-10 p-0 border-right">Contact</div>
+                </div>
+                <div class="row border-bottom-1">
+
+                    <div class="col-md-2 text-right"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="col-md-10 p-0 border-right">Date Of Birth</div>
+                </div>
+                <div class="row border-bottom-1">
+
+                    <div class="col-md-2 text-right"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="col-md-10 p-0 border-right">Qualification</div>
+                </div>
+                <div class="row border-bottom-1">
+
+                    <div class="col-md-2 text-right"><i class="fas fa-building"></i></div>
+                    <div class="col-md-10 p-0 border-right">Department</div>
+                </div>
+                <div class="row border-bottom-1">
+
+                    <div class="col-md-2 text-right d-flex">
+                        <i class="fas fa-male"></i>
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div class="col-md-10 p-0 border-right">Gender</div>
+                </div>
+
+            </div>
+            <div class="col-md-5 p-0">
+                <div class="col-md border-bottom-1">Shaikh </div>
+                <div class="col-md border-bottom-1">Madyan</div>
+
+                <div class="col-md border-bottom-1">0332-1234567</div>
+                <div class="col-md border-bottom-1">2020-05-29</div>
+                <div class="col-md border-bottom-1">Graduated</div>
+                <div class="col-md border-bottom-1">Complaint</div>
+                <div class="col-md border-bottom-1">Male</div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div class="col-md-7 pl-5">
+        <div class="col-lg-4 row pb-2"><button class="btn-account float-right" (click)="toggle()" (click)="toggle1()">Change Password</button></div>
+        <div class="row border-bottom p-2">
+            
+
+            <div class="col-md-6 row">
+
+                <div class="col-md-2 text-right"><i class="far fa-user"></i></div>
+                <div class="col-md-10 p-0 text-secondary">User Name</div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md text-right" style="color: rgb(132, 171, 187);">Shaikh@#12347</div>
+            </div>
+        </div>
+        <div class="row" *ngIf="isShown">
+
+            <div class="col-md-12">
+                <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                    <mat-label>New Password</mat-label>
+                    <input matInput disabled value="#wedD4587">
+                    <mat-hint align="end" class="mb-5">Should Be Strong</mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput disabled value="Password">
+                    <mat-hint align="end" class="mb-5">Should Be Strong</mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                    <mat-label>Old Password</mat-label>
+                    <input matInput disabled value="#SSCae@34587">
+                    <mat-hint align="end" class="mb-5">Should Be Strong</mat-hint>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row" *ngIf="isNotShown">
+
+            <div class="col-md-12">
+                <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                    <mat-label>New Password</mat-label>
+                    <input matInput #input placeholder="New Password">
+                    <mat-hint align="end" class="mb-5">Should Be Strong</mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput #input placeholder="Confirm Password">
+                    <mat-hint align="end" class="mb-5">Should Be Strong</mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="col-md-12">
+                <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                    <mat-label>Old Password</mat-label>
+                    <input matInput #input placeholder="Old Password">
+                    <mat-hint align="end" class="mb-5">Should Be Strong</mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="col-lg pt-3 d-flex">
+                <div class="col-lg float-left">
+                    <button class="btn-account">Save</button>
+                </div>
+                <div class="col-lg">
+                    <button class="btn-account float-right">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

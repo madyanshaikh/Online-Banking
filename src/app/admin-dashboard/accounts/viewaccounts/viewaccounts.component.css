@@ -1,0 +1,37 @@
+
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td,th {
+  
+    width: 270px;
+   
+    
+  }
+  th{
+      font-size: 17px;
+      font-weight: 500;
+  }
+  td{
+    color: lightslategray;
+    font-size:15px;
+    font-weight: 500;
+  }
+  #action{
+        padding-left: 5em;
+        
+  }
+  button{
+      color:skyblue
+  }
+  mat-label{
+      padding-left: 20px;
+      font-size: 20px;
+      color: lightslategray;
+  }

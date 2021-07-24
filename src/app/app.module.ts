@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { MaterialModule } from './material/material.component';
 import { LoginFormComponent } from './login-form/login-form.component';
@@ -29,19 +30,31 @@ import { reactivemodule } from './app-routing.module';
 import { MyHomeComponent } from './dashboard/Home/my-home/my-home.component';
 
 
+=======
+import { AppRoutingModule, routingcomponents } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
+import { MainAppRoutingModule, mainroutingcomponent } from './admin-dashboard/main-app-routing.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MaterialModule } from './material/material.component';
+import * as $ from 'jquery';
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
 
 
 
 
 
+<<<<<<< HEAD
 const routes: Routes = [
 
 ];
+=======
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     DashboardComponent,
     MyHomeComponent,
     AccountListComponent,
@@ -65,11 +78,17 @@ const routes: Routes = [
 
    
 
+=======
+    routingcomponents,
+    mainroutingcomponent,
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
-    
   ],
+
+
   imports: [
     BrowserModule,
+<<<<<<< HEAD
     MaterialModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
@@ -77,8 +96,18 @@ const routes: Routes = [
     RouterModule,
     AppRoutingModule,
     reactivemodule
+=======
+    MaterialModule,    
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MainAppRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
   ],
+
+  
   providers: [],
   bootstrap: [AppComponent]
 })

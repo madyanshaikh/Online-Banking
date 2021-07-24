@@ -1,0 +1,176 @@
+<mat-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <div class="row p-5">
+
+
+
+                <ng-template matStepLabel>Personal Information</ng-template>
+                <div class="col-md">
+                    <div class="col-md">
+                        <mat-form-field appearance="legacy">
+
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon" id="person">
+                                person
+                            </mat-icon>
+                            <mat-label>first name</mat-label>
+                            <input matInput placeholder="First name" formControlName="firstCtrl" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md">
+                        <mat-form-field appearance="legacy">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon" id="person">
+                                person
+                            </mat-icon>
+                            <mat-label>Last Name</mat-label>
+                            <input matInput placeholder="Last name" formControlName="first1Ctrl" required>
+                        </mat-form-field> <br>
+                    </div>
+
+                    <div class="col-md">
+                        <mat-form-field appearance="legacy">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">
+                                contacts
+                            </mat-icon>
+                            <mat-label>Contact</mat-label>
+                            <input matInput placeholder="Contact" formControlName="first2Ctrl" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md border-left pl-5">
+                    <div class="col-md">
+                        <mat-form-field appearance="legacy">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">email
+                            </mat-icon>
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Email" formControlName="first3Ctrl" required>
+                        </mat-form-field> <br>
+                    </div>
+                    <div class="col-md">
+                        <mat-form-field appearance="legacy">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">date_range
+                            </mat-icon>
+
+                            <mat-label>Date Of Birth</mat-label>
+                            <input matInput placeholder="Date Of Birth" formControlName="first4Ctrl" required>
+                        </mat-form-field> <br>
+
+                    </div>
+                    <div class="col-md">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon"
+                                style="transform: translate(.10em,0.1em);">wc
+                            </mat-icon>
+                            <mat-radio-button color="warn" value="1">Male</mat-radio-button>
+                            <mat-radio-button color="warn" value="2">Female</mat-radio-button>
+                        </mat-radio-group>
+                        <button mat-button matStepperNext class="btn float-right">Next</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </mat-step>
+
+
+
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+
+            <div class="row p-5">
+                <div class="col-md">
+
+                    <ng-template matStepLabel>Professional Information</ng-template>
+                    <div class="col-md">
+                        <button mat-button matStepperPrevious class="btn">Back</button>
+                    </div>
+                    <div class="col-md">
+                        <mat-form-field appearance="legacy">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">school
+                            </mat-icon>
+
+                            <mat-label>Qualification</mat-label>
+                            <input matInput formControlName="secondCtrl" placeholder="Qualification" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md">
+                        <mat-form-field appearance="legacy">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">business
+                            </mat-icon>
+
+                            <mat-label>Department</mat-label>
+                            <input matInput formControlName="second1Ctrl" placeholder="Department" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md">
+                        <mat-form-field appearance="legacy">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">money
+                            </mat-icon>
+
+                            <mat-label>Salary</mat-label>
+                            <input matInput formControlName="second2Ctrl" placeholder="Salary" required>
+                        </mat-form-field>
+                    </div>
+
+
+
+
+                </div>
+                <div class="col-md border-left p-5">
+                    <img [src]="photoFilePath" alt=" Employee Image">
+
+                    <div class="form-group pt-2">
+                        <mat-icon aria-hidden="false" class="fieldIcons" id="img">image</mat-icon>
+
+                        <input type="file" class="form-control-file ml-5" id="exampleFormControlFile1">
+                    </div>
+                    <button mat-button matStepperNext class="btn float-right">Next</button>
+                </div>
+            </div>
+        </form>
+    </mat-step>
+
+
+    <mat-step>
+        <ng-template matStepLabel>Accounts Information</ng-template>
+        <form [formGroup]="secondFormGroup">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div class="col-md">
+                        <button mat-button matStepperPrevious class="btn">Back</button>
+                    </div>
+                    <div class="col-md">
+                        <mat-form-field appearance="legacy">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">person
+                            </mat-icon>
+
+                            <mat-label>User Name</mat-label>
+                            <input matInput formControlName="second3Ctrl" placeholder="User Name" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md">
+
+                        <mat-form-field appearance="legacy">
+                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">lock
+                            </mat-icon>
+
+                            <mat-label>Password</mat-label>
+                            <input matInput formControlName="second4Ctrl" placeholder="Password" required>
+                        </mat-form-field>
+                    </div>
+                     <div class="col-md">   
+                    <button mat-button class="pl-5 pr-5 border btn-light"> Generate Accounts Details</button>
+                </div>
+                
+                      <div class="col-md"><button class="save">Save</button></div>
+                </div>
+             
+                    <button mat-button (click)="stepper.reset()" class="btn float-right">Reset</button>
+               
+               
+            </div>
+         
+        </form>
+    </mat-step>
+</mat-stepper>

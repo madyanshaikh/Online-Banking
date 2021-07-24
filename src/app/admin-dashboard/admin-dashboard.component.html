@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav class="navbar navbar-dark row m-0 z-depth-5 nv-color">
 
     <h4 class="col-md-2 pt-2  nav-link text-center text-secondary" style="min-width: 300px !important;">Muslim Bank</h4>
@@ -167,3 +168,198 @@
    
   
   </div>
+=======
+<div class="for-bg">
+  <nav class="navbar navbar-dark row m-0 z-depth-5 nv-color">
+
+    <h4 class="col-md-2 pt-2 nav-link text-secondary"
+      style="min-width: 300px !important; padding-left: 60px !important;">Muslim Bank</h4>
+
+    <div class="col-md p-0 text-left">
+      <button class="nav-link sidenav-btn btn-muted bars" mat-button (click)="drawer.toggle()"><i
+          class="clr-icon fas fa-bars" style="font-size: 30px;"></i></button>
+    </div>
+
+
+
+    <div class="col-md-4 text-right input-group">
+      <input type="text" class="form-control" placeholder="Search this blog">
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="button">
+          <i class="fa fa-search" style="color: skyblue;"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false"
+        style="font-weight: 500; text-transform: capitalize !important; color: skyblue;">
+        <img class="rounded-circle p-1" src="../../assets/images/6.jpg" alt=""
+          style="width: 50px;height: 50px; ">&nbsp;&nbsp;&nbsp;&nbsp;Admin
+      </button>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+
+
+
+
+
+  </nav>
+
+
+  <div class="row p-0 pt-0">
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+        <div class="col-md-2 main-toggle p-0 pl-1">
+
+
+          <div class="col-md-12 p-2 text-center dnone">
+            <img class="rounded-circle ml-auto" src="../../assets/images/6.jpg" alt=""
+              style="width: 100px;height:100px;">
+          </div>
+          <div class="col-md-12 text-center dnone">
+            <p class=" col-md-12 font-weight-bold p-0" style="color: skyblue;">Admin</p>
+            <h6 class="col-md-12 p-0 font-weight-bold pb-3" style="color: slategrey;">Shaikh Madyan</h6>
+
+          </div>
+          <div class="col-md-12 pt-5 dnone">
+            <div class="h5 pl-4" style="color: skyblue; font-weight: 500;">GENERAL</div>
+          </div>
+          <div class="col-md dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0" routerLink="home">
+              <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+
+              <button class="h6 nav-link pt-4 pb-3 cl"><i class="clr-icon fas fa-home"></i>
+                &nbsp;&nbsp;Dashboard</button>
+            </div>
+
+          </div>
+          <div class="col-md-12 dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0"  routerLink="employee">
+              <!-- --------------------Home ------------- toggle2-------------------starts--------------- -->
+              <button class="h6 nav-link pt-4 pb-3 cl"> <i class="clr-icon fas fa-user-friends"></i>
+                &nbsp;&nbsp;Employees</button>
+
+
+            </div>
+          </div>
+          <div class="col-md-12 dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0" routerLink="department">
+              <!-- --------------------Home ------------- toggle3-------------------starts--------------- -->
+              <button class="h6 nav-link pt-4 pb-3 cl" > <i class="clr-icon fas fa-building"></i>
+                &nbsp;&nbsp;Department</button>
+
+
+            </div>
+          </div>
+          <div class="col-md-12 dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0" routerLink ="customer">
+              <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+              <button class="h6 nav-link pt-4 pb-3 cl"> <i class="clr-icon fas fa-users"></i>
+                &nbsp;&nbsp;Customers</button>
+
+
+            </div>
+          </div>
+          <div class="col-md-12 dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0"  routerLink="branch">
+              <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+              <button class="h6 nav-link pt-4 pb-3 cl"> <i
+                  class="clr-icon fas fa-code-branch clr-icon fas fa-sitemap"></i>
+                &nbsp;&nbsp;Branch</button>
+
+
+
+            </div>
+          </div>
+          <div class="col-md-12 dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0" routerLink="accounts">
+              <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+              <button class="h6 nav-link pt-4 pb-3 cl"> <i class="clr-icon fas fa-chart-bar"></i>
+                &nbsp;&nbsp;Accounts</button>
+
+
+            </div>
+          </div>
+          <div class="col-md-12 dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0" routerLink="revenue">
+              <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+              <button class="h6 nav-link pt-4 pb-3 cl"> <i class="clr-icon fas fa-money-check-alt"></i>
+                &nbsp;&nbsp;Revenue</button>
+
+
+            </div>
+          </div>
+          <div class="col-md-12 dnone">
+            <div class="h5 pl-4 pt-2 pb-2" style="color: skyblue; font-weight: 500;">FEATURES</div>
+          </div>
+          <div class="col-md-12 dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0" routerLink="notification">
+              <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+              <button class="h6 nav-link pt-4 pb-3 cl"><i class="clr-icon fas fa-bell"></i>
+                &nbsp;&nbsp;Generate Notification</button>
+
+
+            </div>
+
+
+          </div>
+
+          <div class="col-md-12 dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0" routerLink="loan">
+              <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+              <button class="h6 nav-link pt-4 pb-3 cl"><i class="clr-icon fas fa-hand-holding-usd"></i>
+                &nbsp;&nbsp;Loan</button>
+
+
+
+            </div>
+          </div>
+          <div class="col-md-12 dnone hover-only btn-ripple">
+
+            <div class="col-md-12 p-0" routerLink="setting">
+              <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+              <button class="h6 nav-link pt-4 pb-3 cl"> <i class="clr-icon fas fa-tools"></i>
+                &nbsp;&nbsp;Settings</button>
+
+
+
+            </div>
+          </div>
+
+        </div>
+       
+    
+      </mat-drawer>
+    </mat-drawer-container>
+
+    <div class="col-md m-0 p-0 pl-2">
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+</div>
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
