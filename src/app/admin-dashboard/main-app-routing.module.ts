@@ -17,15 +17,27 @@ import { QualityComponent } from './department/quality/quality.component';
 import { ComplaintComponent } from './department/complaint/complaint.component';
 import { ItComponent } from './department/it/it.component';
 import { HomeComponent } from './home/home.component';
-
+import { AddComponent } from './employee/add/add.component';
+import { ViewComponent } from './employee/view/view.component';
+import { AddCustomerComponent } from './customers/addcustomer/addcustomer.component';
+import { ViewCustomerComponent } from './customers/viewcustomer/viewcustomer.component';
+import { ViewaccountsComponent } from './accounts/viewaccounts/viewaccounts.component';
+import { AddaccountsComponent } from './accounts/addaccounts/addaccounts.component';
 const routes: Routes = [
   {
     path: 'admin-dashboard', component: AdminDashboardComponent, children: [
-      { path: 'home', component: HomeComponent },
+      { path: 'home', component: HomeComponent,},
+      {path:'employee',component:EmployeeComponent,children:[{path:'add',component:AddComponent},{ path:'view',component: ViewComponent,}] },
       {path: 'department', component: DepartmentComponent, children: [{ path: 'hr', component: HrComponent },
         { path: 'quality', component: QualityComponent }, { path: 'complaint', component: ComplaintComponent }, { path: 'it', component: ItComponent }]
-      }
-
+      },
+      {path:'customer',component:CustomersComponent,children:[{path:'addcustomer',component:AddCustomerComponent},{ path:'viewcustomer',component: ViewCustomerComponent,}] },
+      {path:'branch',component:BranchComponent},
+      {path:'accounts',component:AccountsComponent,children:[{path:'viewaccounts',component:ViewaccountsComponent},{path:'addaccounts',component:AddaccountsComponent}]},
+      {path:'revenue',component:RevenueComponent},
+      {path: 'notification',component:NotificationComponent},
+      {path:'loan',component:LoanComponent},
+      {path:'setting',component:SettingComponent}
     ]
   }
 
@@ -51,6 +63,8 @@ export const mainroutingcomponent = [
   RevenueComponent,
   NotificationComponent,
   LoanComponent,
-  SettingComponent
+  SettingComponent,
+  AddComponent,
+  ViewComponent,AddCustomerComponent,ViewCustomerComponent,AddaccountsComponent,ViewaccountsComponent
 
 ];

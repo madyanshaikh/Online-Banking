@@ -1,0 +1,67 @@
+
+.mat-form-field {
+    margin-top: 16px;
+    width: 100%;
+  }
+
+mat-icon{
+    position: absolute;
+    margin-left :-40px;
+    color: skyblue;
+    margin-top: -4px;
+    font-size: 30px;
+}
+mat-label{
+    font-weight: 500;
+}
+
+.mat-radio-group{
+    position: absolute;
+    transform: translateY(1.5em);
+  
+    /* padding: 50px; */
+}
+.mat-radio-button{
+color: slategray;
+font-weight: 500;
+  margin-left: 10px; 
+}
+
+mat-stepper{
+    border: 1px solid rgb(206, 209, 212);
+    margin-top: 20px;
+    background-color: whitesmoke !important;
+    padding: 50px;
+}
+.btn{
+    font-size: 20px;
+    font-weight: 500;
+    background-color: transparent;
+    width: 100px !important;
+    padding: 10px;
+    border: 1px solid slategray;
+}
+.btn:hover,.save:hover{
+ color: skyblue;
+ background-color: rgba(119, 136, 153, 0.288);
+}
+
+.save{
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: rgba(185, 191, 197, 0.164);
+
+}
+img{
+    min-height: 202px !important;
+    min-width: 200px !important;
+    border: 1px solid gray;
+    padding: 10px;
+}
+#img{
+    margin-left: -5px;
+    font-size: 40px;
+}

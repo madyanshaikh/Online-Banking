@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-complaint',
+  selector: 'complaint',
   templateUrl: './complaint.component.html',
   styleUrls: ['./complaint.component.css']
 })

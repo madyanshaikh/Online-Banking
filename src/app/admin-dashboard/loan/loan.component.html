@@ -1,1 +1,122 @@
-<p>loan works!</p>
+<div class="row row-me text-center">
+    <h1 class="p-3 pb-5 mt-3 m-auto text-center" style="color: lightslategray; font-weight: 500;">Bank Loan Generator</h1>
+</div>
+<div class="container p-0">
+    
+        <mat-stepper #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <div class="row p-5">
+        
+        
+        
+                        <ng-template matStepLabel>Personal Information</ng-template>
+                        <div class="col-md">
+                            <div class="col-md">
+                                <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                                    <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon" id="person">
+                                        
+                                        password
+                                       
+                                </mat-icon>
+                                  
+                                    <mat-label>Account No #</mat-label>
+                                    <input matInput disabled value="PKR42057845-55244-32">
+                                    <mat-hint align="end" class="mb-5">Read-only</mat-hint>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md"><button class="save-4">Verify Account Number</button></div>
+                            <div class="col-md">
+                                <mat-form-field class="example-full-width" appearance="legacy">
+                                    <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon" id="person">
+                                        
+                                            date_range
+                                           
+                                    </mat-icon>
+                                    <mat-label>Date</mat-label>
+                                    <input matInput disabled value="Transfer Date">
+                                </mat-form-field> <br>
+                            </div>
+        
+                            <div class="col-md">
+                                <mat-form-field appearance="legacy">
+                                    <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">
+                                        attach_money
+                                    </mat-icon>
+                                    <mat-label>Amount Transfer</mat-label>
+                                    <input matInput disabled value="Amount to Transfer">
+                                </mat-form-field>
+                                <div class="col-md"><button type="button" class="save-1" disabled>Transfer <i class="fas fa-angle-double-right pt-1 pl-2" style="position: absolute;"></i></button></div>
+                            </div>
+                        </div>
+                        <div class="col-md border-left pl-5">
+                            <div class="col-md">
+                                <mat-form-field appearance="legacy">
+                                    <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">email
+                                    </mat-icon>
+                                    <mat-label>IBAN Number</mat-label>
+                                    <input matInput placeholder="Optional" formControlName="first3Ctrl" required>
+                                </mat-form-field> <br>
+                            </div>
+                            <div class="col-md">
+                                <mat-form-field appearance="legacy">
+                                    <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">date_range
+                                    </mat-icon>
+        
+                                    <mat-label>Cvc Code</mat-label>
+                                    <input matInput placeholder="Optional" formControlName="first4Ctrl" required>
+                                </mat-form-field> <br>
+        
+                            </div>
+                            <div class="col-md">
+                                <button mat-button matStepperNext class="save-2 float-right">Next</button></div>
+                        </div>
+                       
+                    </div>
+        
+                </form>
+            </mat-step>
+        
+        
+        
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+        
+                    <div class="row p-5">
+                        <div class="col-md">
+        
+                            <ng-template matStepLabel>Confirmation</ng-template>
+                            <div class="col-md">
+                                <button mat-button matStepperPrevious class="save-2">Back</button>
+                            </div>
+                            <div class="col-md">
+                                <mat-form-field appearance="legacy">
+                                    <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">password
+                                    </mat-icon>
+        
+                                    <mat-label>Current Pasword</mat-label>
+                                    <input matInput formControlName="secondCtrl" placeholder="Current Password" required>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md">
+                                <mat-form-field appearance="legacy">
+                                    <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">engineering
+                                    </mat-icon>
+        
+                                    <mat-label>Confirm Password</mat-label>
+                                    <input matInput formControlName="second1Ctrl" placeholder="Confirm Password" required>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md"><button type="button" class="save-2">Transfer <i class="fas fa-angle-double-right pt-1 pl-2" style="position: absolute;"></i></button></div>
+        
+        
+        
+                        </div>
+                        
+                    </div>
+                </form>
+            </mat-step>
+        </mat-stepper>
+       
+  
+</div>

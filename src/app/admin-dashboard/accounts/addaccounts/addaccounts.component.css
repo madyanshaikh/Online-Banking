@@ -1,0 +1,80 @@
+.search {
+  color: slategray;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+}
+
+.btn-account {
+  padding: 10px;
+  background-color: skyblue;
+  width: 200px;
+  color: rgb(241, 248, 255);
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  cursor: pointer!important;
+  transition: .3s ease;
+}
+
+.btn-account:hover {
+  background-color: rgb(177, 216, 231)!important;
+  letter-spacing: 5px;
+}
+
+.btn-gen {
+  padding: 10px;
+  background-color: slategray;
+  width: 200px;
+  color: rgb(241, 248, 255);
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  cursor: pointer!important;
+  transition: .3s ease;
+}
+
+.btn-gen:hover {
+  background-color: rgb(147, 164, 182) !important;
+  letter-spacing: 5px;
+}
+
+.size-div {
+  background-color: skyblue;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 4px;
+  width: 60px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  transition: .3s ease;
+  font-size:20px;
+  font-weight: 500
+
+}
+
+.size-div:hover {
+  padding-top: 9px;
+  background-color: slategray;
+
+}
+.fa-user{
+ font-size:20px;
+ font-weight: 500;
+}
+
+@media only screen and (max-width:1370px) {
+  .btn-account {
+    width: 150px !important;
+    margin: 0px !important;
+  }
+ 
+}

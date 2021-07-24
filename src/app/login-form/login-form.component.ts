@@ -11,17 +11,17 @@ export class LoginFormComponent implements OnInit {
 
   url = 'assets/custom/custom.js';
   loadAPI: Promise<unknown> | undefined;
-  
-  ngOnInit(): void{
+
+  ngOnInit(): void {
     this.loadAPI = new Promise(resolve => {
       console.log("resolving promise...");
       this.loadScript();
     });
-   }
+  }
   username = ''
   password = ''
 
-  constructor(private snackbar: MatSnackBar,private router: Router) { }
+  constructor(private snackbar: MatSnackBar, private router: Router) { }
 
   public loadScript() {
     console.log("preparing to load...");
@@ -31,10 +31,11 @@ export class LoginFormComponent implements OnInit {
     node.async = true;
     node.charset = "utf-8";
     document.getElementsByTagName("head")[0].appendChild(node);
-}
- 
+  }
+
   onlogin() {
-    this.router.navigate(['admin-dashboard'])
+    this.router.navigate(['admin-dashboard']);
+
     // if (this.username == 'admin' && this.password == 'admin') {
     //   sessionStorage.setItem("isLogedIn", "true")
     //   this.router.navigate(['admin-dashboard'])
@@ -47,8 +48,8 @@ export class LoginFormComponent implements OnInit {
     //   this.snackbar.open("Invalid Username Or Password", "okay", { duration: 3000 })
     // }
 
-   }
-  
+  }
+
 }
 function showpass() {
   throw new Error('Function not implemented.');

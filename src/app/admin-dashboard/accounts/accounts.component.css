@@ -1,0 +1,56 @@
+.save1 {
+    font-weight: 500;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    color: slategray;
+    width: 100% !important;
+    max-width: 100% !important;
+    transition: 0.50s ease;
+    outline: none;
+
+}
+
+
+.row {
+    background-color: rgba(185, 191, 197, 0.164);
+    width: 100%;
+}
+
+mat-icon {
+ cursor: pointer;
+    transition: 0.50s ease;
+    color: skyblue;
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 60px;
+    text-align: center;
+    width: 50px;
+    height: 55px;
+    font-size: 30px;
+}
+
+.all-border:hover .save1 {
+    padding-left: 30px !important;
+    color: whitesmoke;
+    background-color: skyblue;
+}
+
+.all-border:hover mat-icon {
+    color: white;
+}
+
+.all-border {
+    box-shadow: 0 10px 10px 0px rgba(109, 132, 141, 0.205),0 10px 10px 0px rgba(121, 142, 146, 0.185);
+    /* border: 1px solid rgb(139, 150, 161); */
+    transition: 0.50s ease;
+    background-color: skyblue;
+}
+
+.all-border:hover {
+    padding-left: 30px !important;
+    /* background-color: skyblue; */
+    border: none;
+    -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}

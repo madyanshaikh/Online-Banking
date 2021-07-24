@@ -5,7 +5,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AccountListComponent } from './account-list/account-list.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { HomeComponent } from './admin-dashboard/home/home.component';
 
 
 
@@ -32,7 +31,7 @@ export  const routingcomponents =[
     AdminDashboardComponent,
     AccountListComponent,
     WelcomeComponent,
-    HomeComponent
+ 
   
     
    

@@ -1,4 +1,10 @@
 
+// --------------------------JAVASCRIPT--------------------------
+
+ function displaynone(){
+    document.getElementById("hide-me").style.display="none";
+ }
+
 // -------------------------------------jQuery-----------------------------------
 
 $( document ).ready(function() {
@@ -19,51 +25,6 @@ $( document ).ready(function() {
   });
 
 
-// ---------------------------side nav -------------------------------
-$(".sidenav-btn").click(function () {
-
-  $(".main-toggle").toggleClass("sliderr-left", "slow");
-  $(".dnone").toggleClass("d-none", "slow");
-  $("div #myChart").css("min-width", "400px");
-
-});
-  $(".hover-only").on("mouseenter", function () {
-      $("i", this).css("color", "mintcream");
-      $(".cl", this).css({ "padding-left": "45PX", "color": "white" });
-
-  });
-
-  $(".hover-only").on("mouseleave", function () {
-      $("i", this).css("color", "skyblue");
-      $(".cl", this).css({ "padding-left": "16px", "color": "slategrey" });
-  });
-
-
-
-  // ------------------table--------------------
-
-  $(".tbl,.tbl1,.tbl2,.tbl3").hide();
-
-  $(".dprt").click(function(){
-
-
-      $(".tbl").toggle("slow");
-  })
-  $(".dprt1").click(function(){
-
-
-      $(".tbl1").toggle("slow");
-  })
-  $(".dprt2").click(function(){
-
-
-      $(".tbl2").toggle("slow");
-  })
-  $(".dprt3").click(function(){
-
-
-      $(".tbl3").toggle("slow");
-  })
 
 
 });

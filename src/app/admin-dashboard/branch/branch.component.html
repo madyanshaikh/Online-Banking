@@ -1,1 +1,76 @@
-<p>branch works!</p>
+<h2 class="p-3 mt-3 text-center" style="color: lightslategray; font-weight: 500;">Bank Branches</h2>
+<div class="col-md bg-info all-border ml-4 m-0 p-0 float-right" style="max-width: 350px;">
+
+    <mat-icon aria-hidden="false" class="fieldIcons" id="add-icon">add</mat-icon>
+    <button class="save1 ">Add Customers</button>
+
+</div>
+
+<mat-form-field appearance="standard" class="pl-5 pr-5 pb-2">
+
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input class="pb-3">
+   
+</mat-form-field>
+
+
+<div class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- ID Column -->
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Branch ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+        </ng-container>
+
+
+
+        <!-- Name Column -->
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Branch Name </th>
+            <td mat-cell *matCellDef="let row"> </td>
+        </ng-container>
+
+        <!-- Fruit Column -->
+
+        <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+            <td mat-cell *matCellDef="let row"> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="city">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+            <td mat-cell *matCellDef="let row"> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header id="action"> Action </th>
+            <td mat-cell *matCellDef="let row">
+                <button mat-button>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">visibility</mat-icon>
+                </button>
+                <button mat-button>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+                </button>
+                <button mat-button color="warn">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

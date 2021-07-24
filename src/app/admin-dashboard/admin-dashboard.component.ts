@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { MatSidenav } from '@angular/material/sidenav';
+
 
 
 @Component({
@@ -10,10 +11,12 @@ import { Router } from '@angular/router';
 
 export class AdminDashboardComponent implements OnInit {
   
+ 
+  
   url = 'assets/custom/custom.js';
   loadAPI: Promise<unknown> | undefined;
   
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
 
@@ -21,7 +24,7 @@ export class AdminDashboardComponent implements OnInit {
       console.log("resolving promise...");
       this.loadScript();
     });
-    
+   
   }
 
   public loadScript() {
@@ -32,13 +35,12 @@ export class AdminDashboardComponent implements OnInit {
     node.async = true;
     node.charset = "utf-8";
     document.getElementsByTagName("head")[0].appendChild(node);
-}
+  } 
 
+  
 
-department(){
-    
-  this.router.navigate(['department']);
-}
+  
+
  }
 
 

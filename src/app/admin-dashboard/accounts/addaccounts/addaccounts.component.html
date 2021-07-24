@@ -1,0 +1,119 @@
+<form>
+    <div class="row p-2">
+
+        <div class="col-lg-3 search p-0 m-0">
+            <div class="row p-0 m-0 row-flex">
+                <div class="col-lg-2 text-center pt-3">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="col-lg-7 border-left">
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Customer Id</mat-label>
+                        <input matInput #input maxlength="10">
+                    </mat-form-field>
+                </div>
+                <div class="size-div mt-2"><i class="fas fa-arrow-down"></i></div>
+            </div>
+            <div class="row p-2">
+                <div class="col-lg h6">ID :</div>
+                <div class="col-lg-8"></div>
+            </div>
+            <div class="row p-2">
+                <div class="col-lg h6">First Name :</div>
+                <div class="col-lg"></div>
+            </div>
+            <div class="row p-2">
+                <div class="col-lg h6">Last Name :</div>
+                <div class="col-lg"></div>
+            </div>
+            <div class="row p-2">
+                <div class="col-lg h6">Contact :</div>
+                <div class="col-lg"></div>
+            </div>
+            <div class="row p-2">
+                <div class="col-lg h6">Cnic :</div>
+                <div class="col-lg"></div>
+            </div>
+            <div class="row p-2">
+                <div class="col-lg h6">Email :</div>
+                <div class="col-lg"></div>
+            </div>
+            <div class="row p-2">
+                <div class="col-lg h6">Gender :</div>
+                <div class="col-lg"></div>
+            </div>
+        </div>
+
+        <div class="col-lg border-left">
+
+            <mat-form-field appearance="legacy">
+                <mat-label>Account Type</mat-label>
+                <mat-select>
+                    <mat-option value="1">Current Account</mat-option>
+                    <mat-option value="2">Saving Account</mat-option>
+                    <mat-option value="3">Term Deposit Account</mat-option>
+                </mat-select>
+                <mat-hint align="end">Select your Account ^</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field hintLabel="Minimum ''0''" appearance="legacy" class="mt-2">
+                <mat-label>Opening Balance</mat-label>
+                <input matInput #input maxlength="10" placeholder="Balance 00.00">
+                <mat-hint align="end"> 0 / Infinite</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                <mat-label>Date of Account opening</mat-label>
+                <input matInput disabled value="2021/05/25">
+                <mat-hint align="end" class="mb-5">Read-only</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy">
+                <mat-label>Branches</mat-label>
+                <mat-select>
+                    <mat-option value="option">Karachi KHI - 789458</mat-option>
+                    <mat-option value="option">Islamabad ISB - 584681 </mat-option>
+                    <mat-option value="option">Lahore LHR - 859586</mat-option>
+                    <mat-option value="option">Rawalpindi RPD - 624586</mat-option>
+                    <mat-option value="option">Peshawar PWR - 859586</mat-option>
+
+
+                </mat-select>
+                <mat-hint align="end">Select your Branch ^</mat-hint>
+            </mat-form-field>
+            <mat-checkbox color="warn">Activate</mat-checkbox>
+        </div>
+
+        <div class="col-lg">
+            <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                <mat-label>Account No #</mat-label>
+                <input matInput disabled value="PKR42057845-55244-32">
+                <mat-hint align="end" class="mb-5">Read-only</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                <mat-label>User Name</mat-label>
+                <input matInput disabled value="Madyan@12345">
+                <mat-hint align="end" class="mb-5">Symbol/UpperCase</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="legacy" class="mt-4">
+                <mat-label>Password</mat-label>
+                <input matInput disabled value="#wedD4587">
+                <mat-hint align="end" class="mb-5">Should Be Strong</mat-hint>
+            </mat-form-field>
+
+            <div class="col-lg m-0 p-0 text-center">
+                <button class="btn-gen">Generate</button>
+            </div>
+            <div class="col-lg pt-3 d-flex">
+                <div class="col-lg float-left">
+                    <button class="btn-account">Save</button>
+                </div>
+                <div class="col-lg">
+                    <button class="btn-account float-right">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</form>
