@@ -87,7 +87,7 @@
 
                         <div class="form-group">
                             <input type="text" class="form-control text-center"
-                                placeholder="Username" required="">
+                                placeholder="Username" required="" [(ngModel)]="username">
                             <small id="emailHelp" class="form-text text-muted pl-2">We'll never share your email
                                 with anyone
                                 else.
@@ -96,13 +96,13 @@
 
                         <div class="form-group" id="show_hide_password">
                             <input id="password-field" type="password"
-                                class="form-control text-center" placeholder="Password" required="">
+                                class="form-control text-center" placeholder="Password" required=""[(ngModel)]="password">
                             <span id="hideShowBtn" class="pr-3">
-                                <a href="#" class="text-white"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                                <a class="text-white"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                             </span>
                         </div>
                         <div class="form-group pt-2">
-                            <button type="submit" id="btn-1" class="form-control btn" (click)="onlogin()">Sign
+                            <button type="submit" id="btn-1" class="form-control btn" (click)='onlogin()'>Sign
                                 In</button>
                         </div>
                         <div class="form-group d-md-flex">

@@ -1,74 +1,4 @@
-/* The spaN */
-.spaN {
-    display: block;
-    position: relative;
-    padding-left: 20px;
-    padding-right: 10px;
-    padding-bottom: 2px;
-    /* padding-top: 5px; */
-    /* margin-bottom: 12px; */
-    cursor: pointer;
-    font-size: .8rem;
-    font-weight: 700;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    float: left;
-  }
-
-  /* Hide the browser's default radio button */
-  .spaN input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    height: 15px;
-    width: 15px;
-    background-color: #fff;
-    border-radius: 50%;
-    font-size: .9rem;
-    
-  }
-  
-  
-  .spaN input ~ .checkmark {
-    border: 2px solid #7f7c7c;
-  }
-  
-
-  
-
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  
-  .spaN input:checked ~ .checkmark:after{
-    display: block;
-    
-  }
- 
-  
-  /* Style the indicator (dot/circle) */
-  .spaN .checkmark:after {
-       top: 2.5px;
-      left: 2.5px;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: black;
-  }
-
-  strong {
+strong {
     font-weight: 600;
     font-size: 1.3rem;
 }
@@ -91,7 +21,6 @@
     font-size: .9rem;
     font-weight: 600;
     margin: 0;
-    border: none;
 }
 label{
     font-weight: 700;

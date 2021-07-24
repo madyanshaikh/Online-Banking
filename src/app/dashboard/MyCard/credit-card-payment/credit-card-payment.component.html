@@ -1,6 +1,6 @@
 <div class="row mb-2 mb-xl-3">
     <div class="col-auto d-none d-sm-block">
-        <h5><strong style="color: black;">Payments</strong></h5>
+        <h5><strong style="color: black;">Credit Card Payment</strong></h5>
     </div>
 </div>
 
@@ -13,10 +13,9 @@
             <form action="">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6 mt-1">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <div class="card-title text-dark">Select From Account</div>
-                                <label for="pYAccount">ACCOUNT</label>
+                                <label for="pYAccount"><i class="far fa-dot-circle"></i> ACCOUNT</label>
                                 <select class="form-control" id="pYAccount">
                                     <option value="" disabled selected>Select Account</option>
                                     <option>Account Number</option>
@@ -29,52 +28,15 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                               <div class="card-title text-dark pb-1">Select Transfer To</div>
-                                <label class="spaN" (click)="bene1Function()">
-                                    <input type="radio" name="toggle" checked>
-                                    <span class="checkmark" ></span>
-                                    OWN ACCOUNT
-                                </label>
-                                <label class="spaN" (click)="bene2Function()">
-                                    <input type="radio" name="toggle">
-                                    <span class="checkmark" ></span>
-                                    Beneficiary
-                                </label>
-                                <label class="spaN" (click)="bene3Function()">
-                                    <input type="radio" name="toggle">
-                                    <span class="checkmark" ></span>
-                                    NON-BENEFICIARY
-                                </label>
-                                <div *ngIf="bene1">
-                                    <select class="form-control" id="beneOne">
-                                        <option value="" disabled selected>Select Own Account</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                    </select>
-                                </div>
-                                <div *ngIf="bene2">
-                                    <select class="form-control" id="beneTwo">
-                                        <option value="" disabled selected>Select Beneficiary</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                    </select>
-                                </div>
-                                <div *ngIf="bene3">
-                                    <select class="form-control" id="beneThree">
-                                        <option value="" disabled selected>Select Non Beneficiary</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                        <option>Credit Card Number</option>
-                                    </select>
-                                </div>
+                                <label for="pYCreditCard">Transfer To: CREDIT CARD</label>
+                                <select class="form-control" id="pYCreditCard">
+                                    <option value="" disabled selected>Select Card</option>
+                                    <option>Credit Card Number</option>
+                                    <option>Credit Card Number</option>
+                                    <option>Credit Card Number</option>
+                                    <option>Credit Card Number</option>
+                                    <option>Credit Card Number</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -90,8 +52,7 @@
                                     </div>
                                 </div>
                                 <div class="row align-items-end">
-                                    <div class="col-md-12 m-0 text-right"><button class="btn m-0 text-right"
-                                            id="showBalance" (click)="div1Function()">Show Balance</button></div>
+                                    <div class="col-md-12 m-0 text-right"><button class="btn m-0 text-right" id="showBalance" (click)="div1Function()">Show Balance</button></div>
                                 </div>
                             </div>
                         </div>

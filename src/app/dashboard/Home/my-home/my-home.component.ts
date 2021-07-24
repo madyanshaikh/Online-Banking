@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare const mdb:any;
 @Component({
   selector: 'app-my-home',
   templateUrl: './my-home.component.html',
@@ -9,7 +9,26 @@ export class MyHomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // url = 'assets/js/myActive.js';
+  // loadAPI: Promise<unknown> | undefined;
 
+  ngOnInit(): void {
+    // this.loadAPI = new Promise(resolve => {
+    //   console.log("resolving promise...");
+    //   this.loadScript();
+    // });
+
+  
+
+
+  }
+  // public loadScript() {
+  //   console.log("preparing to load...");
+  //   let node = document.createElement("script");
+  //   node.src = this.url;
+  //   node.type = "text/javascript";
+  //   node.async = true;
+  //   node.charset = "utf-8";
+  //   document.getElementsByTagName("head")[0].appendChild(node);
+  // }
 }

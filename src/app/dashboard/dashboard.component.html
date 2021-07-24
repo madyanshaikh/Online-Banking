@@ -1,17 +1,17 @@
 <div class="wrapper">
-    <nav id="sidebar" class="sidebar">
-        <div class="sidebar-content js-simplebar" id="sideBarContent">
+    <nav id="sidebar" class="sidebar" >
+        <div class="sidebar-content js-simplebar ml-2 mt-2 " id="sideBarContent" style="border-radius: 25px; background-color: #f7f7f7;">
             <a class="sidebar-brand" href="#">
                 <span class="align-middle pl-5">Muslim Bank</span>
             </a>
 
             <ul class="sidebar-nav mt-5 " id="mainList">
-                <li class="sidebar-header">
+                <li class="sidebar-header text-dark">
                     General
                 </li>
 
                 <li class="sidebar-item active" id="myHome">
-                    <a class="sidebar-link" routerLink="/home" routerLinkActive="active">
+                    <a class="sidebar-link" routerLink="Home" [routerLinkActive]="['active']">
                         <i class="align-items" data-feather="home"></i> <span class="align-middle">Home</span>
                     </a>
                 </li>
@@ -21,8 +21,8 @@
                         <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">My Accounts</span>
                     </a>
                     <ul id="HL" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link">Account List</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >Account Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Account-List">Account List</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Account-Management" >Account Management</a></li>
                     </ul>
                 </li>
 
@@ -31,7 +31,7 @@
                         <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">My Cards</span>
                     </a>
                     <ul id="CL" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link">Card List</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Card-List">Card List</a></li>
                         <li class="sidebar-item"><a class="sidebar-link" >Card Management</a></li>
                         <li class="sidebar-item"><a class="sidebar-link" >Cradit Card Payment</a></li>
                     </ul>
@@ -88,7 +88,7 @@
     </nav>
 
     <div class="main">
-        <nav class="navbar navbar-expand  navbar-bg">
+        <nav class="navbar navbar-expand  navbar-bg m-2" style="border-radius: 20px; background-color: #f7f7f7;">
             <a class="sidebar-toggle d-flex">
                 <i class="hamburger align-self-center"></i>
             </a>
@@ -278,10 +278,14 @@
                 </ul>
             </div>
         </nav>
+        <!-- <router-outlet></router-outlet> -->
+        <!-- <app-account-management></app-account-management> -->
+        <!-- <app-card-list></app-card-list> -->
+        <!-- <app-credit-card-payment></app-credit-card-payment> -->
+        <!-- <app-beneficiary-management></app-beneficiary-management> -->
+        <main class="content mr-2 ml-2" style="border-radius: 25px; background-color: #f7f7f7;"><app-inter-bank-fund-transfer></app-inter-bank-fund-transfer></main>
 
-        <main class="content"></main>
-
-        <footer class="footer">
+        <footer class="footer mt-2 mr-2 ml-2 mb-2" style="border-radius: 15px; background-color: #f7f7f7;">
             <div class="container-fluid">
                 <div class="row text-muted">
                     <div class="col-6 text-left">
@@ -310,4 +314,3 @@
         </footer>
     </div>
 </div>
-<router-outlet></router-outlet>

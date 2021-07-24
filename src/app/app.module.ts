@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { RouterModule, RouterOutlet, Routes } from '@angular/router';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -12,7 +11,7 @@ import { AccountListComponent } from './dashboard/MyAccounts/account-list/accoun
 import { AccountManagementComponent } from './dashboard/MyAccounts/account-management/account-management.component';
 import { CardListComponent } from './dashboard/MyCard/card-list/card-list.component';
 import { CardManagementComponent } from './dashboard/MyCard/card-management/card-management.component';
-import { CreditCardManagementComponent } from './dashboard/MyCard/credit-card-management/credit-card-management.component';
+import { CreditCardPaymentComponent } from'./dashboard/MyCard/credit-card-payment/credit-card-payment.component'
 import { BillPaymentsComponent } from './dashboard/Payments/bill-payments/bill-payments.component';
 import { BeneficiaryManagementComponent } from './dashboard/Payments/beneficiary-management/beneficiary-management.component';
 import { ChaqueBookRequestComponent } from './dashboard/ServiceRequest/chaque-book-request/chaque-book-request.component';
@@ -25,7 +24,11 @@ import { ActivityLogsComponent } from './dashboard/Settings/activity-logs/activi
 import { SessionHistoryComponent } from './dashboard/Settings/session-history/session-history.component';
 import { FundTransferComponent } from './dashboard/Transfers/fund-transfer/fund-transfer.component';
 import { InterBankFundTransferComponent } from './dashboard/Transfers/inter-bank-fund-transfer/inter-bank-fund-transfer.component';
-import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { AppRoutingModule, routingcomponents } from './app-routing.module';
+import { reactivemodule } from './app-routing.module';
+import { MyHomeComponent } from './dashboard/Home/my-home/my-home.component';
+
+
 
 
 
@@ -39,14 +42,13 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginFormComponent,
     DashboardComponent,
-    AdminDashboardComponent,
+    MyHomeComponent,
     AccountListComponent,
     AccountManagementComponent,
     CardListComponent,
     CardManagementComponent,
-    CreditCardManagementComponent,
+    CreditCardPaymentComponent,
     BillPaymentsComponent,
     BeneficiaryManagementComponent,
     ChaqueBookRequestComponent,
@@ -59,7 +61,8 @@ const routes: Routes = [
     SessionHistoryComponent,
     FundTransferComponent,
     InterBankFundTransferComponent,
-    routingComponents
+    routingcomponents,
+
    
 
 
@@ -70,9 +73,11 @@ const routes: Routes = [
     MaterialModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    ReactiveFormsModule,
     BrowserAnimationsModule,
-    FormsModule,
+    RouterModule,
+    AppRoutingModule,
+    reactivemodule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
