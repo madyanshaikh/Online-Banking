@@ -1,4 +1,13 @@
 import { NgModule } from '@angular/core';
+<<<<<<< HEAD
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
+var materialcomponents = [
+  MatSnackBarModule,
+  MatSidenavModule
+]
+=======
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button'
 import { MatSidenavModule } from '@angular/material/sidenav'
@@ -63,6 +72,7 @@ const ItemsArray = [
   MatTooltipModule,
   MatMenuModule,
   MatFormFieldModule ]
+>>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
 
 @NgModule({

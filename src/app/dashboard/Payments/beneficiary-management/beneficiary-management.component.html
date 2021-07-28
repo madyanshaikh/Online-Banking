@@ -1,0 +1,146 @@
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h5><strong style="color: black;">Payments</strong></h5>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-header">
+                <h5 class="card-title">Select From Account</h5>
+            </div>
+            <form action="">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mt-1">
+                            <div class="form-group">
+                                <div class="card-title text-dark">Select From Account</div>
+                                <label for="pYAccount">ACCOUNT</label>
+                                <select class="form-control" id="pYAccount">
+                                    <option value="" disabled selected>Select Account</option>
+                                    <option>Account Number</option>
+                                    <option>Account Number</option>
+                                    <option>Account Number</option>
+                                    <option>Account Number</option>
+                                    <option>Account Number</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               <div class="card-title text-dark pb-1">Select Transfer To</div>
+                                <label class="spaN" (click)="bene1Function()">
+                                    <input type="radio" name="toggle" checked>
+                                    <span class="checkmark" ></span>
+                                    OWN ACCOUNT
+                                </label>
+                                <label class="spaN" (click)="bene2Function()">
+                                    <input type="radio" name="toggle">
+                                    <span class="checkmark" ></span>
+                                    Beneficiary
+                                </label>
+                                <label class="spaN" (click)="bene3Function()">
+                                    <input type="radio" name="toggle">
+                                    <span class="checkmark" ></span>
+                                    NON-BENEFICIARY
+                                </label>
+                                <div *ngIf="bene1">
+                                    <select class="form-control" id="beneOne">
+                                        <option value="" disabled selected>Select Own Account</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                    </select>
+                                </div>
+                                <div *ngIf="bene2">
+                                    <select class="form-control" id="beneTwo">
+                                        <option value="" disabled selected>Select Beneficiary</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                    </select>
+                                </div>
+                                <div *ngIf="bene3">
+                                    <select class="form-control" id="beneThree">
+                                        <option value="" disabled selected>Select Non Beneficiary</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                        <option>Credit Card Number</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card-header m-0" id="accDetails">
+                                <div class="row align-items-end">
+                                    <div class="col-md-12">
+                                        <p>Account Number: <span class="acc-details">SQL</span></p>
+                                        <p>Account Title: <span class="acc-details">SQL</span></p>
+                                        <p>Currency: <span class="acc-details">SQL</span></p>
+                                        <p *ngIf="div1">Balance: <span class="acc-details">SQL</span></p>
+                                    </div>
+                                </div>
+                                <div class="row align-items-end">
+                                    <div class="col-md-12 m-0 text-right"><button class="btn m-0 text-right"
+                                            id="showBalance" (click)="div1Function()">Show Balance</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="amountSelection">ENTER AMMOUNT</label>
+                                <input type="number" class="form-control" placeholder="Enter Amount"
+                                    id="ammountSelection" name="ammountSelection">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="enterComments">ENTER COMMENTS (Max 250 characters)</label>
+                                <input type="text" class="form-control" placeholder="Enter Comments(Max 250 characters)"
+                                    id="enterComments" name="enterComments" maxlength="250">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="pYCreditCard">Select Purpose</label>
+                                <select class="form-control" id="pYCreditCard">
+                                    <option value="" disabled selected>Select Purpose</option>
+                                    <option>Purpose</option>
+                                    <option>Purpose</option>
+                                    <option>Purpose</option>
+                                    <option>Purpose</option>
+                                    <option>Purpose</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3 mb-3">
+                        <div class="col-md-12 text-right">
+                            <input type="reset" value="reset" class="btn" id="reset">
+                            <button class="btn" type="submit">Transfer</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
