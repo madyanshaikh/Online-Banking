@@ -1,30 +1,50 @@
-.image {
-  background-image: url(../../assets/images/3.jpg);
-  background-size: cover;
-  /* height: 100vh !important; */
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: slategrey !important;
+  border-color: slategrey !important;
 }
 
-.main-div {
-  height: 100% !important;
-  min-height: 122vh !important;
+::ng-deep.mat-form-field-outline {
+  /*change color of underline*/
+  /* background-color: rgba(112, 128, 144, 0.425) !important; */
+  color: slategrey !important;
+  border-bottom: slategrey !important;
+  border: none !important;
+}
+
+::ng-deep.mat-form-field-outline:focus {
+  border: none !important;
+  outline: none;
+  color: slategrey !important;
+  border-color: slategrey !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: whitesmoke !important;
+  color: slategrey !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.container-fluid {
+  background-image: url(../../assets/images/3.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-position: top center;
+  min-height: 100vh;
+}
+
+.container-fluid, .row {
+  background-color: transparent !important;
 }
 
 #btn-1 {
-  background-color: slategray !important;
+  background-color: lightgray !important;
   border-radius: 50px !important;
   height: 50px !important;
-}
-
-input {
-  color: whitesmoke !important;
-  background: rgba(112, 128, 144, 0.274) !important;
-  border-radius: 50px !important;
-  height: 50px !important;
-  border: 0px solid slategray !important;
-}
-
-input:hover {
-  background-color: rgba(78, 104, 110, 0.281) !important;
+  width: 300px !important;
 }
 
 #btn-1:hover, button:hover {
@@ -32,7 +52,7 @@ input:hover {
 }
 
 #f-p:hover {
-  color: slategray !important;
+  color: lightgray !important;
 }
 
 .row {
@@ -40,13 +60,7 @@ input:hover {
 }
 
 .dropdown-item {
-  color: slategray;
-}
-
-#hideShowBtn {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
+  color: lightgray !important;
 }
 
 .row-media {
@@ -60,4 +74,64 @@ input:hover {
   .main-row-media {
     display: none !important;
   }
+}
+
+.mat-form-field {
+  overflow: hidden;
+  margin-top: 16px;
+  width: 80%;
+  outline: none !important;
+  border: none !important;
+  padding-bottom: 5px;
+}
+
+.mat-form-field:focus, mat-input:focus, input:focus {
+  border: none !important;
+  outline: none !important;
+  border-color: slategrey !important;
+}
+
+.mat-input, input {
+  width: 100% !important;
+  /* border-bottom: 1px solid  whitesmoke !important; */
+  padding: 5px !important;
+}
+
+input {
+  color: slategrey !important;
+}
+
+mat-label {
+  color: slategrey !important;
+  text-align: center !important;
+  min-width: 100% !important;
+  width: 100% !important;
+  /* padding: 10em; */
+}
+
+.mat-icon {
+  transform: translate(-1em, -1em);
+  font-size: 30px !important;
+  color: skyblue;
+  cursor: pointer;
+  position: absolute;
+}
+
+a, h3 {
+  color: slategray !important;
+}
+
+mat-hint {
+  color: lightslategray !important;
+}
+
+
+.toggle-me{display: none;}
+@media screen and (max-width:700px) {
+ 
+.toggle-me{
+  display: block;
+}
+
+
 }

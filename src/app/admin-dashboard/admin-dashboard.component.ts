@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 
 
@@ -10,8 +10,9 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 
 export class AdminDashboardComponent implements OnInit {
-  
- 
+
+  isOpened: boolean = true;
+  desktopViewWidth: number = 1100;
   
   url = 'assets/custom/custom.js';
   loadAPI: Promise<unknown> | undefined;
@@ -24,6 +25,8 @@ export class AdminDashboardComponent implements OnInit {
       console.log("resolving promise...");
       this.loadScript();
     });
+
+    this.onResize(window.innerWidth);
    
   }
 
@@ -36,6 +39,17 @@ export class AdminDashboardComponent implements OnInit {
     node.charset = "utf-8";
     document.getElementsByTagName("head")[0].appendChild(node);
   } 
+ 
+ 
+
+  @HostListener('window:resize', ['$event.target.innerWidth'])
+  onResize(width: number) {
+    this.isOpened = width >= this.desktopViewWidth;
+  }
+
+ 
+
+  
 
   
 

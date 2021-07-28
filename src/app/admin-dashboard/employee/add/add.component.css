@@ -15,12 +15,13 @@ mat-label{
     font-weight: 500;
 }
 
-.mat-radio-group{
+/* .mat-radio-group{
     position: absolute;
     transform: translateY(1.5em);
   
-    /* padding: 50px; */
-}
+    padding: 50px; 
+} */
+
 .mat-radio-button{
 color: slategray;
 font-weight: 500;
@@ -33,28 +34,10 @@ mat-stepper{
     background-color: whitesmoke !important;
     padding: 50px;
 }
-.btn{
-    font-size: 20px;
-    font-weight: 500;
-    background-color: transparent;
-    width: 100px !important;
-    padding: 10px;
-    border: 1px solid slategray;
-}
-.btn:hover,.save:hover{
- color: skyblue;
- background-color: rgba(119, 136, 153, 0.288);
-}
 
-.save{
-    margin-top: 20px;
-    width: 50%;
-    padding: 10px;
-    font-size: 20px;
-    border: none;
-    background-color: rgba(185, 191, 197, 0.164);
 
-}
+
+
 img{
     min-height: 202px !important;
     min-width: 200px !important;
@@ -65,3 +48,74 @@ img{
     margin-left: -5px;
     font-size: 40px;
 }
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: slategrey; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: lightgray; 
+  }
+  .hover-only:hover .cl {
+    color: white;
+    padding-left: 65px;
+    background-color: transparent !important;
+  }
+  
+  .hover-only:hover .clr-icon {
+    color: white;
+  }
+  
+  .hover-only {
+    box-shadow: 0 10px 10px 0px rgba(109, 132, 141, 0.205), 0 10px 10px 0px rgba(121, 142, 146, 0.185);
+    transition: 0.30s ease;
+    width: 300px !important;
+    max-width: 300px !important;
+    height: 53px !important;
+    padding: 0px !important;
+  }
+  
+  .hover-only:hover {
+    color: white !important;
+    background-color: skyblue;
+    -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+  }
+  
+  .clr-icon {
+    font-size: 22px;
+    color: skyblue;
+    transition: .1s;
+  }
+  
+  .cl,.cl-back {
+    background-color: transparent !important;
+    border: none;
+    color: slategray;
+    transition: .3s linear !important;
+    width: 100% !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 60px;
+    outline: none !important;
+    height: 100% !important;
+  }
+  .hover-only:hover .cl-back {
+    color: white;
+    padding-right: 110px;
+    background-color: transparent !important;
+  }
+  
+  

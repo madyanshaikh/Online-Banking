@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
@@ -8,30 +8,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
+  isCollapsed: boolean = false;
+  hide:boolean = true;
 
-  url = 'assets/custom/custom.js';
-  loadAPI: Promise<unknown> | undefined;
+  Opened:boolean = false;
+  desktopViewWidth: number = 700;
+ 
 
   ngOnInit(): void {
-    this.loadAPI = new Promise(resolve => {
-      console.log("resolving promise...");
-      this.loadScript();
-    });
-  }
+    
+    this.onResize(window.innerWidth);
+   }
+   
+
   username = ''
   password = ''
 
   constructor(private snackbar: MatSnackBar, private router: Router) { }
 
-  public loadScript() {
-    console.log("preparing to load...");
-    let node = document.createElement("script");
-    node.src = this.url;
-    node.type = "text/javascript";
-    node.async = true;
-    node.charset = "utf-8";
-    document.getElementsByTagName("head")[0].appendChild(node);
-  }
+
 
   onlogin() {
     this.router.navigate(['admin-dashboard']);
@@ -50,8 +45,11 @@ export class LoginFormComponent implements OnInit {
 
   }
 
+  @HostListener('window:resize', ['$event.target.innerWidth'])
+  onResize(width: number) {
+    this.Opened = width >= this.desktopViewWidth;
+  }
+  
 }
-function showpass() {
-  throw new Error('Function not implemented.');
-}
+
 

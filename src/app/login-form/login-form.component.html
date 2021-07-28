@@ -1,64 +1,63 @@
 <!-- --------------------------------------------------------- Navigations ---------------------------------- -->
 
-<div class="container-fluid p-0 image main-div">
+<div class="container-fluid h-auto main-div">
     <div class="row row-media">
         <div class="col-md-6 pl-5 d-flex p-3">
-            <a href="" class=" text-secondary pl-5" ><i class="fas fa-envelope-open-text pl-3"></i></a>
-            <a href="" class=" text-secondary pl-5" ><i class="fas fa-phone pl-3"></i></a>
+            <a href="" class="  pl-5"><i class="fas fa-envelope-open-text pl-3"></i></a>
+            <a href="" class="  pl-5"><i class="fas fa-phone pl-3"></i></a>
 
             <div class="col-md-12 pl-5 text-right">
-                <a href="" class="text-secondary font-weight-bold pl-5 pr-2 h5"><i class="fab fa-facebook-f"></i> </a>
-                <a href="" class="text-secondary font-weight-bold pl-4 h5"><i class="fab fa-instagram"></i> </a>
-                <a href="" class="text-secondary font-weight-bold pl-4 h5"><i class="fab fa-twitter"></i> </a>
-                <a href="" class="text-secondary font-weight-bold pl-4 h5"><i class="fab fa-linkedin-in"></i> </a>
+                <a href="" class=" font-weight-bold pl-5 pr-2 h5"><i class="fab fa-facebook-f"></i> </a>
+                <a href="" class=" font-weight-bold pl-4 h5"><i class="fab fa-instagram"></i> </a>
+                <a href="" class=" font-weight-bold pl-4 h5"><i class="fab fa-twitter"></i> </a>
+                <a href="" class=" font-weight-bold pl-4 h5"><i class="fab fa-linkedin-in"></i> </a>
             </div>
         </div>
     </div>
     <div class="row main-row-media">
         <div class="col-md-3 text-right pt-3 ">
-            <a href="" class="text-secondary font-weight-bold h6 nav-link email-hide"
-                style="letter-spacing: 1px;"><i class="fas fa-envelope-open-text text-secondary"></i> info@muslimbank.com</a>
+            <a href="" class=" font-weight-bold h6 nav-link email-hide" style="letter-spacing: 1px;"><i
+                    class="fas fa-envelope-open-text "></i> info@muslimbank.com</a>
 
         </div>
         <div class="col-md-3 pt-3">
-            <a href="" class="text-secondary font-weight-bold h6 nav-link phone-hide">
+            <a href="" class=" font-weight-bold h6 nav-link phone-hide">
                 <i class="fas fa-phone"></i> +92 111 897 897-2
             </a>
 
         </div>
         <div class="col-md-4 pt-3 d-flex ml-auto contact-media-hidden">
-            <a href="" class="text-secondary font-weight-bold pr-2 h5"><i class="fab fa-facebook-f"></i> </a>
-            <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-instagram"></i> </a>
-            <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-twitter"></i> </a>
-            <a href="" class="text-secondary font-weight-bold pl-3 h5"><i class="fab fa-linkedin-in"></i> </a>
+            <a href="" class=" font-weight-bold pr-2 h5"><i class="fab fa-facebook-f"></i> </a>
+            <a href="" class=" font-weight-bold pl-3 h5"><i class="fab fa-instagram"></i> </a>
+            <a href="" class=" font-weight-bold pl-3 h5"><i class="fab fa-twitter"></i> </a>
+            <a href="" class=" font-weight-bold pl-3 h5"><i class="fab fa-linkedin-in"></i> </a>
         </div>
 
     </div>
     <nav class="navbar navbar-expand-lg navbar-muted bg-muted" style="border-top: 1px ridge rgb(84, 90, 97);">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars text-secondary"></i>
+        <button type="button" class=" btn btn-light toggle-me" (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"  style="top: 50px; position: absolute;">
+            <i class="fas fa-bars h3 mt-2" (click)="Opened = !Opened"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <a class="nav-link text-secondary h4 m-auto" href="#">Muslim Bank</a>
-            <ul class="navbar-nav m-auto pt-3 ">
+        <a class="nav-link  h4 mr-auto" href="#">Muslim Bank</a>
+        <div  class="collapse-me ml-auto" id="navbarNavDropdown"  [collapse]="isCollapsed" [isAnimated]="true">
+           
+            <ul *ngIf="Opened" class="navbar-nav m-auto pt-3">
                 <li class="nav-item">
-                    <a class="nav-link h6 text-secondary" href="#"><i class="fas fa-map-marker-alt"></i> Branch
+                    <a class="nav-link h6 " href="#"><i class="fas fa-map-marker-alt"></i> Branch
                         Locations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link h6 text-secondary" href="#"><i class="fas fa-user-shield"></i> Security Tips</a>
+                    <a class="nav-link h6 " href="#"><i class="fas fa-user-shield"></i> Security Tips</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link h6 text-secondary" href="#"><i class="fas fa-map-marker-alt"></i> Branch Locations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link h6 text-secondary" href="#">About</a>
+                    <a class="nav-link h6 " href="#">About</a>
                 </li>
                 <li class="nav-item dropdown h6">
-                    <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdownMenuLink"
-                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Optional
                     </a>
                     <div class="dropdown-menu bg-light " aria-labelledby="navbarDropdownMenuLink">
@@ -73,60 +72,74 @@
 
     <!-- --------------------------------------------- Login - Form -------------------------------------------------------- -->
 
-    <section class="ftco-section" style="position: relative;top: 7em;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center mb-5">
-                    <h1 class="heading-section"><a href="" class="text-secondary nav-link h1">Muslim Bank</a></h1>
-                </div>
+
+    <div class="container text-center pt-5">
+        <div class="row">
+            <div class="col-md-12 text-center mb-5">
+                <h1 class="heading-section"><a href="" class=" nav-link h1">Muslim Bank</a></h1>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="login-wrap p-0">
-                        <h3 class="mb-4 text-center text-muted">Have an account?</h3>
+        </div>
+        <div class="row">
 
-                        <div class="form-group">
-                            <input type="text" [(ngModel)]='username' class="form-control text-center"
-                                placeholder="Username" required="">
-                            <small id="emailHelp" class="form-text text-muted pl-2">We'll never share your email
-                                with anyone
-                                else.
-                            </small>
-                        </div>
 
-                        <div class="form-group" id="show_hide_password">
-                            <input id="password-field" type="password" [(ngModel)]='password'
-                                class="form-control text-center" placeholder="Password" required="">
-                            <span id="hideShowBtn" class="pr-3">
-                                <a class="text-white"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
-                            </span>
-                        </div>
-                        <div class="form-group pt-2">
-                            <button type="submit" id="btn-1" class="form-control btn" (click)="onlogin()">Sign
-                                In</button>
-                        </div>
-                        <div class="form-group d-md-flex">
-                            <div class="w-50">
-                                <label class="checkbox-wrap font-weight-bold text-secondary pl-3 r-me">Remember Me
-                                    <input type="checkbox" style="height: auto !important;">
-                                  
-                                </label>
-                            </div>
-                            <div class="ml-auto pr-3">
-                                <a class="text-white" href="#" id="f-p">Forgot Password</a>
-                            </div>
-                        </div>
+            <h3 class="mb-4 text-center text-muted col-md-12">Have an account?</h3>
 
-                        <p class="w-100 text-center text-white">— Or Sign up —</p>
-                        <div class="social d-flex text-center">
-                            <button class="btn pl-5 pr-5 m-auto"
-                                style="background-color: slategray; border-radius: 50px;">Sign
-                                Up</button>
+            <div class="text-center col-md-7 m-auto p-0 m-0 ">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Username</mat-label>
+                    <input matInput class="text-center">
+                    <mat-hint>Should be strong</mat-hint>
+
+
+                </mat-form-field>
+
+            </div>
+
+            <div class="col-md-7 m-auto p-0 m-0">
+
+                <mat-form-field appearance="standard">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" class="text-center">
+
+                    <mat-icon mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        {{hide ? 'visibility_off' : 'visibility'}}
+                    </mat-icon>
+
+                    <mat-hint>Password Contain 1 Upper case 1 symbol Atleast</mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="col-md-7  m-auto p-0 m-0">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-check" style="width: 100%;">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1"
+                                style="left: -2.30em !important;top: 2px;">
+                            <label class="form-check-label text-white " for="exampleCheck1">Remember Me</label>
                         </div>
+                    </div>
+                    <div class="col-md-6 p-0 m-0">
+                        <a class="text-danger" href="#">Forgot Password</a>
                     </div>
                 </div>
             </div>
+            <div class="col-md-12 text-center form-group pt-4 text-center">
+                <button type="submit" id="btn-1" class="btn" (click)="onlogin()">Sign
+                    In</button>
+            </div>
+
+
+
+            <div class="col-md-12 text-center pb-2">
+                <p class="col-md-12 text-center p-2 text-white">— Or Sign Up —</p>
+                <button class="btn pl-5 pr-5" style="background-color: slategray; border-radius: 50px;">Sign
+                    Up</button>
+            </div>
+
+
         </div>
-    </section>
+    </div>
+   
     <!-- --------------------------------------------- Login -Ends - Form -------------------------------------------------------- -->
 </div>
+

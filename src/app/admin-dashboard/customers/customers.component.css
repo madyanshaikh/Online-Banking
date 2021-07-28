@@ -1,56 +1,77 @@
-.save1 {
-    font-weight: 500;
-    padding: 10px;
-    font-size: 20px;
-    border: none;
-    color: slategray;
-    width: 100% !important;
-    max-width: 100% !important;
-    transition: 0.50s ease;
-    outline: none;
-
-}
-
-
 .row {
     background-color: rgba(185, 191, 197, 0.164);
     width: 100%;
-}
-
-mat-icon {
- cursor: pointer;
-    transition: 0.50s ease;
-    color: skyblue;
-    position: absolute;
-    padding-top: 10px;
-    padding-left: 60px;
-    text-align: center;
-    width: 50px;
-    height: 55px;
-    font-size: 30px;
-}
-
-.all-border:hover .save1 {
-    padding-left: 30px !important;
-    color: whitesmoke;
-    background-color: skyblue;
-}
-
-.all-border:hover mat-icon {
+  }
+  
+  /* ========================== */
+  
+  .hover-only:hover .cl {
     color: white;
-}
-
-.all-border {
-    box-shadow: 0 10px 10px 0px rgba(109, 132, 141, 0.205),0 10px 10px 0px rgba(121, 142, 146, 0.185);
-    /* border: 1px solid rgb(139, 150, 161); */
-    transition: 0.50s ease;
+    padding-left: 65px;
+    background-color: transparent !important;
+  }
+  
+  .hover-only:hover .clr-icon {
+    color: white;
+  }
+  
+  .hover-only {
+    box-shadow: 0 10px 10px 0px rgba(109, 132, 141, 0.205), 0 10px 10px 0px rgba(121, 142, 146, 0.185);
+    transition: 0.30s ease;
+    width: 360px !important;
+    max-width: 360px !important;
+    height: 53px !important;
+    padding: 0px !important;
+  }
+  
+  .hover-only:hover {
+    color: white !important;
     background-color: skyblue;
-}
-
-.all-border:hover {
-    padding-left: 30px !important;
-    /* background-color: skyblue; */
-    border: none;
     -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-}
+  }
+  
+  .clr-icon {
+    font-size: 22px;
+    color: skyblue;
+    transition: .1s;
+  }
+  
+  .cl {
+    background-color: transparent !important;
+    border: none;
+    color: slategray;
+    transition: .3s linear !important;
+    width: 100% !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 60px;
+    outline: none !important;
+    height: 100% !important;
+  }
+  
+  /* ========================= */
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  
+  ::-webkit-scrollbar-thumb {
+    background: slategrey;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: lightgray;
+  }

@@ -37,7 +37,7 @@
                         </mat-form-field>
                     </div>
                 </div>
-                <div class="col-md border-left pl-5">
+                <div class="col-md">
                     <div class="col-md">
                         <mat-form-field appearance="legacy">
                             <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">email
@@ -56,7 +56,7 @@
                         </mat-form-field> <br>
 
                     </div>
-                    <div class="col-md">
+                    <div class="col-md pt-3">
                         <mat-radio-group aria-label="Select an option">
                             <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon"
                                 style="transform: translate(.10em,0.1em);">wc
@@ -64,7 +64,11 @@
                             <mat-radio-button color="warn" value="1">Male</mat-radio-button>
                             <mat-radio-button color="warn" value="2">Female</mat-radio-button>
                         </mat-radio-group>
-                        <button mat-button matStepperNext class="btn float-right">Next</button>
+                        
+                    </div>
+                    <div class="col-md hover-only p-0 m-0 float-right">
+                        <button class="cl" mat-button matStepperNext><i class="clr-icon fas fa-arrow-right"></i>
+                            &nbsp;&nbsp;Next</button>
                     </div>
                 </div>
 
@@ -82,8 +86,9 @@
                 <div class="col-md">
 
                     <ng-template matStepLabel>Professional Information</ng-template>
-                    <div class="col-md">
-                        <button mat-button matStepperPrevious class="btn">Back</button>
+                     <div class="col-md hover-only p-0 m-0">
+                        <button class="cl-back" mat-button matStepperPrevious><i class="clr-icon fas fa-arrow-left"></i>
+                            &nbsp;&nbsp;Back</button>
                     </div>
                     <div class="col-md">
                         <mat-form-field appearance="legacy">
@@ -119,14 +124,17 @@
 
                 </div>
                 <div class="col-md border-left p-5">
-                    <img [src]="photoFilePath" alt=" Employee Image">
+                    <img [src]="photoFilePath" alt="Employee Image">
 
                     <div class="form-group pt-2">
                         <mat-icon aria-hidden="false" class="fieldIcons" id="img">image</mat-icon>
 
                         <input type="file" class="form-control-file ml-5" id="exampleFormControlFile1">
                     </div>
-                    <button mat-button matStepperNext class="btn float-right">Next</button>
+                    <div class="col-md hover-only p-0 m-0">
+                        <button class="cl" mat-button matStepperNext><i class="clr-icon fas fa-arrow-right"></i>
+                            &nbsp;&nbsp;Next</button>
+                    </div>
                 </div>
             </div>
         </form>
@@ -138,8 +146,9 @@
         <form [formGroup]="secondFormGroup">
             <div class="row">
                 <div class="col-md-6 text-center">
-                    <div class="col-md">
-                        <button mat-button matStepperPrevious class="btn">Back</button>
+                     <div class="col-md hover-only p-0 m-0">
+                        <button class="cl-back" mat-button matStepperPrevious><i class="clr-icon fas fa-arrow-left"></i>
+                            &nbsp;&nbsp;Back</button>
                     </div>
                     <div class="col-md">
                         <mat-form-field appearance="legacy">
@@ -161,12 +170,18 @@
                             <input matInput formControlName="second6Ctrl" placeholder="Password" required>
                         </mat-form-field>
                     </div>
-                    
-                    <div class="col-md"><button class="save">Save</button></div>
+
+                    <div class="col-md hover-only p-0 m-0">
+                        <button class="cl" mat-button matStepperPrevious><i class="clr-icon fas fa-file"></i>
+                            &nbsp;&nbsp;Save</button>
+                    </div>
                 </div>
-
-                <button mat-button (click)="stepper.reset()" class="btn float-right">Reset</button>
-
+                <div class="col-md-6">
+                <div class="col-md hover-only p-0 m-0 float-right">
+                    <button class="cl" mat-button (click)="stepper.reset()"><i class="clr-icon fas fa-cog"></i>
+                        &nbsp;&nbsp;Reset</button>
+                </div>
+            </div>
 
             </div>
 

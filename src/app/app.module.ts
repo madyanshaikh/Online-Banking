@@ -3,14 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routingcomponents } from './app-routing.module';
-import { RouterModule, Routes } from '@angular/router';
 import { MainAppRoutingModule, mainroutingcomponent } from './admin-dashboard/main-app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
-import * as $ from 'jquery';
-
-
-
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 
 
@@ -31,7 +27,8 @@ import * as $ from 'jquery';
     AppRoutingModule,
     MainAppRoutingModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CollapseModule
 
   ],
 
