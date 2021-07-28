@@ -10,7 +10,6 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +28,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     FormsModule, 
     ReactiveFormsModule,
     CollapseModule
+    
 
   ],
 

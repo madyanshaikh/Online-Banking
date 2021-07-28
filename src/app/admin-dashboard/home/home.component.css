@@ -277,9 +277,13 @@ background-color: white;
     color: skyblue;
  }
 #mychart2{
-    
-    min-width: 600px;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
 }
+    
+
 div canvas{
     width: 100% !important;
     min-width: 400px !important;

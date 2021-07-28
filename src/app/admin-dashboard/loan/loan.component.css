@@ -101,6 +101,7 @@ img{
     color: slategray;
     margin-top: 20px;
     width: 50%;
+    min-width: 60%;
     padding: 10px;
     font-size: 15px;
     border: none;

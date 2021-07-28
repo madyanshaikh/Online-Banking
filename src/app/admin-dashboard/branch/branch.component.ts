@@ -22,14 +22,14 @@ const NAMES: string[] = [
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
-
-@Component({
+ @Component({
   selector: 'app-branch',
   templateUrl: './branch.component.html',
-  styleUrls: ['./branch.component.css']
+  styleUrls: ['./branch.component.css'],
+
 })
 export class BranchComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id','name','address','city','action'];
+  displayedColumns: string[] = ['id','name','gender','contact','email','action'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator)
