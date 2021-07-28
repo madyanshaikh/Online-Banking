@@ -30,36 +30,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss",       
+              "src/custom-theme.scss",
               "src/styles.css",
-<<<<<<< HEAD
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/datatables/media/css/jquery.dataTables.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
-            "scripts": ["node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/datatables/media/js/jquery.dataTables.min.js",
-              "src/assets/js/myActive.js",
-              "src/assets/custom/custom.js"
-=======
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "node_modules/font-awesome/css/font-awesome.css"
-         
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "src/assets/custom/custom.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js"
-             
-              
-              
-
-              
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
-              ]
+            ]
           },
           "configurations": {
             "production": {
