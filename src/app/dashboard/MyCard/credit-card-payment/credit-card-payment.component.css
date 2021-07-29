@@ -4,9 +4,8 @@ strong {
 }
 .card-body{
     background-color: #fff;
-    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: 0px 00px 20px 20px !important;
+    border-radius: 0px 0px 20px 20px !important;
 }
 .card-header {
     padding-bottom: 7px;
@@ -15,6 +14,10 @@ strong {
     border-bottom: 0 solid transparent;
     border-radius: 20px 20px 0 0 !important;
  
+}
+.new{
+    width: 100%;
+    background:none!important;
 }
 .card-title{
     color: #fff;

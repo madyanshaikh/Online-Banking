@@ -1,14 +1,18 @@
 th{
     color: white;
+    padding: 10px 20px 7px 20px!important;
+    
 }
 td{
     color: black;
     font-weight: 400;
 }
-tbody{
-    padding-left: 50px;
-    margin-left: 20px;
-}
+
 strong {
     font-weight: 600;
+}
+thead{
+    border: none;
+    position: relative;
+    
 }

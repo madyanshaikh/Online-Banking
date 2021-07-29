@@ -4452,13 +4452,11 @@ input[type="submit"].btn-block {
 }
 .card-header {
     margin-bottom: 0;
+    padding: 13px 20px 7px 20px!important;
     background-color: rgb(116, 184, 184);
     border-bottom: 0 solid transparent;
     border-radius: 20px 20px 0 0 !important;
-    
-    
-    
-    
+ 
 }
 .card-header:first-child {
     border-radius: 0.25rem 0.25rem 0 0;

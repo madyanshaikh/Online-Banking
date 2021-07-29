@@ -1,1 +1,129 @@
-<p>e-statement-request works!</p>
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h5><strong style="color: black;">E-Statement Request</strong></h5>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-header">
+                <div class="card-title">
+                    Chaque Book Request
+                </div>
+            </div>
+            <form action="">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="card-title text-dark "></div>
+                                 <label class="spaN" (change)="bene1Function()">
+                                     <input type="radio" name="toggle" class="radio">
+                                     <span class="checkmark" ></span>
+                                     ACCOUNT
+                                 </label>
+                                 <label class="spaN"  (change)="bene2Function()">
+                                     <input type="radio" name="toggle" class="radio">
+                                     <span class="checkmark" ></span>
+                                     CARD
+                                 </label>
+                                 
+                                 <div *ngIf="bene1">
+                                     <select class="form-control" id="beneOne">
+                                         <option value="" disabled selected>Select Account</option>
+                                         <option>Credit Card Number</option>
+                                         <option>Credit Card Number</option>
+                                         <option>Credit Card Number</option>
+                                         <option>Credit Card Number</option>
+                                         <option>Credit Card Number</option>
+                                     </select>
+                                 </div>
+                                 <div *ngIf="bene2">
+                                     <select class="form-control" id="beneTwo">
+                                         <option value="" disabled selected>Select Card</option>
+                                         <option>Credit Card Number</option>
+                                         <option>Credit Card Number</option>
+                                         <option>Credit Card Number</option>
+                                         <option>Credit Card Number</option>
+                                         <option>Credit Card Number</option>
+                                     </select>
+                                 </div>
+                                 
+                             </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="card-title text-dark ">
+                                </div>
+                                <label class="spaN" (change)="bene1Function()">
+                                    <input type="checkbox" name="toggle" class="radio" onclick="return false;" checked>
+                                    <span class="checkmark" ></span>
+                                    EMAIL
+                                </label>
+                                <select class="form-control md-form" id="pYAccount">
+                                    <option value="" disabled selected>Select Email</option>
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>75</option>
+                                    <option>100</option>
+    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card-header m-0" id="accDetails">
+                                <div class="row align-items-end">
+                                    <div class="col-md-12">
+                                        <p>Account Number: <span class="acc-details">SQL</span></p>
+                                        <p>Account Title: <span class="acc-details">SQL</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <div class="card-title pb-2 freq">Frequency:</div>
+                            <label class="spaN">
+                                <input type="checkbox" name="toggle" class="radio">
+                                <span class="checkmark" ></span>
+                                Daily
+                            </label>
+                            <label class="spaN">
+                                <input type="checkbox" name="toggle" class="radio">
+                                <span class="checkmark" ></span>
+                                Weekly
+                            </label>
+                            <label class="spaN">
+                                <input type="checkbox" name="toggle" class="radio">
+                                <span class="checkmark" ></span>
+                                Monthly
+                            </label>
+                            <label class="spaN">
+                                <input type="checkbox" name="toggle" class="radio">
+                                <span class="checkmark" ></span>
+                                Half Year
+                            </label>
+                            <label class="spaN">
+                                <input type="checkbox" name="toggle" class="radio">
+                                <span class="checkmark" ></span>
+                                Yearly
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="md-form">
+                            <input mdbInput type="text" id="form1" class="form-control">
+                            <label for="form1" class="">Example label</label>
+                          </div>
+                        <div class="col-md-12 text-right">
+                            <input type="reset" value="reset" class="btn" id="reset">
+                            <button class="btn" type="submit">SUBSCRIBE</button></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,15 +1,15 @@
-$( document ).ready(function() {
-//===================List Active Code==================//
-$(function myActiveBtn(){
+$( document ).ready(function(){
+ //===================List Active Code==================//
+ $(function myActiveBtn(){
     $('.sidebar-nav').on('click', 'li', function() {
         $('.sidebar-nav li.active').removeClass('active');
         $(this).addClass('active');
     });
-});
+ });
 
-//======================SideBar Toggle Code====================//
+ //======================SideBar Toggle Code====================//
 
-$(function simpleBar() {
+ $(function simpleBar() {
     (document.getElementsByClassName("js-simplebar")[0]);
   
     $(".sidebar-toggle").on("click", function() {
@@ -24,44 +24,26 @@ $(function simpleBar() {
   });
 
   //============================Account List Pagination======================//
-
-  
-
-    $('#myTable,#mySecondTable').dataTable({
-      stateSave: true,
-      "bDestroy": true,
-      "bLengthChange": false,
-      "pagingType": "simple",
-      pageLength : 5,
-      "bInfo" : false,
-      "searching": false,
-      pageLength : 5,
-    lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']],
-      language: {
-        paginate: {
-          next: '<i class="fas fa-chevron-right"></i>,',
-          previous: '<i class="fas fa-chevron-left"></i>' 
-        }
+});
+var ctx = document.getElementById('myChart').getContext('2d');
+var xValues = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
+var yValues = [55, 49, 44, 24, 15,35,50];
+var barColors = ["#177e89","#084c61","#db3a34","#ffc857","#8D99AE","#566573","#74b8b8"];
+new Chart(ctx, {
+    type: "pie",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues }]
+    },
+    options: {
+      title: {
+        display: true,
+        text:"Muslim Bank Summary 2021"
       }
+    },
     
-    });
-    $('#mySecondTable').dataTable({
-      stateSave: true,
-      "bDestroy": true,
-      "bLengthChange": false,
-      "pagingType": "simple",
-      pageLength : 5,
-      "bInfo" : false,
-      "searching": false,
-      pageLength : 5,
-    lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']],
-      language: {
-        paginate: {
-          next: '<i class="fas fa-chevron-right"></i>,',
-          previous: '<i class="fas fa-chevron-left"></i>' 
-        }
-      }
-    
-    });
   });
+  
   

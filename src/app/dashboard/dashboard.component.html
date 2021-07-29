@@ -32,8 +32,7 @@
                     </a>
                     <ul id="CL" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                         <li class="sidebar-item"><a class="sidebar-link" routerLink="Card-List">Card List</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >Card Management</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >Cradit Card Payment</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Credit-Card-Payment">Cradit Card Payment</a></li>
                     </ul>
                 </li>
 
@@ -42,9 +41,9 @@
                         <i class="align-middle" data-feather="navigation"></i> <span class="align-middle">Transfers</span>
                     </a>
                     <ul id="Trans" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" >Fund Transfer</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >InterBank Fund Tranfser</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >Beneficiary Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Fund-Transfer">Fund Transfer</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Inter-Bank-Fund-Transfer">InterBank Fund Tranfser</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Transfer-Beneficiary-Management">Beneficiary Management</a></li>
                     </ul>
                 </li>
 
@@ -53,8 +52,8 @@
                         <i class="align-middle" data-feather="info"></i> <span class="align-middle">Payments</span>
                     </a>
                     <ul id="Pay" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" >Bill Payments</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >Beneficiary Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Bill-Payment">Bill Payments</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Beneficiary-Management">Beneficiary Management</a></li>
                     </ul>
                 </li>
 
@@ -63,10 +62,7 @@
                         <i class="align-middle" data-feather="mail"></i> <span class="align-middle">Service Request</span>
                     </a>
                     <ul id="SR" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" >Chaque Book Request</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >E-Statement Request</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >Stop Cheque</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >SMS Subscription</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="E-Statement-Request">E-Statement Request</a></li> 
                     </ul>
                 </li>
                 
@@ -75,10 +71,9 @@
                         <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
                     </a>
                     <ul id="Set" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                        <li class="sidebar-item"><a class="sidebar-link" >My Profile</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >Setup Alert & Notifications</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >Extract Activity Logs</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" >Session History</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="My-Profile">My Profile</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Activity-Logs">Extract Activity Logs</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Session-History">Session History</a></li>
                     </ul>
                 </li>
             </ul>
@@ -283,7 +278,7 @@
         <!-- <app-card-list></app-card-list> -->
         <!-- <app-credit-card-payment></app-credit-card-payment> -->
         <!-- <app-beneficiary-management></app-beneficiary-management> -->
-        <main class="content mr-2 ml-2" style="border-radius: 25px; background-color: #f7f7f7;"><app-inter-bank-fund-transfer></app-inter-bank-fund-transfer></main>
+        <main class="content mr-2 ml-2" style="border-radius: 25px; background-color: #f7f7f7;"><app-my-profile></app-my-profile></main>
 
         <footer class="footer mt-2 mr-2 ml-2 mb-2" style="border-radius: 15px; background-color: #f7f7f7;">
             <div class="container-fluid">

@@ -1,5 +1,6 @@
 th{
     color: white;
+    padding: 10px 20px 7px 20px!important;
 }
 td{
     color: black;
@@ -8,4 +9,7 @@ td{
 strong {
     font-weight: 600;
     font-size: 1.3125rem
+}
+thead{
+    border: none;
 }

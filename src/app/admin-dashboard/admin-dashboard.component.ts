@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import { Router } from '@angular/router';
-=======
 import { MatSidenav } from '@angular/material/sidenav';
 
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
 
 @Component({
@@ -12,18 +8,6 @@ import { MatSidenav } from '@angular/material/sidenav';
   templateUrl: './admin-dashboard.component.html',
   styleUrls: ['./admin-dashboard.component.css'],
 })
-<<<<<<< HEAD
-
-export class AdminDashboardComponent implements OnInit {
-
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-
-  
-    
-  }
-=======
 
 export class AdminDashboardComponent implements OnInit {
   
@@ -56,7 +40,6 @@ export class AdminDashboardComponent implements OnInit {
   
 
   
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
  }
 

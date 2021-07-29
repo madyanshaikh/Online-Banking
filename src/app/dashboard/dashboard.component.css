@@ -10544,10 +10544,18 @@ body {
     
 }
 .sidebar {
-    min-width: 260px;
-    max-width: 260px;
+    min-width: 300px;
+    max-width: 300px;
     direction: ltr;
        
+}
+@media only screen and (max-width: 1370px) {
+    .sidebar {
+        min-width: 260px;
+        max-width: 260px;
+        direction: ltr;
+           
+    }
 }
 .sidebar,
 .sidebar-content {
@@ -10687,7 +10695,7 @@ a.sidebar-link svg {
     height: 26px;
 }
 .sidebar.collapsed {
-    margin-left: -260px;
+    margin-left: -300px;
 }
 @media (min-width: 1px) and (max-width: 991.98px) {
     .sidebar {

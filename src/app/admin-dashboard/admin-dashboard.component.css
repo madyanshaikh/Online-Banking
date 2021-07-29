@@ -1,26 +1,5 @@
 * {
     box-sizing: border-box !important;
-<<<<<<< HEAD
-    outline: none !important;
-    /* transition: .3s !important; */
-}
-
-button {
-    outline: none !important;
-    border: none !important;
-    background-color: transparent !important;
-    text-transform: uppercase !important;
-}
-
-.nv-color {
-
-    background-color: whitesmoke;
-    /* background-color: rgb(46, 51, 59); */
-}
-
-li {
-    
-=======
     outline: none !important;
     /* transition: .3s !important; */
 }
@@ -46,7 +25,6 @@ button {
 }
 
 li {
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
     box-sizing: border-box !important;
     padding-top: 10px !important;
 }
@@ -54,10 +32,6 @@ li {
 .row {
     width: 100% !important;
 }
-<<<<<<< HEAD
-
-i {
-=======
 .hover-only:hover .cl{
     color:white;
     padding-left: 45px;
@@ -68,7 +42,6 @@ i {
    
 }
 .clr-icon {
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
     font-size: 17px;
     color: skyblue;
     transition: .1s;
@@ -82,12 +55,8 @@ i {
 
 .main-toggle {
     transition: .5s !important;
-<<<<<<< HEAD
-    min-width: 300px !important;
-=======
     padding-top: 8px !important;
     min-width: 315px;
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 }
 
 .btn-toggle1 {
@@ -101,34 +70,12 @@ i {
 .cl {
     color: slategray;
     transition: .3s linear !important;
-<<<<<<< HEAD
-}
-
-button.collapse:focus {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-=======
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 }
 
 .hover-only {
     transition: 0.30s ease;
 }
 
-<<<<<<< HEAD
-.slide-left {
-    height: 98% !important;
-    min-width: 0px !important;
-    max-width: 0px !important;
-    transition: .3s linear;
-    position: absolute !important;
-}
-
-=======
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 .z-depth-5 {
     -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
@@ -174,10 +121,6 @@ button.collapse:focus {
     transform: scale(0, 0);
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 .dprt {
     transform: translate(-5em, -2em) !important;
     background-color: grey !important;
@@ -185,10 +128,6 @@ button.collapse:focus {
     width: 100px;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 .dprt1 {
     transform: translate(-5em, -2em) !important;
     background-color: grey !important;
@@ -202,16 +141,6 @@ button.collapse:focus {
     height: 80px;
     width: 100px;
 }
-<<<<<<< HEAD
-.dprt3 {
-    transform: translate(-5em, -2em) !important;
-    background-color: grey !important;
-
-    height: 80px;
-    width: 100px;
-}
-.fa-address-card, .fa-laptop-house, .fa-diagnoses,.fa-users-class {
-=======
 
 .dprt3 {
     transform: translate(-5em, -2em) !important;
@@ -221,32 +150,12 @@ button.collapse:focus {
 }
 
 .fa-address-card, .fa-laptop-house, .fa-diagnoses, .fa-users-class {
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
     font-size: 50px;
     color: lightgray;
 }
 
 .dprt:focus {
     background-color: green !important;
-<<<<<<< HEAD
-        background-color: goldenrod !important;
-
-}
-.dprt1:focus{    
-    background-color: cornflowerblue !important;
-
-
-}
-.dprt2:focus{    
-    background-color: tomato !important;
-
-
-}
-.dprt3:focus{    
-    background-color: yellowgreen !important;
-} 
-.box-1{
-=======
     background-color: goldenrod !important;
 }
 
@@ -263,24 +172,11 @@ button.collapse:focus {
 }
 
 .box-1 {
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
     margin-top: 50px !important;
     height: 15vh !important;
     /* margin-left: 20px !important; */
 }
 
-<<<<<<< HEAD
-
-@media only screen and (max-width:1370px){
-    .fa-address-card, .fa-laptop-house, .fa-diagnoses,.fa-users-class {
-        font-size: 40px;
-        color: lightgray;
-    }
-
-    .box-1{
-        max-height: 15vh !important;
-
-=======
 @media only screen and (max-width:1370px) {
     .fa-address-card, .fa-laptop-house, .fa-diagnoses, .fa-users-class {
         font-size: 40px;
@@ -288,51 +184,7 @@ button.collapse:focus {
     }
     .box-1 {
         max-height: 15vh !important;
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
     }
-    .dprt {
-        transform: translate(-6em, -2em) !important;
-        background-color: goldenrod !important;
-        height: 60px;
-        width: 80px;
-        position: absolute;
-<<<<<<< HEAD
-    }   
-    
-    
-=======
-    }
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
-    .dprt1 {
-        transform: translate(-6em, -2em) !important;
-        background-color: cornflowerblue !important;
-        height: 60px;
-        width: 80px;
-        position: absolute;
-    }
-<<<<<<< HEAD
-    
-=======
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
-    .dprt2 {
-        transform: translate(-6em, -2em) !important;
-        background-color: tomato !important;
-        height: 60px;
-        width: 80px;
-        position: absolute;
-    }
-    .dprt3 {
-        transform: translate(-6em, -2em) !important;
-        background-color: yellowgreen !important;
-        height: 60px;
-        width: 80px;
-        position: absolute;
-    }
-<<<<<<< HEAD
-    .dpr-text{
-        margin-top: 40px;
-    }
-=======
     .dpr-text {
         margin-top: 40px;
     }
@@ -399,5 +251,4 @@ div #myChart3 {
     padding: 0px !important;
     margin: 0px !important;
     background-color: whitesmoke;
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 }

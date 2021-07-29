@@ -1,13 +1,9 @@
 import { Identifiers } from '@angular/compiler';
 import { Component, OnInit, Query, } from '@angular/core';
-<<<<<<< HEAD
 declare var $: any;
 declare const feather: any;
 declare const myActive: any;
 declare const togleBar: any;
-=======
-
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 
 
 
@@ -16,17 +12,18 @@ declare const togleBar: any;
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  
 })
 
 export class DashboardComponent implements OnInit {
-
-<<<<<<< HEAD
+  url = 'assets/js/myActive.js';
+  urlOne = 'src\assets\js\myAccountList.js';
   constructor() {
     
    }
-   url = 'assets/js/myActive.js';
-  loadAPI: Promise<unknown> | undefined;
+   
+  loadAPI: Promise<any> | undefined;
 
   ngOnInit(): any {
 
@@ -43,20 +40,12 @@ export class DashboardComponent implements OnInit {
   public loadScript() {
     console.log("preparing to load...");
     let node = document.createElement("script");
-    node.src = this.url;
+    node.src = this.url, this.urlOne;
     node.type = "text/javascript";
     node.async = true;
     node.charset = "utf-8";
     document.getElementsByTagName("head")[0].appendChild(node);
   }
 
-=======
-  constructor() { }
-
-  ngOnInit(): any {
-    
-    
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
  
-}
 }

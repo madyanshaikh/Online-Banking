@@ -1,70 +1,4 @@
 
-<<<<<<< HEAD
-
-$( document ).ready(function() {
-//    ---------------------------------Eye Paswword---------------------
-    $("#show_hide_password a").click(function(event) {
-
-        event.preventDefault();
-        if ($("#show_hide_password input").attr("type") == "text") {
-            $("#show_hide_password input").attr("type", "password");
-            $("#show_hide_password i").addClass("fa-eye-slash");
-            $("#show_hide_password i").removeClass("fa-eye");
-        } else if ($("#show_hide_password input").attr("type") == "password") {
-            $("#show_hide_password input").attr("type", "text");
-            $("#show_hide_password i").removeClass("fa-eye-slash");
-            $("#show_hide_password i").addClass("fa-eye");
-        }
-    });
-
-
-// ---------------------------side nav -------------------------------
-
-    $(".hover-only").on("mouseenter", function () {
-        $("i", this).css("color", "mintcream");
-        $(".cl", this).css({ "padding-left": "45PX", "color": "white" });
-
-    });
-
-    $(".hover-only").on("mouseleave", function () {
-        $("i", this).css("color", "skyblue");
-        $(".cl", this).css({ "padding-left": "16px", "color": "slategrey" });
-    });
-    $(".sidenav-btn").click(function () {
-
-        $(".main-toggle").toggleClass("slide-left", "slow");
-        $(".dnone").toggleClass("d-none", "slow")
-
-    });
-
-
-    // ------------------table--------------------
-    
-    $(".tbl,.tbl1,.tbl2,.tbl3").hide();
-
-    $(".dprt").click(function(){
-
-        
-        $(".tbl").toggle("slow");
-    })
-    $(".dprt1").click(function(){
-
-        
-        $(".tbl1").toggle("slow");
-    })
-    $(".dprt2").click(function(){
-
-        
-        $(".tbl2").toggle("slow");
-    })
-    $(".dprt3").click(function(){
-
-        
-        $(".tbl3").toggle("slow");
-    })
-    
-  
-=======
 // --------------------------JAVASCRIPT--------------------------
 
  function displaynone(){
@@ -96,9 +30,9 @@ $( document ).ready(function() {
 });
 // ------------------------------------PIE-CHART--------------------------------------
 
-var xValues = ["Satisfaction", "Revenue", "Complaints", "Loss", "Sales","Loan"];
-var yValues = [55, 49, 44, 24, 15,35];
-var barColors = ["#177e89","#084c61","#db3a34","#ffc857","#8D99AE","#566573"];
+var xValues = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"];
+var yValues = [55, 49, 44, 24, 15,35,50];
+var barColors = ["#177e89","#084c61","#db3a34","#ffc857","#8D99AE","#566573","#74b8b8"];
 new Chart("myChart", {
     type: "pie",
     data: {
@@ -156,7 +90,7 @@ var xValues = ["Satisfaction","Revenue","Complaints","Loss","Sales","Loan"];
 var yValues = [55,49,44,47,45,39];
 var barColors = ['#22223B','#4A4E69','#9A8C98','#C9ADA7','#F2E9E4','#566573'];
 
-new Chart("myChart1", {
+new Chart("myChartOne", {
   type: "bar",
   data: {
     labels: xValues,
@@ -268,5 +202,4 @@ new Chart("myChart3", {
   options: {
     legend: {display: false}
   }
->>>>>>> 7050222b9718aa437fa9f6b37b1b12b3029c5d86
 });
