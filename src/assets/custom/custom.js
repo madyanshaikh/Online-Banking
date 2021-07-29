@@ -69,7 +69,14 @@ var ctx = document.getElementById('myChart').getContext('2d');
 
 var xValues = ["Satisfaction", "Revenue", "Complaints", "Loss", "Sales", "Loan"];
 var yValues = [55, 49, 44, 47, 45, 39];
-var barColors = ['#22223B', '#4A4E69', '#9A8C98', '#C9ADA7', '#F2E9E4', '#566573'];
+var barColors = [
+  "#AAAAAA",
+  "#A4EBF3",
+  "#CCF2F4",
+  "#F4F9F9",
+  "#AAAAAA",
+  "#A4EBF3",
+];
 
 new Chart("myChart1", {
   type: "bar",
@@ -95,15 +102,15 @@ new Chart("myChart1", {
 var xValues = ["Satisfaction", "Revenue", "Complaints", "Loss", "Sales", "Loan"];
 var yValues = [55, 49, 44, 47, 45, 39];
 var barColors = [
-  "#b91d47",
-  "#00aba9",
-  "#2b5797",
-  "#e8c3b9",
-  "#1e7145"
+  "#AAAAAA",
+  "#A4EBF3",
+  "#CCF2F4",
+  "#F4F9F9",
+  "#AAAAAA"
 ];
 
-new Chart("myChart2", {
-  type: "doughnut",
+new Chart("myChart4", {
+  type: "doghnut",
   data: {
     labels: xValues,
     datasets: [{
@@ -126,26 +133,31 @@ new Chart("myChart3", {
   data: {
     labels: xValues,
     datasets: [{
+
+
+
+
+
       data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
-      borderColor: "#03071E",
+      borderColor: 'rgb(255, 99, 132)',
       fill: false
     }, {
       data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
-      borderColor: "#370617",
+      borderColor: 'rgb(75, 192, 192)',
       fill: false
     }, {
       data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
-      borderColor: "#6A040F",
+      borderColor: 'rgb(255, 205, 86)',
       fill: false
     }
       , {
       data: [3200, 7100, 700, 5000, 1600, 4100, 2000, 1100, 2050, 2900],
-      borderColor: "#9D0208",
+      borderColor: 'rgb(201, 203, 207)',
       fill: false
     }
       , {
       data: [3000, 750, 2200, 5600, 600, 1000, 2200, 1900, 1200, 1800],
-      borderColor: "#D00000",
+      borderColor: 'rgb(54, 162, 235)',
       fill: false
     }
       , {
@@ -155,7 +167,7 @@ new Chart("myChart3", {
     }
       , {
       data: [1200, 1700, 1020, 6050, 6000, 5400, 1200, 2100, 4500, 2600],
-      borderColor: "#E85D04",
+      borderColor: 'rgb(54, 162, 235)',
       fill: false
     }
 
@@ -165,17 +177,7 @@ new Chart("myChart3", {
       fill: false
     }
 
-      , {
-      data: [1110, 7777, 2222, 5555, 1555, 4321, 2123, 1223, 2213, 1846],
-      borderColor: "#FAA307",
-      fill: false
-    }
 
-      , {
-      data: [2196, 7840, 2252, 5916, 1000, 4555, 9315, 1511, 2981, 1254],
-      borderColor: "#FFBA08",
-      fill: false
-    }
 
 
     ]
@@ -184,3 +186,42 @@ new Chart("myChart3", {
     legend: { display: false }
   }
 });
+
+
+
+var data = {
+  datasets: [{
+    data: [
+      11,
+      16,
+      7,
+      3,
+      14,
+      12
+    ],
+    backgroundColor: [
+      '#ef476f',
+      '#ffd166',
+      '#06d6a0',
+      '#118ab2',
+      '#073b4c',
+      '#E8ECF1',
+
+    ],
+    label: 'My dataset' // for legend
+  }],
+  labels: [
+    "Red",
+    "Green",
+    "Yellow",
+    "Grey",
+    "Blue"
+  ]
+};
+new Chart("myChart2", {
+  data: data,
+  type: 'polarArea'
+
+});
+
+

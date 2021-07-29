@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Chart } from 'chart.js';
 
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -24,6 +23,7 @@ constructor(private router:Router){
 
 canvas: any;
 ctx: any;
+
 @ViewChild('mychart') mychart:any;
 
 ngAfterViewInit() {

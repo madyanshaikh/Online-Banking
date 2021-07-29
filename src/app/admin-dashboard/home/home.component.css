@@ -276,12 +276,12 @@ background-color: white;
     font-size: 25px;
     color: skyblue;
  }
-#mychart2{
-    width: 100% !important;
+/* #myChart2{
+    width: 600px !important;
     height: 100% !important;
     min-width: 100% !important;
-    min-height: 100% !important;
-}
+    
+} */
     
 
 div canvas{
@@ -289,7 +289,7 @@ div canvas{
     min-width: 400px !important;
 }
 
-div #myChart3{
-    height: 100%;
-  }  
-   
+ 
+  /* -----------------------chart-2-DIV------------- */
+
+   /* ------------------------------------- */

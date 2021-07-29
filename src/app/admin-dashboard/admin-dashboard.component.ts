@@ -1,6 +1,6 @@
-
-import { Component, OnInit,HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router} from '@angular/router';
 
 
 
@@ -15,49 +15,39 @@ export class AdminDashboardComponent implements OnInit {
 
   isOpened: boolean = true;
   desktopViewWidth: number = 1100;
-  
-  url = 'assets/custom/custom.js';
-  loadAPI: Promise<unknown> | undefined;
-  
-  constructor() { }
+
+
+
+  constructor(private router :Router) { }
 
   ngOnInit(): void {
 
-    this.loadAPI = new Promise(resolve => {
-      console.log("resolving promise...");
-      this.loadScript();
-    });
 
     this.onResize(window.innerWidth);
-   
+
   }
 
-  public loadScript() {
-    console.log("preparing to load...");
-    let node = document.createElement("script");
-    node.src = this.url;
-    node.type = "text/javascript";
-    node.async = true;
-    node.charset = "utf-8";
-    document.getElementsByTagName("head")[0].appendChild(node);
-  } 
+  welcome(){
  
- 
+    sessionStorage.setItem("isLoggedoff","false")
+    this.router.navigate(['login-form'])
+  }
+
 
   @HostListener('window:resize', ['$event.target.innerWidth'])
   onResize(width: number) {
     this.isOpened = width >= this.desktopViewWidth;
   }
 
- 
 
-  
 
-  
 
-  
 
- }
+
+
+
+
+}
 
 
 

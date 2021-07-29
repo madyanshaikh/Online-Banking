@@ -9,8 +9,8 @@ import { Chart } from 'chart.js';
 })
 export class HomeComponent implements OnInit {
 
-  url = 'assets/custom/custom.js';
-  loadAPI: Promise<unknown> | undefined;
+  url = './assets/custom/custom.js';
+  loadAPI!: Promise<unknown>;
   
   constructor() { }
 

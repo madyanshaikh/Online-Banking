@@ -8,12 +8,35 @@
   color: slategrey !important;
   
 }
+::ng-deep.mat-form-field-outline::before {
+  /*change color of underline*/
+  background-color: slategrey !important;
+  height: 10px !important;
+  
+}
+.mat-form-field-outline::before {
+  /*change color of underline*/
+  background-color: slategrey !important;
+  height: 10px !important;
+  
+}
+mat-form-field-outline::before {
+  /*change color of underline*/
+  background-color: slategrey !important;
+  height: 10px !important;
+  
+}
+
+::ng-deep.mat-form-field-underline {
+  height: 2px!important;
+  background-color: skyblue !important;
+}
 
 .container-fluid {
-  background-image: url(../../assets/images/3.jpg);
+  background-image: url(../../assets/images/10.jpg);
   width: 100%;
   height: 100%;
-  background-size: auto auto;
+  background-size: 100% 100% ;
   background-position: top center;
   min-height: 100vh;
   background-repeat: no-repeat;
@@ -91,7 +114,7 @@ mat-label {
 .mat-icon {
   transform: translate(-1em, -1em);
   font-size: 30px !important;
-  color: skyblue;
+  color: slategrey;
   cursor: pointer;
   position: absolute;
 }

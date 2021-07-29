@@ -193,6 +193,7 @@ div #myChart3 {
 }
 
 .example-sidenav {
+  
     width: 300px;
     padding: 0px !important;
     margin: 0px !important;
@@ -202,4 +203,35 @@ div #myChart3 {
 
     color: slategray !important;
     min-width: 300px !important;
+}
+.admin-text-nav{
+
+    font-size: 17px;
+    font-weight: 500 !important;
+    color: skyblue !important;
+    text-transform: capitalize !important;
+    text-decoration: none !important;
+    padding: 10px ;
+  position: relative;
+  top: 2px;
+
+}
+span {
+    font-size: 15px;
+    color: slategrey;
+    text-transform: capitalize !important;
+}
+.mat-menu-item:hover span{
+    color: white;
+
+}
+#icon-nav{
+    color: skyblue;
+}
+.mat-menu-item:hover #icon-nav{
+    color: white !important;
+}
+.mat-menu-item:hover{
+    background-color: skyblue !important;
+    
 }

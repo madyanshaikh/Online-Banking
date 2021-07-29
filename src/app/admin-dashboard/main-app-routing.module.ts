@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminSummaryComponent } from './admin-summary/admin-summary.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { DepartmentComponent } from './department/department.component';
 import { CustomersComponent } from './customers/customers.component';
@@ -23,6 +22,7 @@ import { AddCustomerComponent } from './customers/addcustomer/addcustomer.compon
 import { ViewCustomerComponent } from './customers/viewcustomer/viewcustomer.component';
 import { ViewaccountsComponent } from './accounts/viewaccounts/viewaccounts.component';
 import { AddaccountsComponent } from './accounts/addaccounts/addaccounts.component';
+import { LoginFormComponent } from '../login-form/login-form.component';
 
 const routes: Routes = [
   {
@@ -40,7 +40,8 @@ const routes: Routes = [
       {path:'loan',component:LoanComponent},
       {path:'setting',component:SettingComponent}
     ]
-  }
+  },
+  {path:'login',component:LoginFormComponent}
 
 ];
 
@@ -56,7 +57,6 @@ export const mainroutingcomponent = [
 
   HomeComponent,
   QualityComponent,
-  AdminSummaryComponent,
   EmployeeComponent,
   DepartmentComponent,
   CustomersComponent,
