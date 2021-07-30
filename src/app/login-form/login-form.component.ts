@@ -1,6 +1,9 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+declare let $: any;
+
+
 
 @Component({
   selector: 'app-login-form',
@@ -10,53 +13,59 @@ import { Router } from '@angular/router';
 })
 export class LoginFormComponent implements OnInit {
 
-  isCollapsed: boolean = false;
-  hide:boolean = true;
-  
-  url = 'assets/custom/custom.js';
-  loadAPI: Promise<unknown> | undefined;
+  url = './assets/my-jquery/my-jquery.js';
+  loadAPI!: Promise<unknown>;
 
-  Opened:boolean = false;
-  desktopViewWidth: number = 992;
- 
+  hide: boolean = true;
 
   ngOnInit(): void {
-    
-    this.onResize(window.innerWidth);
-   }
    
+   
+
+    this.loadAPI = new Promise(resolve => {
+      console.log("resolving promise...");
+      this.loadScript();
+    });
+   
+  }
 
   username = ''
   password = ''
 
 
-  
+
   constructor(private snackbar: MatSnackBar, private router: Router) { }
-  
+
 
 
   onlogin() {
-  
 
-    if (this.username == 'admin' && this.password == 'admin') {
-      sessionStorage.setItem("isLogedIn", "true")
-      this.router.navigate(['admin-dashboard'])
-    }
-    else if (this.username == 'user' && this.password == 'user') {
-      sessionStorage.setItem("isLogedIn", "true")
-      this.router.navigate(['user-dashboard'])
-    }
-    else {
-      this.snackbar.open("Invalid Username Or Password", "okay", { duration: 3000 })
-    }
+    this.router.navigate(['admin-dashboard'])
+
+    // if (this.username == 'admin' && this.password == 'admin') {
+    //   sessionStorage.setItem("isLogedIn", "true")
+    //   this.router.navigate(['admin-dashboard'])
+    // }
+    // else if (this.username == 'user' && this.password == 'user') {
+    //   sessionStorage.setItem("isLogedIn", "true")
+    //   this.router.navigate(['user-dashboard'])
+    // }
+    // else {
+    //   this.snackbar.open("Invalid Username Or Password", "okay", { duration: 3000 })
+    // }
 
   }
 
-  @HostListener('window:resize', ['$event.target.innerWidth'])
-  onResize(width: number) {
-    this.Opened = width >= this.desktopViewWidth;
-  }
 
+  public loadScript() {
+    console.log("preparing to load...");
+    let node = document.createElement("script");
+    node.src = this.url;
+    node.type = "text/javascript";
+    node.async = true;
+    node.charset = "utf-8";
+    document.getElementsByTagName("head")[0].appendChild(node);
+  } 
 
 
 }
@@ -65,4 +74,4 @@ export class LoginFormComponent implements OnInit {
 
 
 
-  
+

@@ -1,6 +1,8 @@
 
 // --------------------------JAVASCRIPT--------------------------
 
+
+
 function displaynone() {
   document.getElementById("hide-me").style.display = "none";
 }
@@ -223,5 +225,3 @@ new Chart("myChart2", {
   type: 'polarArea'
 
 });
-
-

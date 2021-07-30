@@ -6,7 +6,6 @@ import { AppRoutingModule, routingcomponents } from './app-routing.module';
 import { MainAppRoutingModule, mainroutingcomponent } from './admin-dashboard/main-app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
-import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { reactivemodule } from './app-routing.module';
 
 
@@ -27,7 +26,7 @@ import { reactivemodule } from './app-routing.module';
     MainAppRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
-    CollapseModule,reactivemodule
+    reactivemodule
     
 
   ],
