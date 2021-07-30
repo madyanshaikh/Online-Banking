@@ -7,6 +7,7 @@
     color :slategrey;
 }
 .hover:hover{
+    transform: scale(1.1);
     background-color: skyblue;
     -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
@@ -21,7 +22,7 @@
 .hover{
     padding: 60px;
     box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.2);
-    transition: .7s ease;
+    transition: .3s ease;
 }
 .row{
     padding: 7em !important;
@@ -32,8 +33,8 @@
 @media only screen and (max-width:1370px){
     .row{
         
-        padding:7em 0px 0px 0px !important;
-        column-gap: 20px;
+        padding:7em 0px 0px 10px !important;
+        column-gap: 40px;
         width: 100%;
         margin: 0px !important;
     }
@@ -45,12 +46,32 @@
         padding-top:4em !important ;
     }
 }
-.hover:hover .check-1{
+/* .hover:hover .check-1{
     font-size: 15px !important;
 }
 .hover:hover .check-2{
-    font-size: 10px !important ;
-}
+    font-size: 10px !important ; */
+
 .check-1,.check-2{
 transition: .5s ease;
 }
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: slategrey; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: lightgray; 
+  }

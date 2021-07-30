@@ -2,8 +2,8 @@ import { Identifiers } from '@angular/compiler';
 import { Component, OnInit, Query, } from '@angular/core';
 declare var $: any;
 declare const feather: any;
-declare const myActive: any;
-declare const togleBar: any;
+// declare const myActive: any;
+// declare const togleBar: any;
 
 
 
@@ -17,13 +17,13 @@ declare const togleBar: any;
 })
 
 export class DashboardComponent implements OnInit {
-  url = 'assets/js/myActive.js';
-  urlOne = 'src\assets\js\myAccountList.js';
+  url = '';
+  urlOne = 'assets/js/myAccountList.js';
   constructor() {
     
    }
    
-  loadAPI: Promise<any> | undefined;
+  loadAPI: Promise<unknown> | undefined;
 
   ngOnInit(): any {
 
@@ -33,8 +33,8 @@ export class DashboardComponent implements OnInit {
     });
    
     feather.replace();
-    myActive.myActiveBtn();
-    togleBar.simpleBar();
+    // myActive.myActiveBtn();
+    // togleBar.simpleBar();
 
   }
   public loadScript() {

@@ -1,26 +1,25 @@
 *{
     outline: none !important;
 }
+
 #mybg {
-    background: url(../../assets/images/4.jpg);
-  background-size: 100% 100%;
+  background: url(../../assets/images/4.jpg);
   background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: cover;
   min-height: 100vh;
 }
 
 #nvbar {
-    background-color: rgba(33, 105, 105, 0.151);
+  
     right: 0;
     top: 0px;
     padding:15px !important;
     height: 100%;
-    /* width: 70px;
-    height: 100vh; */
+ 
     
-    /* position: absolute; */
+
 }
+
 .mover{
     position: relative;
     top: 40% !important;
@@ -49,3 +48,10 @@
 
       transform: rotateY(360deg);
   }
+  /* @media only screen and (max-width:1366px) {
+    #mybg{
+      min-height:112vh !important ;
+    }
+    
+  } */
+  

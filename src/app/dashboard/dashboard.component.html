@@ -1,6 +1,6 @@
 <div class="wrapper">
     <nav id="sidebar" class="sidebar" >
-        <div class="sidebar-content js-simplebar ml-2 mt-2 " id="sideBarContent" style="border-radius: 25px; background-color: #f7f7f7;">
+        <div class="sidebar-content ml-2 mt-2 " id="sideBarContent" style="border-radius: 25px; background-color: #f7f7f7;">
             <a class="sidebar-brand" href="#">
                 <span class="align-middle pl-5">Muslim Bank</span>
             </a>
@@ -11,13 +11,12 @@
                 </li>
 
                 <li class="sidebar-item active" id="myHome">
-                    <a class="sidebar-link" routerLink="Home" [routerLinkActive]="['active']">
+                    <button class="sidebar-link" routerLink="Home">
                         <i class="align-items" data-feather="home"></i> <span class="align-middle">Home</span>
-                    </a>
-                </li>
-
+                    </button>
+                </li>   
                 <li class="sidebar-item" id="myAcc">
-                    <a href="#HL" data-toggle="collapse" class="sidebar-link collapsed">
+                    <a  data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">My Accounts</span>
                     </a>
                     <ul id="HL" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
@@ -73,7 +72,6 @@
                     <ul id="Set" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                         <li class="sidebar-item"><a class="sidebar-link" routerLink="My-Profile">My Profile</a></li>
                         <li class="sidebar-item"><a class="sidebar-link" routerLink="Activity-Logs">Extract Activity Logs</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Session-History">Session History</a></li>
                     </ul>
                 </li>
             </ul>
@@ -278,7 +276,7 @@
         <!-- <app-card-list></app-card-list> -->
         <!-- <app-credit-card-payment></app-credit-card-payment> -->
         <!-- <app-beneficiary-management></app-beneficiary-management> -->
-        <main class="content mr-2 ml-2" style="border-radius: 25px; background-color: #f7f7f7;"><app-my-profile></app-my-profile></main>
+        <main class="content mr-2 ml-2" style="border-radius: 25px; background-color: #f7f7f7;"><router-outlet></router-outlet> </main>
 
         <footer class="footer mt-2 mr-2 ml-2 mb-2" style="border-radius: 15px; background-color: #f7f7f7;">
             <div class="container-fluid">

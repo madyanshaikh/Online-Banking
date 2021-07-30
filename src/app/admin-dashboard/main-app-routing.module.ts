@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminSummaryComponent } from './admin-summary/admin-summary.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { DepartmentComponent } from './department/department.component';
 import { CustomersComponent } from './customers/customers.component';
@@ -23,13 +22,15 @@ import { AddCustomerComponent } from './customers/addcustomer/addcustomer.compon
 import { ViewCustomerComponent } from './customers/viewcustomer/viewcustomer.component';
 import { ViewaccountsComponent } from './accounts/viewaccounts/viewaccounts.component';
 import { AddaccountsComponent } from './accounts/addaccounts/addaccounts.component';
+import { LoginFormComponent } from '../login-form/login-form.component';
+
 const routes: Routes = [
   {
     path: 'admin-dashboard', component: AdminDashboardComponent, children: [
       { path: 'home', component: HomeComponent,},
       {path:'employee',component:EmployeeComponent,children:[{path:'add',component:AddComponent},{ path:'view',component: ViewComponent,}] },
       {path: 'department', component: DepartmentComponent, children: [{ path: 'hr', component: HrComponent },
-        { path: 'quality', component: QualityComponent }, { path: 'complaint', component: ComplaintComponent }, { path: 'it', component: ItComponent }]
+      { path: 'quality', component: QualityComponent }, { path: 'complaint', component: ComplaintComponent }, { path: 'it', component: ItComponent }]
       },
       {path:'customer',component:CustomersComponent,children:[{path:'addcustomer',component:AddCustomerComponent},{ path:'viewcustomer',component: ViewCustomerComponent,}] },
       {path:'branch',component:BranchComponent},
@@ -39,7 +40,8 @@ const routes: Routes = [
       {path:'loan',component:LoanComponent},
       {path:'setting',component:SettingComponent}
     ]
-  }
+  },
+  {path:'login',component:LoginFormComponent}
 
 ];
 
@@ -48,13 +50,13 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class MainAppRoutingModule { }
 
 export const mainroutingcomponent = [
 
   HomeComponent,
   QualityComponent,
-  AdminSummaryComponent,
   EmployeeComponent,
   DepartmentComponent,
   CustomersComponent,

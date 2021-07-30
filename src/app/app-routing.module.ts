@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { UserMainRoutingModule, usermaincomponent } from './dashboard/user-main-routing/user-main-routing.module';
+
 
 
 
@@ -12,14 +14,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent},
   { path: 'login-form', component: LoginFormComponent},
-  { path: 'admin-dashboard', component: AdminDashboardComponent},
-  { path: 'user-dashboard', component:DashboardComponent}
+  { path: 'admin-dashboard', component: AdminDashboardComponent}
+  
   
 
 ];
 
 
 @NgModule({
+  
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
@@ -30,8 +33,13 @@ export  const routingcomponents =[
     LoginFormComponent,
     AdminDashboardComponent,
     WelcomeComponent,
-    DashboardComponent
-  
-    
+    usermaincomponent
    
+  
   ];
+  export const reactivemodule =[
+
+    ReactiveFormsModule, 
+    FormsModule,
+    UserMainRoutingModule
+  ] ;

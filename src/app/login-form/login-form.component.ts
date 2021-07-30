@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
@@ -10,51 +10,59 @@ import { Router } from '@angular/router';
 })
 export class LoginFormComponent implements OnInit {
 
+  isCollapsed: boolean = false;
+  hide:boolean = true;
+  
   url = 'assets/custom/custom.js';
   loadAPI: Promise<unknown> | undefined;
 
+  Opened:boolean = false;
+  desktopViewWidth: number = 992;
+ 
+
   ngOnInit(): void {
-    this.loadAPI = new Promise(resolve => {
-      console.log("resolving promise...");
-      this.loadScript();
-    });
-  }
+    
+    this.onResize(window.innerWidth);
+   }
+   
+
   username = ''
   password = ''
 
- 
+
   
   constructor(private snackbar: MatSnackBar, private router: Router) { }
+  
 
-  public loadScript() {
-    console.log("preparing to load...");
-    let node = document.createElement("script");
-    node.src = this.url;
-    node.type = "text/javascript";
-    node.async = true;
-    node.charset = "utf-8";
-    document.getElementsByTagName("head")[0].appendChild(node);
-  }
 
   onlogin() {
-    this.router.navigate(['user-dashboard']);
+  
 
-    // if (this.username == 'admin' && this.password == 'admin') {
-    //   sessionStorage.setItem("isLogedIn", "true")
-    //   this.router.navigate(['admin-dashboard'])
-    // }
-    // else if (this.username == 'user' && this.password == 'user') {
-    //   sessionStorage.setItem("isLogedIn", "true")
-    //   this.router.navigate(['user-dashboard'])
-    // }
-    // else {
-    //   this.snackbar.open("Invalid Username Or Password", "okay", { duration: 3000 })
-    // }
+    if (this.username == 'admin' && this.password == 'admin') {
+      sessionStorage.setItem("isLogedIn", "true")
+      this.router.navigate(['admin-dashboard'])
+    }
+    else if (this.username == 'user' && this.password == 'user') {
+      sessionStorage.setItem("isLogedIn", "true")
+      this.router.navigate(['user-dashboard'])
+    }
+    else {
+      this.snackbar.open("Invalid Username Or Password", "okay", { duration: 3000 })
+    }
 
   }
 
-}
-function showpass() {
-  throw new Error('Function not implemented.');
+  @HostListener('window:resize', ['$event.target.innerWidth'])
+  onResize(width: number) {
+    this.Opened = width >= this.desktopViewWidth;
+  }
+
+
+
 }
 
+
+
+
+
+  
