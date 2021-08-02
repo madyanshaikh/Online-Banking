@@ -10202,11 +10202,13 @@ footer.footer ul {
     border-radius: 1px;
     height: 3px;
     width: 24px;
-    background: #495057;
+    background: #74b8b8;
     display: block;
     content: "";
     transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
 }
+
+
 .hamburger {
     position: relative;
 }
@@ -10223,7 +10225,17 @@ footer.footer ul {
 .sidebar-toggle:hover .hamburger,
 .sidebar-toggle:hover .hamburger:after,
 .sidebar-toggle:hover .hamburger:before {
-    background: #3b7ddd;
+    background: #74b8b8;
+    animation: example 1s infinite;
+}
+@keyframes example {
+    0%{
+       right: 0px;
+    }
+    100%{
+        right: 5px;
+    }
+   
 }
 .hamburger-right,
 .hamburger-right:after,
@@ -10408,6 +10420,10 @@ a.list-group-item {
         width: 100vw;
     }
 } */
+.avatar{
+    height: 35px;
+    width: 35px;
+}
 .navbar .avatar {
     margin-top: -15px;
     margin-bottom: -15px;
@@ -10540,31 +10556,32 @@ body {
     }
 }
 .sidebar,.main{
-    background: rgb(116, 184, 184)!important;
+    background: #59d8c7!important;
     
 }
 .sidebar {
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 260px;
+    max-width: 260px;
     direction: ltr;
        
 }
-@media only screen and (max-width: 1370px) {
-    .sidebar {
-        min-width: 260px;
-        max-width: 260px;
-        direction: ltr;
-           
-    }
-}
+
 .sidebar,
 .sidebar-content {
     transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out, margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
-    background: black;
+    /* background: black; */
+}
+#mainLogo{
+    position: relative; 
+    bottom: 15px; 
+    left: -5px;
+}
+#mainList{
+    margin-top: -40px;
 }
 .sidebar-content {
     display: flex;
-    min-height: 98%;
+    min-height: 98.5%;
     padding-bottom: 20px;
     flex-direction: column;
 }
@@ -10695,10 +10712,10 @@ a.sidebar-link svg {
     height: 26px;
 }
 .sidebar.collapsed {
-    margin-left: -300px;
+    margin-left: -260px;
 }
 @media (min-width: 1px) and (max-width: 991.98px) {
-    .sidebar {
+    .sidebar{
         margin-left: -260px;
     }
     .sidebar.collapsed {

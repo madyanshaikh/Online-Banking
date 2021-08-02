@@ -1,9 +1,10 @@
 import { Identifiers } from '@angular/compiler';
 import { Component, OnInit, Query, } from '@angular/core';
+import { Router } from '@angular/router';
 declare var $: any;
 declare const feather: any;
-// declare const myActive: any;
-// declare const togleBar: any;
+declare const myActive: any;
+declare const togleBar: any;
 
 
 
@@ -17,9 +18,9 @@ declare const feather: any;
 })
 
 export class DashboardComponent implements OnInit {
-  url = '';
+  url = 'assets/js/myActive.js';
   urlOne = 'assets/js/myAccountList.js';
-  constructor() {
+  constructor(private router: Router) {
     
    }
    
@@ -33,8 +34,8 @@ export class DashboardComponent implements OnInit {
     });
    
     feather.replace();
-    // myActive.myActiveBtn();
-    // togleBar.simpleBar();
+    myActive.myActiveBtn();
+    togleBar.simpleBar();
 
   }
   public loadScript() {
@@ -46,6 +47,12 @@ export class DashboardComponent implements OnInit {
     node.charset = "utf-8";
     document.getElementsByTagName("head")[0].appendChild(node);
   }
+  btnClick = () => {
+    this.router.navigateByUrl('/login-form');
+};
+newClick = () => {
+  this.router.navigateByUrl('/user-dashboard/Password');
+};
 
  
 }

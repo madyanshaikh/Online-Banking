@@ -32,6 +32,7 @@ button {
     font-size: 17px;
     color: skyblue;
     transition: .1s;
+    padding-right: 10px;
 }
 
 .small {

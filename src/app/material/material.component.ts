@@ -66,7 +66,9 @@ const ItemsArray = [
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    
+  ],
   imports: [
     CommonModule,
     MatButtonModule,

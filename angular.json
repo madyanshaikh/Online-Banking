@@ -20,6 +20,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash"
+           ],
             "outputPath": "dist/Online-Banking",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -32,20 +35,22 @@
             "styles": [
               "src/custom-theme.scss",
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/datatables/media/css/jquery.dataTables.css",
+              "src/assets/css/Custom-dataTable.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "node_modules/font-awesome/css/font-awesome.css"
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/datatables/media/js/jquery.dataTables.min.js",
-              
-              "src/assets/js/myAccountList.js",
+            
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/datatables/media/js/jquery.dataTables.js",
               "src/assets/custom/custom.js",
-              "node_modules/bootstrap/js/src/collapse.js",
-              "node_modules/bootstrap/js/src/button.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
+             
+             
               
               
 

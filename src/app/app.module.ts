@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -9,6 +10,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { reactivemodule } from './app-routing.module';
+import { BarChartComponent } from './dashboard/bar-chart/bar-chart.component';
+import { UserAdminLoginComponent } from './welcome/user-admin-login/user-admin-login.component';
+
+
+
 
 
 @NgModule({
@@ -16,7 +22,9 @@ import { reactivemodule } from './app-routing.module';
     AppComponent,
     routingcomponents,
     usermaincomponent,
-    mainroutingcomponent
+    mainroutingcomponent,
+    BarChartComponent,
+    UserAdminLoginComponent,
     
 
   ],
@@ -24,7 +32,8 @@ import { reactivemodule } from './app-routing.module';
 
   imports: [
     BrowserModule,
-    MaterialModule,    
+    CommonModule,
+    MaterialModule, 
     BrowserAnimationsModule,
     MainAppRoutingModule,
     UserMainRoutingModule,

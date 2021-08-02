@@ -2,56 +2,97 @@
     outline: none !important;
 }
 
+.nav-brand{
+  height: 200px;
+  width: 200px;
+}
+
+
 #mybg {
-  background: url(../../assets/images/4.jpg);
+  background-image: url(../../assets/images/WelcomBg.jpg),url(../../assets/images/1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-}
-
-#nvbar {
-  
-    right: 0;
-    top: 0px;
-    padding:15px !important;
-    height: 100%;
- 
-    
-
-}
-
-.mover{
-    position: relative;
-    top: 40% !important;
-   
+  background-blend-mode:screen;
   
 }
-#logo {
-   
-      margin: 5px;
-      border-radius: 100%;
-      border: 0px solid rgba(202, 200, 200, 0.479);
-      box-shadow: 0 27px 24px 0 rgba(190, 189, 189, 0.2), 0 40px 77px 0 rgba(221, 218, 218, 0.22);
-      background-color: whitesmoke;
-      height: 60px;
-      width: 60px;
-      color: slategray;
-      /* color: rgb(91, 138, 135); */
-      text-align: center;
-      font-size: 30px;
-      font-weight: bold;
-      font-family: open sans;
-      cursor: pointer;
-      transition: 0.90s ease-in-out;
+.btn{
+outline: none!important;
+border: none!important;
+background: linear-gradient(to right,#5ed7cb,	skyblue);
+border-radius: 10px;
+font-size: 1.5rem;
+animation: btnAni 3s infinite;
+}
+.btn:focus{
+  border: none!important;
+  box-shadow: none;
+}
+
+
+@keyframes btnAni{
+  0%{
+    width: 150px;
   }
-  #logo:hover{
-
-      transform: rotateY(360deg);
+  50%{
+    width: 250px;
   }
-  /* @media only screen and (max-width:1366px) {
-    #mybg{
-      min-height:112vh !important ;
-    }
-    
-  } */
-  
+  100%{
+    width: 150px;
+  }
+}
+
+.fas{
+  padding: 10px;
+  font-size: 6rem;
+}
+.card-title{
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.card{
+  padding-top: 20px;
+  margin: 30px;
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  animation: cardAni 3s infinite;
+}
+
+#user{
+  background: #59d8c7;
+}
+#admin{
+  background: skyblue;
+}
+.announce,h1,.bank{
+  font-size: 5rem;
+  font-weight: 300;
+}
+h3{
+  font-size: 3rem;
+  font-weight: 400;
+}
+#welcome{
+  margin-top: -50px;
+}
+.card:hover{
+  color: white;
+}
+
+/* @media only screen and (max-width: 570px) {
+  #bankingMedia{
+    margin: 0;
+    padding-left: 50px;
+  } 
+} */
+@media only screen and (max-width: 570px) {
+  #brand,#bankingMedia{
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    text-align: center!important;
+  } 
+}

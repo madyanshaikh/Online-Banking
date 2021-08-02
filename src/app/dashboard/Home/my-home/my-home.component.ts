@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-my-home',
   templateUrl: './my-home.component.html',
@@ -10,7 +11,7 @@ export class MyHomeComponent implements OnInit {
 
   constructor() { }
 
-  url = 'assets/js/myActive.js';
+  url = 'assets/js/customCharts.js';
   loadAPI: Promise<any> | undefined;
 
   ngOnInit(): void {

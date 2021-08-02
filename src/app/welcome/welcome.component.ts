@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
+  btnClick: boolean = false;
   navigate: any;
 
   constructor(private router: Router) { }
@@ -17,10 +18,12 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
     
   }
-welcome(){
- 
-  sessionStorage.setItem("isLogedIn", "true")
-  this.router.navigate(['login-form'])
+
+btnClickFunction(){
+  this.btnClick = true;
 }
+
+
+
 
 }

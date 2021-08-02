@@ -1,12 +1,81 @@
-strong {
-    font-weight: 600;
-    font-size: 1.3rem;
+.input-group-text{
+  background: #e9ecef;
+  border-right: none;
+  padding-right: 2px;
+  border-radius: 7px;
 }
-.mat-form-field{
 
-    width: 100%;
-    background: none!important;
+.form-control {
+  border-left: none;
+  border-radius: 7px;
 }
-::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
-    background-color: rgba(0, 0, 0, 0)!important;
+
+.form-control:focus{
+  
+  border-color: #ced4da;
+  color: black;
+  text-transform: capitalize;
+  outline: none!important;
+  -webkit-box-shadow: none;
+  box-shadow: none!important;
+
+}
+.inpt{
+  border-color: #ced4da;
+  color: black;
+  text-transform: capitalize;
+  outline: none!important;
+  -webkit-box-shadow: none;
+  box-shadow: none!important;
+  border-right: none!important;
+  border-radius: 7px;
+}
+input{
+  padding: 6px 6px 3px 6px;
+}
+strong {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.card-body{
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 0px 0px 20px 20px !important;
+}
+.card-header {
+  padding-bottom: 7px;
+  margin-bottom: 0!important;
+  background-color: #59d8c7;
+  border-bottom: 0 solid transparent;
+  border-radius: 20px 20px 0 0 !important;
+
+}
+.card-title{
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 0;
+}
+#pDetails,#aDetails{
+  color: #fff;
+}
+.btn{
+  width: 100%;
+  
+  margin-right: 10px;
+  background-color: rgba(66, 65, 65, 0.329);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: 1px!important;
+  text-transform: uppercase;
+  color: #000;
+  padding: 6px 55px 6px 55px;
+  transition: .3s ease-in;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.btn:hover{
+  background-color: #59d8c7;
+  color: #fff;
+  
 }

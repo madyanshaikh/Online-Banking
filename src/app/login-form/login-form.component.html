@@ -34,14 +34,14 @@
         </div>
 
     </div>
-    <nav class="navbar navbar-expand-lg navbar-muted bg-muted" style="border-top: 1px ridge rgb(84, 90, 97);">
+    <nav class="navbar navbar-expand-lg navbar-muted bg-muted" style="border-top: 1px ridge rgb(84, 90, 97); ">
 
         <button type="button" class=" btn btn-light toggle-me" (click)="isCollapsed = !isCollapsed"
         [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"  style="top: 50px; position: absolute;">
             <i class="fas fa-bars h3 mt-2" (click)="Opened = !Opened"></i>
         </button>
-        <a class="nav-link  h4 mr-auto" href="#">Muslim Bank</a>
-        <div  class="collapse-me ml-auto" id="navbarNavDropdown"  [collapse]="isCollapsed" [isAnimated]="true">
+        <a class="nav-link  h4 mr-auto" href="#"><img src="../../assets/images/logo.png" alt="" class="img-fluid" style="margin-top: -50px;"></a>
+        <div  class="collapse-me ml-auto" style="padding-top: -50px;" id="navbarNavDropdown"  [collapse]="isCollapsed" [isAnimated]="true">
            
             <ul *ngIf="Opened" class="navbar-nav m-auto pt-3">
                 <li class="nav-item">

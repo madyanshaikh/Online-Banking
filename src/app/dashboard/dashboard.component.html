@@ -1,27 +1,27 @@
 <div class="wrapper">
     <nav id="sidebar" class="sidebar" >
-        <div class="sidebar-content ml-2 mt-2 " id="sideBarContent" style="border-radius: 25px; background-color: #f7f7f7;">
-            <a class="sidebar-brand" href="#">
-                <span class="align-middle pl-5">Muslim Bank</span>
+        <div class="sidebar-content js-simplebar ml-2 mt-2 " id="sideBarContent" style="border-radius: 25px; background-color: #f7f7f7;">
+            <a class="sidebar-brand pt-0 pb-0" routerLink="user-dashboard" >
+                <span class="align-middle"><img src="assets/images/logo.png" alt="" class="img-fluid" id="mainLogo"></span>
             </a>
 
-            <ul class="sidebar-nav mt-5 " id="mainList">
+            <ul class="sidebar-nav" id="mainList">
                 <li class="sidebar-header text-dark">
                     General
                 </li>
 
                 <li class="sidebar-item active" id="myHome">
-                    <button class="sidebar-link" routerLink="Home">
+                    <a class="sidebar-link" routerLink="Home">
                         <i class="align-items" data-feather="home"></i> <span class="align-middle">Home</span>
-                    </button>
-                </li>   
+                    </a>
+                </li>
+
                 <li class="sidebar-item" id="myAcc">
-                    <a  data-toggle="collapse" class="sidebar-link collapsed">
+                    <a href="#HL" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">My Accounts</span>
                     </a>
                     <ul id="HL" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                         <li class="sidebar-item"><a class="sidebar-link" routerLink="Account-List">Account List</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Account-Management" >Account Management</a></li>
                     </ul>
                 </li>
 
@@ -42,7 +42,7 @@
                     <ul id="Trans" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                         <li class="sidebar-item"><a class="sidebar-link" routerLink="Fund-Transfer">Fund Transfer</a></li>
                         <li class="sidebar-item"><a class="sidebar-link" routerLink="Inter-Bank-Fund-Transfer">InterBank Fund Tranfser</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Transfer-Beneficiary-Management">Beneficiary Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Transfer-Beneficiary-Management">Fund Beneficiary</a></li>
                     </ul>
                 </li>
 
@@ -52,7 +52,7 @@
                     </a>
                     <ul id="Pay" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                         <li class="sidebar-item"><a class="sidebar-link" routerLink="Bill-Payment">Bill Payments</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Beneficiary-Management">Beneficiary Management</a></li>
+                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Beneficiary-Management">Bill Beneficiary</a></li>
                     </ul>
                 </li>
 
@@ -66,12 +66,11 @@
                 </li>
                 
                 <li class="sidebar-item" id="mySet">
-                    <a href="#Set" data-toggle="collapse" class="sidebar-link collapsed">
+                    <a data-target="#Set" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
                     </a>
                     <ul id="Set" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                         <li class="sidebar-item"><a class="sidebar-link" routerLink="My-Profile">My Profile</a></li>
-                        <li class="sidebar-item"><a class="sidebar-link" routerLink="Activity-Logs">Extract Activity Logs</a></li>
                     </ul>
                 </li>
             </ul>
@@ -100,10 +99,10 @@
             <div class="navbar-collapse collapse">
                 <ul class="navbar-nav navbar-align">
                     <li class="nav-item dropdown">
-                        <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-toggle="dropdown">
+                        <a class="nav-icon dropdown-toggle"  id="alertsDropdown" data-toggle="dropdown">
                             <div class="position-relative">
                                 <i class="align-middle" data-feather="bell"></i>
-                                <span class="indicator">4</span>
+                                <span class="indicator" style="background-color: skyblue;">4</span>
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0"
@@ -112,7 +111,7 @@
                                 4 New Notifications
                             </div>
                             <div class="list-group">
-                                <a href="#" class="list-group-item">
+                                <a  class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
                                             <i class="text-danger" data-feather="alert-circle"></i>
@@ -125,7 +124,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a  class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
                                             <i class="text-warning" data-feather="bell"></i>
@@ -137,7 +136,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a  class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
                                             <i class="text-primary" data-feather="home"></i>
@@ -148,7 +147,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a  class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
                                             <i class="text-success" data-feather="user-plus"></i>
@@ -163,12 +162,12 @@
                                 </a>
                             </div>
                             <div class="dropdown-menu-footer">
-                                <a href="#" class="text-muted">Show all notifications</a>
+                                <a  class="text-muted">Show all notifications</a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-toggle="dropdown">
+                        <a class="nav-icon dropdown-toggle"  id="messagesDropdown" data-toggle="dropdown">
                             <div class="position-relative">
                                 <i class="align-middle" data-feather="message-square"></i>
                             </div>
@@ -181,11 +180,11 @@
                                 </div>
                             </div>
                             <div class="list-group">
-                                <a href="#" class="list-group-item">
+                                <a  class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
-                                            <img src="img"
-                                                class="avatar img-fluid rounded-circle" >
+                                            
+                                                 <img src="../../assets/images/user-dashboard.png" alt="" class="avatar img-fluid rounded-circle">
                                         </div>
                                         <div class="col-10 pl-2">
                                             <div class="text-dark">Sir Subhan</div>
@@ -195,7 +194,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a  class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
                                             <img src="img"
@@ -209,7 +208,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a  class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
                                             <img src="img"
@@ -223,7 +222,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a  class="list-group-item">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-2">
                                             <img src="img"
@@ -239,44 +238,43 @@
                                 </a>
                             </div>
                             <div class="dropdown-menu-footer">
-                                <a href="#" class="text-muted">Show all messages</a>
+                                <a  class="text-muted">Show all messages</a>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
+                        <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" 
                             data-toggle="dropdown">
-                            <i class="align-middle" data-feather="settings"></i>
+                            <i class="align-middle" data-feather="more-vertical"></i>
                         </a>
 
-                        <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
+                        <a class="nav-link dropdown d-none d-sm-inline-block" 
                             data-toggle="dropdown">
-                            <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1"
-                                 /> <span class="text-dark">Sheikh Farzaib</span>
+                            <img src="../../assets/images/user-dashboard.png" class="avatar img-fluid rounded mr-1"
+                                 /> <span class="text-dark">Sheikh Farzaib <i class="align-middle" data-feather="more-vertical"></i></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1"
+                            <a class="dropdown-item" routerLink="My-Profile"><i class="align-middle mr-1"
                                     data-feather="user"></i> Profile</a>
-                            <a class="dropdown-item" href="#"><i class="align-middle mr-1"
-                                    data-feather="pie-chart"></i> Analytics</a>
+                            
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="pages-settings.html"><i class="align-middle mr-1"
+                            <a class="dropdown-item" (click)="newClick();"><i class="align-middle mr-1"
                                     data-feather="settings"></i> Settings & Privacy</a>
-                            <a class="dropdown-item" href="#"><i class="align-middle mr-1"
-                                    data-feather="help-circle"></i> Help Center</a>
+                            
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Log out</a>
+                            <a class="dropdown-item text-danger" (click)="btnClick();"><i class="align-middle mr-1 " data-feather="log-out"></i> LOG OUT</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </nav>
         <!-- <router-outlet></router-outlet> -->
+        <!-- <app-change-password></app-change-password> -->
         <!-- <app-account-management></app-account-management> -->
         <!-- <app-card-list></app-card-list> -->
         <!-- <app-credit-card-payment></app-credit-card-payment> -->
         <!-- <app-beneficiary-management></app-beneficiary-management> -->
-        <main class="content mr-2 ml-2" style="border-radius: 25px; background-color: #f7f7f7;"><router-outlet></router-outlet> </main>
+        <main class="content mr-2 ml-2" style="border-radius: 25px; background-color: #f7f7f7; "><router-outlet></router-outlet></main>
 
         <footer class="footer mt-2 mr-2 ml-2 mb-2" style="border-radius: 15px; background-color: #f7f7f7;">
             <div class="container-fluid">
@@ -289,16 +287,16 @@
                     <div class="col-6 text-right">
                         <ul class="list-inline">
                             <li class="list-inline-item">
-                                <a class="text-muted" href="#">Support</a>
+                                <a class="text-muted" >Support</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="text-muted" href="#">Help Center</a>
+                                <a class="text-muted" >Help Center</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="text-muted" href="#">Privacy</a>
+                                <a class="text-muted" >Privacy</a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="text-muted" href="#">Terms</a>
+                                <a class="text-muted" >Terms</a>
                             </li>
                         </ul>
                     </div>

@@ -5,6 +5,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { UserMainRoutingModule, usermaincomponent } from './dashboard/user-main-routing/user-main-routing.module';
+import { UserAdminLoginComponent } from './welcome/user-admin-login/user-admin-login.component';
 
 
 
@@ -12,7 +13,7 @@ import { UserMainRoutingModule, usermaincomponent } from './dashboard/user-main-
 
 
 const routes: Routes = [
-  { path: 'welcome', component: WelcomeComponent},
+  { path: 'welcome', component: WelcomeComponent,children:[{path:'Login-Option', component: UserAdminLoginComponent}]},
   { path: 'login-form', component: LoginFormComponent},
   { path: 'admin-dashboard', component: AdminDashboardComponent}
   

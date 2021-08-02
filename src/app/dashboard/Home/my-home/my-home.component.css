@@ -4392,9 +4392,12 @@ input[type="submit"].btn-block {
 }
 #accDetails{
     border-radius: 20px;
+    background: #fff;
 }
+
 #accTitle{
     color: black!important;
+    
 }
 .card {
     position: relative;
@@ -4429,13 +4432,15 @@ input[type="submit"].btn-block {
     border-radius: 0 0 20px 20px;
     background-color: #fff;
 }
-.card-title {
-    /* margin-bottom: 1rem; */
-    color: #fff!important;
-    font-size: .9rem;
-
+    .card-title{
+        color: #fff!important;
+        font-size: 1rem!important;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin: 0;
+      }
     
-}
+
 .card-subtitle {
     margin-top: -0.5rem;
     
@@ -4453,7 +4458,7 @@ input[type="submit"].btn-block {
 .card-header {
     margin-bottom: 0;
     padding: 13px 20px 7px 20px!important;
-    background-color: rgb(116, 184, 184);
+    background: #59d8c7!important;
     border-bottom: 0 solid transparent;
     border-radius: 20px 20px 0 0 !important;
  
@@ -11124,6 +11129,12 @@ a.text-dark:hover {
         height: 100%;
     }
 }
+
+#myChart,#myTry {
+   max-height: 365px;
+    width: 365px;
+  }
+ 
 .chart {
     margin: auto;
     position: relative;
@@ -17072,4 +17083,7 @@ svg {
     top: 0;
     left: 0;
     width: 260px;
+}
+th{
+    border: none!important;
 }

@@ -1,0 +1,71 @@
+
+
+.btn{
+outline: none!important;
+border: none!important;
+background: linear-gradient(to right,#5ed7cb,	skyblue);
+border-radius: 10px;
+font-size: 1.5rem;
+animation: btnAni 3s infinite;
+}
+.btn:focus{
+  border: none!important;
+  box-shadow: none;
+}
+
+
+@keyframes btnAni{
+  0%{
+    width: 150px;
+  }
+  50%{
+    width: 250px;
+  }
+  100%{
+    width: 150px;
+  }
+}
+
+.fas{
+  padding-top: 10px;
+  font-size: 6rem;
+}
+.card-title{
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.card{
+  padding-top: 20px;
+  margin: 30px;
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  animation: cardAni 3s infinite;
+}
+
+#user:hover{
+  background: radial-gradient(circle, rgba(186,238,230,1) 0%, rgba(54,247,190,1) 100%);
+}
+#admin,#user{
+  background: rgb(160, 158, 158);
+  transition: .2s ease-in;
+}
+.announce,h1{
+  font-size: 5rem;
+  font-weight: 300;
+}
+h3{
+  font-size: 3rem;
+  font-weight: 400;
+}
+#welcome{
+  margin-top: -50px;
+}
+.card:hover{
+  color: white;
+}
+#admin:hover{
+  background: radial-gradient(circle, rgb(116, 231, 227) 50%, #87ceeb 100%);
+}
