@@ -23,13 +23,13 @@ const NAMES: string[] = [
  * @title Data table with sorting, pagination, and filtering.
  */
 
-@Component({
+ @Component({
   selector: 'app-viewaccounts',
   templateUrl: './viewaccounts.component.html',
   styleUrls: ['./viewaccounts.component.css']
 })
 export class ViewaccountsComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id','accountname','accounttype','accountopened','customer','action'];
+  displayedColumns: string[] = ['id','name','gender','contact','email','action'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator)

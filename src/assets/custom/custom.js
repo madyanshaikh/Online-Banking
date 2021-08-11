@@ -25,6 +25,11 @@ new Chart("myChart", {
     }]
   },
   options: {
+    plugins: {
+      deferred: {
+        delay: 10000,
+      },
+    },
     title: {
       display: true,
       text: "Muslim Bank Summary 2021"
@@ -91,6 +96,11 @@ new Chart("myChart1", {
   },
   options: {
     legend: { display: false },
+    plugins: {
+      deferred: {
+        delay: 10000,
+      },
+    },
     title: {
       display: true,
       text: "Muslim Bank Summary 2021"
@@ -121,6 +131,11 @@ new Chart("myChart4", {
     }]
   },
   options: {
+    plugins: {
+      deferred: {
+        delay: 10000,
+      },
+    },
     title: {
       display: true,
       text: "Muslim bank Summary 2021"
@@ -185,7 +200,12 @@ new Chart("myChart3", {
     ]
   },
   options: {
-    legend: { display: false }
+    legend: { display: false },
+    plugins: {
+      deferred: {
+        delay: 10000,
+      },
+    },
   }
 });
 
@@ -218,7 +238,14 @@ var data = {
     "Yellow",
     "Grey",
     "Blue"
-  ]
+  ],
+  options: {
+    plugins: {
+      deferred: {
+        delay: 10000,
+      },
+    },
+  }
 };
 new Chart("myChart2", {
   data: data,

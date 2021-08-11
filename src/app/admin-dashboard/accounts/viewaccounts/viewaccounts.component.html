@@ -3,62 +3,58 @@
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input class="pb-3">
 
-
 </mat-form-field>
 
-<div class="mat-elevation-z8">
+<div class="mat-elevation-z8 scroll">
 
-  <table mat-table [dataSource]="dataSource" matSort >
+  <table mat-table [dataSource]="dataSource" matSort>
 
     <!-- ID Column -->
 
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}} </td>
     </ng-container>
-
-    <!-- Progress Column -->
 
 
     <!-- Name Column -->
 
-    <ng-container matColumnDef="accountname">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Account NO #
-      </th>
-      <td mat-cell *matCellDef="let row"> </td>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef >Name</th>
+      <td mat-cell *matCellDef="let row"> Shaikh Madyan </td>
     </ng-container>
 
     <!-- Fruit Column -->
 
-    <ng-container matColumnDef="customer">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Customer</th>
-      <td mat-cell *matCellDef="let row"> </td>
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef >Gender</th>
+      <td mat-cell *matCellDef="let row">Male</td>
     </ng-container>
 
-    <ng-container matColumnDef="accounttype">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Account Type</th>
-      <td mat-cell *matCellDef="let row"> </td>
+    <ng-container matColumnDef="contact">
+      <th mat-header-cell *matHeaderCellDef >Contact</th>
+      <td mat-cell *matCellDef="let row">0332-123456-7</td>
     </ng-container>
-
-    <ng-container matColumnDef="accountopened">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Account Opened</th>
-      <td mat-cell *matCellDef="let row" style="width: auto !important;"> </td>
+    
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef >Email</th>
+      <td mat-cell *matCellDef="let row">madyanshaikh@gmail.com</td>
     </ng-container>
     <ng-container matColumnDef="action">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header id="action"> Action </th>
-      <td mat-cell *matCellDef="let row">
+      <th mat-header-cell *matHeaderCellDef  id="action">Action</th>
+      <td mat-cell *matCellDef="let row"> 
         <button mat-button>
-          <mat-icon aria-hidden="false" aria-label="Example home icon">visibility</mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">visibility</mat-icon>
         </button>
         <button mat-button>
-          <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
         </button>
         <button mat-button color="warn">
-          <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
         </button>
-      </td>
+    </td> 
     </ng-container>
-
+    
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
