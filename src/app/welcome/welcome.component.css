@@ -23,7 +23,12 @@
 .card:hover {
   color: white;
 }
-
+.m-center-user{
+  padding:0px 95px 0px 0px !important;
+}
+.m-center-admin{
+  padding:0px 0px 0px 95px !important;
+}
 @media only screen and (max-width: 570px) {
   .logo {
     transition: 1s ease;
@@ -37,7 +42,7 @@
   #admin,#user {
   margin: auto !important;
   }
-  .m-center{
+  .m-center-user,.m-center-admin{
     padding:40px 10px 10px 10px !important;
   }
   .form-padding{
