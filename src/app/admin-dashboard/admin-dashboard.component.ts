@@ -30,7 +30,7 @@ export class AdminDashboardComponent implements OnInit {
   welcome(){
  
     sessionStorage.setItem("isLoggedoff","false")
-    this.router.navigate(['login-form'])
+    this.router.navigate(['welcome'])
   }
 
 
@@ -39,6 +39,12 @@ export class AdminDashboardComponent implements OnInit {
     this.isOpened = width >= this.desktopViewWidth;
   }
 
+  account(){
+
+    this.router.navigate(['viewaccounts'])
+
+
+  }
 
 
 

@@ -1,21 +1,20 @@
 
 // --------------------------JAVASCRIPT--------------------------
 
-
-
 function displaynone() {
   document.getElementById("hide-me").style.display = "none";
+ 
 }
 
 
 // -------------------------------------jQuery-----------------------------------
 ;
 // ------------------------------------PIE-CHART--------------------------------------
-
+var ctx = document.getElementById('myChart-pie').getContext('2d');
 var xValues = ["Satisfaction", "Revenue", "Complaints", "Loss", "Sales", "Loan"];
 var yValues = [55, 49, 44, 24, 15, 35];
 var barColors = ["#177e89", "#084c61", "#db3a34", "#ffc857", "#8D99AE", "#566573"];
-new Chart("myChart", {
+new Chart(ctx, {
   type: "pie",
   data: {
     labels: xValues,
@@ -36,7 +35,7 @@ new Chart("myChart", {
     }
   },
 });
-var ctx = document.getElementById('myChart').getContext('2d');
+
 // var myChart = new Chart(ctx, {
 //     type: 'pie',
 //     data: {
@@ -71,6 +70,8 @@ var ctx = document.getElementById('myChart').getContext('2d');
 //         }
 //     }
 // });
+
+
 
 // -----------------------------Bars-charts-----------------------------------
 
@@ -252,3 +253,5 @@ new Chart("myChart2", {
   type: 'polarArea'
 
 });
+
+

@@ -1,7 +1,7 @@
 <h2 class="p-3 mt-3 text-center" style="color: lightslategray; font-weight: 500;">Bank Employees</h2>
 <div class="row p-3 mt-2 border m-0">
    
-    <div class="col-md hover-only btn-ripple m-5 p-0 m-0" routerLink="add">
+    <div class="col-md hover-only btn-ripple m-5 p-0 m-0" routerLink="add" onclick="displaynone()">
 
 
         <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
@@ -10,17 +10,20 @@
             &nbsp;&nbsp;Add Account</button>
 
     </div>
-    <div class="col-md hover-only btn-ripple m-5 p-0 m-0" routerLink="view">
+    <div class="col-md hover-only btn-ripple m-5 p-0 m-0" routerLink="view" onclick="displaynone()">
 
 
         <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
 
         <button class="cl"><i class="clr-icon fas fa-eye"></i>
-            &nbsp;&nbsp;View Account</button>
+            &nbsp;&nbsp;View Accounts</button>
 
     </div>
   
 
+</div>
+<div id="hide-me">
+    <app-view></app-view>
 </div>
 
 <router-outlet></router-outlet>

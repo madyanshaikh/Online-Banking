@@ -22,7 +22,7 @@ import { AddCustomerComponent } from './customers/addcustomer/addcustomer.compon
 import { ViewCustomerComponent } from './customers/viewcustomer/viewcustomer.component';
 import { ViewaccountsComponent } from './accounts/viewaccounts/viewaccounts.component';
 import { AddaccountsComponent } from './accounts/addaccounts/addaccounts.component';
-import { LoginFormComponent } from '../login-form/login-form.component';
+import { WelcomeComponent } from '../welcome/welcome.component';
 
 const routes: Routes = [
   {
@@ -41,7 +41,7 @@ const routes: Routes = [
       {path:'setting',component:SettingComponent}
     ]
   },
-  {path:'login',component:LoginFormComponent}
+  {path:'welcome',component:WelcomeComponent}
 
 ];
 
@@ -67,6 +67,7 @@ export const mainroutingcomponent = [
   LoanComponent,
   SettingComponent,
   AddComponent,
-  ViewComponent,AddCustomerComponent,ViewCustomerComponent,AddaccountsComponent,ViewaccountsComponent
+  ViewComponent,AddCustomerComponent,ViewCustomerComponent,AddaccountsComponent,ViewaccountsComponent,
+  WelcomeComponent
 
 ];

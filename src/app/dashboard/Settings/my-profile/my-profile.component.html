@@ -1,1 +1,140 @@
-<p>my-profile works!</p>
+<div class="row mb-2 mb-xl-3">
+    <div class="col-auto d-none d-sm-block">
+        <h5><strong style="color: black;">My Profile</strong></h5>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-header">
+                <div class="card-title" id="pDetails">Profile Details</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-title m-0">First Name</div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="align-middle"
+                                        data-feather="user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="First Name" aria-label="Username"
+                                disabled aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-title m-0">Last Name</div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="align-middle"
+                                        data-feather="user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Last Name" aria-label="Username"
+                                disabled aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-title m-0">Contact</div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="align-middle"
+                                        data-feather="phone"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Phone Number" aria-label="Username"
+                                disabled aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-title m-0">Email</div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="align-middle"
+                                        data-feather="mail"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Username" disabled
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-title m-0">CNIC</div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="align-middle"
+                                        data-feather="credit-card"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="CNIC" aria-label="Username" disabled
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-title m-0">Full Address</div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="align-middle"
+                                        data-feather="home"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Address" aria-label="Username" disabled
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card-header">
+                <div class="card-title" id="aDetails">Account Details</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-title m-0">Account Number</div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="align-middle"
+                                        data-feather="briefcase"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Account Number" aria-label="Username"
+                                disabled aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-title m-0">User Login ID</div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="align-middle"
+                                        data-feather="user-check"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="User Login ID" aria-label="Username"
+                                disabled aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="card-title m-0">Account Type</div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="align-middle"
+                                        data-feather="server"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Account Type" aria-label="Username"
+                                disabled aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card-title m-0">Password</div>
+                        <button class="btn" (click)="btnClick();">
+                            <i class="align-bottom" data-feather="lock"></i>
+                             Change Password</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

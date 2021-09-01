@@ -2,7 +2,7 @@
 
 <div class="row p-3 mt-2 border m-0">
    
-    <div class="col-md hover-only btn-ripple m-5 p-0 m-0"routerLink="addcustomer">
+    <div class="col-md hover-only btn-ripple m-5 p-0 m-0"routerLink="addcustomer" onclick="displaynone()">
 
         
         <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
@@ -11,7 +11,7 @@
             &nbsp;&nbsp;Add Account</button>
 
     </div>
-    <div class="col-md hover-only btn-ripple m-5 p-0 m-0" routerLink="viewcustomer" >
+    <div class="col-md hover-only btn-ripple m-5 p-0 m-0" routerLink="viewcustomer" onclick="displaynone()">
 
 
         <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
@@ -23,5 +23,7 @@
   
 
 </div>
-
+<div id="hide-me">
+    <app-viewcustomer></app-viewcustomer>
+</div>
 <router-outlet></router-outlet>

@@ -12,7 +12,7 @@ export class AccountListComponent implements OnInit {
     
   }
   url = 'assets/js/myAccountList.js';
-  loadAPI: Promise<unknown> | undefined;
+  loadAPI: Promise<any> | undefined;
   ngOnInit(): void {
     
     this.loadAPI = new Promise(resolve => {

@@ -1,11 +1,18 @@
 th{
     color: white;
+    font-size: 1rem;
+    font-weight: 500!important;
+    padding: 10px 20px 7px 20px!important;
 }
 td{
-    color: black;
-    font-weight: 400;
+    color: rgb(100, 98, 98);
+    font-weight: normal;
+    font-size: 1rem;
 }
 strong {
     font-weight: 600;
     font-size: 1.3125rem
+}
+thead{
+    border: none;
 }

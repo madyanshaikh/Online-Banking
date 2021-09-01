@@ -1,38 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-
+declare const feather: any;
 @Component({
   selector: 'app-beneficiary-management',
   templateUrl: './beneficiary-management.component.html',
   styleUrls: ['./beneficiary-management.component.css']
 })
 export class BeneficiaryManagementComponent implements OnInit {
-  div1:boolean=false;
-  bene1:boolean=true;
-  bene2:boolean=false;
-  bene3:boolean=false;
-  constructor() {
-    
-   }
+  url = 'assets/js/myAccountList.js';
+  loadAPI: Promise<any> | undefined;
+  constructor() { }
+  
 
   ngOnInit(): void {
-
+    this.loadAPI = new Promise(resolve => {
+      console.log("resolving promise...");
+      this.loadScript();
+    });
+    feather.replace();
   }
-  div1Function(){
-    this.div1=true;
-}
-bene1Function(){
-  this.bene1=true;
-  this.bene2=false;
-  this.bene3=false;
-}
-bene2Function(){
-  this.bene2=true;
-  this.bene1=false;
-  this.bene3=false;
-}
-bene3Function(){
-  this.bene3=true;
-  this.bene2=false;
-  this.bene1=false;
-}
+  public loadScript() {
+    console.log("preparing to load...");
+    let node = document.createElement("script");
+    node.src = this.url;
+    node.type = "text/javascript";
+    node.async = true;
+    node.charset = "utf-8";
+    document.getElementsByTagName("head")[0].appendChild(node);
+  }
+
 }

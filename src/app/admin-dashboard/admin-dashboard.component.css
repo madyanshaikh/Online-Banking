@@ -32,6 +32,7 @@ button {
     font-size: 17px;
     color: skyblue;
     transition: .1s;
+    padding-right: 10px;
 }
 
 .small {
@@ -174,6 +175,14 @@ button.collapse:focus {
     font-size: 25px;
     color: skyblue;
 }
+
+/* #mybg {
+    background-image: url(../../assets/images/WelcomBg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    
+  } */
 
 div canvas {
     width: 100% !important;

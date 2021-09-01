@@ -276,12 +276,11 @@ background-color: white;
     font-size: 25px;
     color: skyblue;
  }
-/* #myChart2{
-    width: 600px !important;
-    height: 100% !important;
-    min-width: 100% !important;
+#myChart-p{
+    width: 400px !important;
+    height: 400px !important;
     
-} */
+} 
     
 
 div canvas{

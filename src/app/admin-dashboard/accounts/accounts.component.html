@@ -1,26 +1,29 @@
 <h2 class="p-3 mt-3 text-center" style="color: lightslategray; font-weight: 500;">Bank Accounts</h2>
 <div class="row p-3 mt-2 border m-0">
-   
-    <div class="col-md hover-only btn-ripple m-5 p-0 m-0" routerLink="addaccounts">
+
+  <div class="col-md hover-only btn-ripple m-5 p-0 m-0 show-back-btn" routerLink="addaccounts" onclick="displaynone()">
 
 
-        <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+    <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
 
-        <button class="cl"><i class="clr-icon fas fa-plus"></i>
-            &nbsp;&nbsp;Add Account</button>
+    <button class="cl hide-account"><i class="clr-icon fas fa-plus"></i>
+      &nbsp;&nbsp;Add Account</button>
 
-    </div>
-    <div class="col-md hover-only btn-ripple m-5 p-0 m-0" routerLink="viewaccounts">
+  </div>
+  <div class="col-md hover-only btn-ripple m-5 p-0 m-0 back-btn" routerLink="viewaccounts" onclick="displaynone()">
 
 
-        <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+    <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
 
-        <button class="cl"><i class="clr-icon fas fa-eye"></i>
-            &nbsp;&nbsp;View Account</button>
+    <button class="cl"><i class="clr-icon fas fa-arrow-left"></i>
+      &nbsp;&nbsp;View Accounts</button>
 
-    </div>
-  
+  </div>
+
+
 
 </div>
+<div id="hide-me">
+<app-viewaccounts></app-viewaccounts></div>
 
 <router-outlet></router-outlet>

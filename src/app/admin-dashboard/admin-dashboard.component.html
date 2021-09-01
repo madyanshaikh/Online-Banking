@@ -1,4 +1,4 @@
-<div class="for-bg">
+<div class="for-bg" id="mybg">
   <nav class="navbar navbar-dark row pl-0 m-0 z-depth-5 nv-color">
 
     <h4 class="col-md-2 p-0 pt-2 m-0 text-center label-me">Muslim Bank</h4>
@@ -25,7 +25,7 @@
       <img class="rounded-circle p-1" src="../../assets/images/9.jpg" alt="" style="width: 50px;height: 50px; ">
       <a class="admin-text-nav">Admin</a>
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        
+
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
@@ -57,14 +57,11 @@
 
 
 
-      <div class="col-md-12 p-2 text-center ">
-        <img class="rounded-circle ml-auto" src="../../assets/images/9.jpg" alt="" style="width: 100px;height:100px;">
+      <div class="col-md text-center ">
+        <img class="ml-auto" src="../../assets/images/Logo/svg/Color logo - no background.svg" alt=""
+          style="width: 150px; height:150px;">
       </div>
-      <div class="col-md-12 text-center ">
-        <p class=" col-md-12 font-weight-bold p-0" style="color: skyblue;">Admin</p>
-        <h6 class="col-md-12 p-0 font-weight-bold pb-3" style="color: slategrey;">Shaikh Madyan</h6>
 
-      </div>
       <div class="col-md-12 pl-0 pt-5 ">
         <div class="h5 pl-4" style="color: skyblue; font-weight: 500;">GENERAL</div>
       </div>
@@ -81,7 +78,7 @@
       <div class="col-md hover-only btn-ripple cl-media-only" routerLink="home" mat-button (click)="drawer.toggle()">
 
 
-        <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
+       
 
         <button class="h6 nav-link pt-4 pb-3 cl"><i class="clr-icon fas fa-home"></i>
           &nbsp;&nbsp;Dashboard</button>
@@ -102,7 +99,7 @@
         (click)="drawer.toggle()">
 
 
-        <!-- --------------------Home ------------- toggle2-------------------starts--------------- -->
+      
         <button class="h6 nav-link pt-4 pb-3 cl"> <i class="clr-icon fas fa-user-friends"></i>
           &nbsp;&nbsp;Employees</button>
 
@@ -281,7 +278,7 @@
     </mat-drawer>
 
 
-    <div class="row p-3">
+    <div class="row m-0 p-0">
       <div class="col-md-12 m-0 p-0 pl-2">
 
         <router-outlet></router-outlet>
