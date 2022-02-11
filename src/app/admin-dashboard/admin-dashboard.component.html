@@ -52,7 +52,7 @@
 
 
 
-  <mat-drawer-container class="example-container">
+  <mat-drawer-container class="example-container" style="overflow: hidden !important;overflow-y: hidden !important;">
     <mat-drawer #drawer class="example-sidenav z-depth-5" mode="side" [opened]="isOpened">
 
 
@@ -78,14 +78,14 @@
       <div class="col-md hover-only btn-ripple cl-media-only" routerLink="home" mat-button (click)="drawer.toggle()">
 
 
-       
+
 
         <button class="h6 nav-link pt-4 pb-3 cl"><i class="clr-icon fas fa-home"></i>
           &nbsp;&nbsp;Dashboard</button>
 
       </div>
 
-      <div class="col-md-12 hover-only btn-ripple add-media-for-cl" routerLinkActive="active" routerLink="employee">
+      <div class="col-md-12 hover-only btn-ripple add-media-for-cl" routerLinkActive="active" routerLink="employee/view">
 
 
         <!-- --------------------Home ------------- toggle2-------------------starts--------------- -->
@@ -95,11 +95,11 @@
 
 
       </div>
-      <div class="col-md-12 hover-only btn-ripple cl-media-only" routerLink="employee" mat-button
+      <div class="col-md-12 hover-only btn-ripple cl-media-only" routerLink="employee/view" mat-button
         (click)="drawer.toggle()">
 
 
-      
+
         <button class="h6 nav-link pt-4 pb-3 cl"> <i class="clr-icon fas fa-user-friends"></i>
           &nbsp;&nbsp;Employees</button>
 
@@ -286,16 +286,8 @@
       </div>
 
     </div>
+
   </mat-drawer-container>
-
-
-
-
-
-
-
-
-
 
 
 </div>

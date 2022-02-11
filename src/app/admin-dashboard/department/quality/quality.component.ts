@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/shared/employee.service';
 
 @Component({
   selector: 'app-quality',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QualityComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service : EmployeeService) { }
 
   ngOnInit(): void {
+    this.service.getDepartsEmployee();
   }
 
 }

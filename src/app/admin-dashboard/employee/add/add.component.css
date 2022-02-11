@@ -3,24 +3,34 @@
     margin-top: 16px;
     width: 100%;
   }
-
+.row{
+  padding-top: 20px;
+}
 mat-icon{
     position: absolute;
     margin-left :-40px;
     color: skyblue;
-    margin-top: -4px;
     font-size: 30px;
+    margin-top: 5px;
+
 }
 mat-label{
     font-weight: 500;
+    color: grey;
 }
-
+input,mat-select{
+  background-color: transparent !important;
+  background: transparent !important;
+  color: lightslategray !important;
+  
+}
 /* .mat-radio-group{
     position: absolute;
     transform: translateY(1.5em);
   
     padding: 50px; 
 } */
+
 
 .mat-radio-button{
 color: slategray;
@@ -91,7 +101,7 @@ img{
     color: white !important;
     background-color: skyblue;
     -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 15px 14px 0 rgba(0, 0, 0, 0.075), 0 40px 77px 0 rgba(0, 0, 0, 0.082);
   }
   
   .clr-icon {
@@ -117,5 +127,30 @@ img{
     padding-right: 110px;
     background-color: transparent !important;
   }
+  .form-group input {
+    font-weight: 500;
+  }
   
+  .form-group input::placeholder {
+    color: #c0bdbd;
+    font-weight: 300;
+  }
+  
+  thead th{
+    font-weight: 400;
+  }
+  
+  table tbody tr:hover {
+    background-color: #fffbf2;
+    cursor: pointer;
+  }
+  
+  /*for invalid form controls*/
+  input.invalid {
+    border-color: red;
+  }
+  label{
+    padding-left: 5px;
+    
+  }
   

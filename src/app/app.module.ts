@@ -10,7 +10,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { reactivemodule } from './app-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -20,6 +22,9 @@ import { reactivemodule } from './app-routing.module';
     routingcomponents,
     usermaincomponent,
     mainroutingcomponent,
+  
+    
+   
     
 
   ],
@@ -35,9 +40,12 @@ import { reactivemodule } from './app-routing.module';
     AppRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
-    CollapseModule,reactivemodule
-    
-
+    CollapseModule,
+    reactivemodule,
+    HttpClientModule,
+    MatInputModule,
+    ToastrModule.forRoot()
+   
   ],
 
   

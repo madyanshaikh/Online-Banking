@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/shared/employee.service';
 
 @Component({
-  selector: 'app-it',
-  templateUrl: './it.component.html',
-  styleUrls: ['./it.component.css']
+  selector: 'app-credit-card',
+  templateUrl: './credit-card.component.html',
+  styleUrls: ['./credit-card.component.css']
 })
-export class ItComponent implements OnInit {
+export class CreditCardComponent implements OnInit {
 
   constructor(public service : EmployeeService) { }
 

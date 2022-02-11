@@ -63,7 +63,7 @@ btnClickFunction(){
 
   if (this.adminname == 'admin' && this.adminpassword == 'admin') {
       sessionStorage.setItem("isLogedIn", "true")
-      this.router.navigate(['admin-dashboard'])
+      this.router.navigate(['admin-dashboard/home'])
     }
     else {
       this.snackbar.open("Invalid Admin name Or Password", "okay", { duration: 3000 })

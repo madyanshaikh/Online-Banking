@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule} from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeComponent } from './employee/employee.component';
 import { DepartmentComponent } from './department/department.component';
@@ -23,14 +23,18 @@ import { ViewCustomerComponent } from './customers/viewcustomer/viewcustomer.com
 import { ViewaccountsComponent } from './accounts/viewaccounts/viewaccounts.component';
 import { AddaccountsComponent } from './accounts/addaccounts/addaccounts.component';
 import { WelcomeComponent } from '../welcome/welcome.component';
-
+import { CreditCardComponent } from './department/credit-card/credit-card.component';
+import { CollectionComponent } from './department/collection/collection.component';
+import { LoanDepartComponent } from './department/loan-depart/loan-depart.component';
 const routes: Routes = [
   {
     path: 'admin-dashboard', component: AdminDashboardComponent, children: [
       { path: 'home', component: HomeComponent,},
       {path:'employee',component:EmployeeComponent,children:[{path:'add',component:AddComponent},{ path:'view',component: ViewComponent,}] },
       {path: 'department', component: DepartmentComponent, children: [{ path: 'hr', component: HrComponent },
-      { path: 'quality', component: QualityComponent }, { path: 'complaint', component: ComplaintComponent }, { path: 'it', component: ItComponent }]
+      { path: 'quality', component: QualityComponent }, { path: 'complaint', component: ComplaintComponent }, 
+      { path: 'it', component: ItComponent }, { path: 'loanDepart', component: LoanDepartComponent }, { path: 'collection', component: CollectionComponent }, 
+      { path: 'credit-card', component: CreditCardComponent }]
       },
       {path:'customer',component:CustomersComponent,children:[{path:'addcustomer',component:AddCustomerComponent},{ path:'viewcustomer',component: ViewCustomerComponent,}] },
       {path:'branch',component:BranchComponent},
@@ -67,7 +71,17 @@ export const mainroutingcomponent = [
   LoanComponent,
   SettingComponent,
   AddComponent,
-  ViewComponent,AddCustomerComponent,ViewCustomerComponent,AddaccountsComponent,ViewaccountsComponent,
-  WelcomeComponent
+  ViewComponent,
+  AddCustomerComponent,
+  ViewCustomerComponent,
+  AddaccountsComponent,
+  ViewaccountsComponent,
+  WelcomeComponent,
+  LoanDepartComponent,
+  CreditCardComponent,
+  CollectionComponent,
+  HrComponent,
+  ComplaintComponent,
+  ItComponent
 
 ];

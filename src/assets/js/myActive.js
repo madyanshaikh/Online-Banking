@@ -25,6 +25,19 @@ $(document).ready(function () {
 
   //   //============================Account List Pagination======================//
 
+
+
+  var table = $('#myTable').DataTable({
+    responsive: true,
+    lengthChange: false,
+    buttons: ['excel', 'pdf', 'print', { extend: 'colvis', className: 'btn btn-danger' }]
+  });
+
+  table.buttons().container()
+    .appendTo('#myTable_wrapper .col-md-6:eq(0)');
+
+
+
 });
 
 

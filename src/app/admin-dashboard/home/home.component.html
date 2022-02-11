@@ -11,7 +11,7 @@
 
       <div class="col-md p-0 m-0 pt-2"><i class="icon-size fas fa-building"></i></div>
 
-      <div class="col-md text-right h2 text-secondary">7</div>
+      <div class="col-md text-right h2 text-secondary">{{cards.department}}</div>
 
     </div>
 
@@ -32,7 +32,7 @@
 
       <div class="col-md p-0 m-0 pt-2"><i class="icon-size fas fa-user-friends"></i></div>
 
-      <div class="col-md text-right h2 text-secondary">7</div>
+      <div class="col-md text-right h2 text-secondary">{{cards.employee}}</div>
 
     </div>
 
@@ -52,7 +52,7 @@
 
       <div class="col-md p-0 m-0 pt-2"><i class="icon-size fas fa-users"></i></div>
 
-      <div class="col-md text-right h2 text-secondary">7</div>
+      <div class="col-md text-right h2 text-secondary">{{cards.customer}}</div>
 
     </div>
 
@@ -72,7 +72,7 @@
 
       <div class="col-md m-0 p-0 pt-2"><i class="icon-size fas fa-envelope-open-text"></i></div>
 
-      <div class="col-md text-right h2 text-secondary">7</div>
+      <div class="col-md text-right h2 text-secondary">{{cards.complaint}}</div>
 
     </div>
 
@@ -90,7 +90,7 @@
 
   <div class="col-md">
     
-      <canvas id="myChart-pie" width="400" height="200"></canvas>
+      <canvas id="myChart-pie" >{{chart}}</canvas>
     
   </div>
   <div class="col-md">
@@ -111,77 +111,17 @@
     <div class="h4 text-secondary">
       Newly Added Customers
     </div>
-    <div class="col-md-12 d-flex border  p-0">
+    <div *ngFor="let item of ten" class="col-md-12 d-flex border  p-0">
       <div class="col-md-2 pl-1 pt-1 p-0">
         <img class="rounded-circle p-1" src="../../assets/images/6.jpg" alt="" style="width: 60px;height: 60px; ">
       </div>
 
-      <div class="col-md-6 h6 p-0 pl-3 text-secondary pt-3">Shaikh Madyan <br>
-        <sup style="font-size: 12px; font-weight: 500;"> madyanshaikh@gmail.com</sup>
+      <div class="col-md-6 h5 p-0 pl-3 text-secondary pt-3">{{item.firstName+" "+item.lastName}} <br>
+        <sup style="font-size: 12px; font-weight: 500;">{{item.email}}</sup>
       </div>
       <div class="col-md h6 text-secondary p-0 pr-3 pt-3 text-right">View <i class="fas fa-eye"></i></div>
     </div>
-    <div class="col-md-12 d-flex border  p-0">
-      <div class="col-md-2 pl-1 pt-1 p-0">
-        <img class="rounded-circle p-1" src="../../assets/images/1.jpg" alt="" style="width: 60px;height: 60px; ">
-      </div>
-
-      <div class="col-md-7 h6 p-0 pl-3 text-secondary pt-3">Khabib Narmagomedov<br>
-        <sup style="font-size: 12px; font-weight: 500"> KhabibNarmagomedov@gmail.com</sup>
-      </div>
-      <div class="col-md h6 text-secondary p-0 pr-3 pt-3 text-right">View <i class="fas fa-eye"></i></div>
-    </div>
-    <div class="col-md-12 d-flex border  p-0">
-      <div class="col-md-2 pl-1 pt-1 p-0">
-        <img class="rounded-circle p-1" src="../../assets/images/2.jpg" alt="" style="width: 60px;height: 60px; ">
-      </div>
-
-      <div class="col-md-6 h6 p-0 pl-3 text-secondary pt-3">Muhammad Ali <br>
-        <sup style="font-size: 12px; font-weight: 500"> MuhammadAli@gmail.com</sup>
-      </div>
-      <div class="col-md h6 text-secondary p-0 pr-3 pt-3 text-right">View <i class="fas fa-eye"></i></div>
-    </div>
-    <div class="col-md-12 d-flex border  p-0">
-      <div class="col-md-2 pl-1 pt-1 p-0">
-        <img class="rounded-circle p-1" src="../../assets/images/3.jpg" alt="" style="width: 60px;height: 60px; ">
-      </div>
-
-      <div class="col-md-6 h6 p-0 pl-3 text-secondary pt-3">Abdul Malik <br>
-        <sup style="font-size: 12px; font-weight: 500"> Abdul Malik@gmail.com</sup>
-      </div>
-      <div class="col-md h6 text-secondary p-0 pr-3 pt-3 text-right">View <i class="fas fa-eye"></i></div>
-    </div>
-    <div class="col-md-12 d-flex border  p-0">
-      <div class="col-md-2 pl-1 pt-1 p-0">
-        <img class="rounded-circle p-1" src="../../assets/images/4.jpg" alt="" style="width: 60px;height: 60px; ">
-      </div>
-
-      <div class="col-md-6 h6 p-0 pl-3 text-secondary pt-3">Talha Anjum<br>
-        <sup style="font-size: 12px; font-weight: 500"> TalhaAnjum@gmail.com</sup>
-      </div>
-      <div class="col-md h6 text-secondary p-0 pr-3 pt-3 text-right">View <i class="fas fa-eye"></i></div>
-    </div>
-    <div class="col-md-12 d-flex border  p-0">
-      <div class="col-md-2 pl-1 pt-1 p-0">
-        <img class="rounded-circle p-1" src="../../assets/images/5.jpg" alt="" style="width: 60px;height: 60px; ">
-      </div>
-
-      <div class="col-md-6 h6 p-0 pl-3 text-secondary pt-3">Mike Tyson <br>
-        <sup style="font-size: 12px; font-weight: 500"> MikeTyson@gmail.com</sup>
-      </div>
-      <div class="col-md h6 text-secondary p-0 pr-3 pt-3 text-right">View <i class="fas fa-eye"></i></div>
-    </div>
-    <div class="col-md-12 d-flex border  p-0">
-      <div class="col-md-2 pl-1 pt-1 p-0">
-        <img class="rounded-circle p-1" src="../../assets/images/6.jpg" alt="" style="width: 60px;height: 60px; ">
-      </div>
-
-      <div class="col-md-6 h6 p-0 pl-3 text-secondary pt-3">Tom Cavangh<br>
-        <sup style="font-size: 12px; font-weight: 500"> TomCavangh@gmail.com</sup>
-      </div>
-      <div class="col-md h6 text-secondary p-0 pr-3 pt-3 text-right">View <i class="fas fa-eye"></i>
-      </div>
-    </div>
+    
 
 
   </div>

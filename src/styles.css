@@ -5,8 +5,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
 
 
 ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px !important;
+    width: 10px;
+    height: 3px !important;
   }
   
   
@@ -26,4 +26,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
     background: rgb(156, 173, 190); ; 
   }
 
- 
+  .mat-drawer-content,mat-drawer-content{
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+  }

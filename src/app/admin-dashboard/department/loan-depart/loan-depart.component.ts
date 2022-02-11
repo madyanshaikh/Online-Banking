@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/shared/employee.service';
 
 @Component({
-  selector: 'app-it',
-  templateUrl: './it.component.html',
-  styleUrls: ['./it.component.css']
+  selector: 'app-loan-depart',
+  templateUrl: './loan-depart.component.html',
+  styleUrls: ['./loan-depart.component.css']
 })
-export class ItComponent implements OnInit {
+export class LoanDepartComponent implements OnInit {
 
   constructor(public service : EmployeeService) { }
 

@@ -1,9 +1,17 @@
 * {
     box-sizing: border-box !important;
     outline: none !important;
+   
     /* transition: .3s !important; */
 }
-
+.mat-drawer-content,mat-drawer-content{
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+::ng-deep .mat-drawer{
+    overflow-y: hidden !important;
+  }
 .nv-color {
     background-color: whitesmoke;
     /* background-color: rgb(46, 51, 59); */
@@ -70,7 +78,7 @@ button.collapse:focus {
 
 .z-depth-5 {
     -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.082), 0 40px 77px 0 rgba(0, 0, 0, 0.103);
 }
 
 .hover-only:hover {
