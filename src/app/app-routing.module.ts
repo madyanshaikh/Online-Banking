@@ -4,6 +4,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { UserMainRoutingModule, usermaincomponent } from './dashboard/user-main-routing/user-main-routing.module';
+import { AuthGuard } from './auth/auth.guard';
 
 
 
@@ -12,7 +13,7 @@ import { UserMainRoutingModule, usermaincomponent } from './dashboard/user-main-
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent},
-  { path: 'admin-dashboard', component: AdminDashboardComponent}
+  { path: 'admin-dashboard', component: AdminDashboardComponent,canActivate:[AuthGuard]}
   
   
 

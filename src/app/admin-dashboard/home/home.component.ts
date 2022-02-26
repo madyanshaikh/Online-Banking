@@ -18,10 +18,11 @@ export class HomeComponent implements OnInit {
 
   pie: any;
   chart: any = [];
-  cards: any;
+  cards: any=[];
 
   data: any = { employee: 0, customer: 0, complaint: 0, department: 0 }
   ten: any;
+  name: any=[];
   constructor(public service: EmployeeService) { }
 
 
@@ -34,11 +35,12 @@ export class HomeComponent implements OnInit {
       console.log("resolving promise...");
       this.loadScript();
     });
+
     this.getcards();
 
     this.loadChart();
     this.newAddedCustomer();
-
+      
 
 
   }

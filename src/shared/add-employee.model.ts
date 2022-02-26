@@ -1,6 +1,6 @@
 export class AddEmployee {
 
-    id: number = 0;
+    id: number ;
     firstName: string;
     lastName: string;
     address: string;
@@ -30,3 +30,35 @@ export class cardsdashboard {
 
 }
 
+export class customerForm{
+    
+    id: number; 
+    firstName: string;
+    lastName: string;
+    gender: boolean;
+    contact: string;
+    age : number;
+    nic: number;
+    dob: Date;
+    email: string;
+    password : string;
+
+    address: string;
+    occupation : string ;
+    alternateAddress: string ;
+    accountId: number; 
+    cityId: number;
+    
+
+
+
+
+}
+
+export class LoginModel{
+
+email: string;
+
+Password: string;
+
+}

@@ -1,21 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AddEmployee } from './add-employee.model';
-
+import { AddEmployee, customerForm, LoginModel } from './add-employee.model';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
   departs: any;
-  
+  customer: customerForm = new customerForm();
 
   constructor(private http: HttpClient) { }
 
-  readonly apiUrl = 'http://localhost:5163/api/Employee'
-  readonly dashUrl = 'http://localhost:5163/api/'
+  readonly apiUrl = 'http://localhost:26870/api/Employee'
+  readonly dashUrl = 'http://localhost:26870/api/'
+  readonly customerUrl = 'http://localhost:26870/api/Customers'
   formData: AddEmployee = new AddEmployee();
   list: AddEmployee[];
 
+  login : LoginModel = new LoginModel();
 
   postEmployee() {
 
@@ -30,6 +32,7 @@ export class EmployeeService {
   getList() {
    return this.http.get(this.apiUrl);
   }
+
   // --------------------- Dashboard-charts --------------------------
 
 
@@ -43,7 +46,7 @@ export class EmployeeService {
     return this.http.get(this.dashUrl + "Dashboard/getCards");
   }
   getLastTen(){
-    return this.http.get(this.dashUrl+ "Customers/getLast10");
+    return this.http.get(this.dashUrl+"Customers/getLast10");
   }
 
   getDepartsEmployee(){
@@ -52,9 +55,53 @@ export class EmployeeService {
       console.log(res)
       
     });
-      
+  
   
   }
 
 
-}
+  // ------------------Customer-----------------
+
+
+  postCustomer(){
+
+  return this.http.post(this.customerUrl,this.customer);
+
+  }
+  putCustomer(){
+
+    return this.http.put(`${this.customerUrl}/${this.customer.id}`,this.customer);
+
+    }
+
+    getCustomer(){
+      return this.http.get(this.customerUrl)
+      
+    }
+    deleteCustomer(id: number) {
+      return this.http.delete(`${this.customerUrl}/${id}`);
+    }
+
+
+    // ------------login ---------------
+
+
+    loginEmployee(loginData: any){
+
+      return this.http.post(this.dashUrl+'Auth/Login',loginData)
+    }
+
+    UserProfile() {
+      return this.http.get(this.dashUrl +'Auth');
+    }
+
+    // ------------Accounts ---------------
+    getAccounts(){
+    return this.http.get(this.dashUrl+'Accounts/getAccounts')}
+  
+      // -----------------Branch------------------------
+  
+      getBranches(){
+        return this.http.get(this.dashUrl+'Accounts/getBranch')}
+  
+    }

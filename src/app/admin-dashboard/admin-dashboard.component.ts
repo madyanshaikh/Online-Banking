@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router} from '@angular/router';
+import { EmployeeService } from 'src/shared/employee.service';
 
 
 
@@ -15,21 +16,34 @@ export class AdminDashboardComponent implements OnInit {
 
   isOpened: boolean = true;
   desktopViewWidth: number = 1100;
+  data: any;
+  name: any=[];
 
 
 
-  constructor(private router :Router) { }
+  constructor(private router :Router,public service :EmployeeService) { }
 
   ngOnInit(): void {
 
 
     this.onResize(window.innerWidth);
 
+    this.service.UserProfile().subscribe(
+      res=>{
+        this.name =res ;
+        
+      },
+    err=>{
+      console.log(err)
+    });
+
   }
 
-  welcome(){
+  logOut(){
  
-    sessionStorage.setItem("isLoggedoff","false")
+    localStorage.removeItem("token")
+    sessionStorage.removeItem("token")
+
     this.router.navigate(['welcome'])
   }
 
@@ -54,6 +68,8 @@ export class AdminDashboardComponent implements OnInit {
 
 
 }
+
+
 
 
 

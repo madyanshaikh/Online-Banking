@@ -3,25 +3,15 @@ import {AfterViewInit,ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { EmployeeService } from 'src/shared/employee.service';
+
 
 export interface UserData {
-  id: string;
-  name: string;
-  
-  
-}
-/** Constants used to fill up our data base. */
-const FRUITS: string[] = [
-  'blueberry', 'lychee', 'kiwi', 'mango', 'peach', 'lime', 'pomegranate', 'pineapple'
-];
-const NAMES: string[] = [
-  'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
-  'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
-];
 
-/**
- * @title Data table with sorting, pagination, and filtering.
- */
+
+}
+
+
  @Component({
   selector: 'app-branch',
   templateUrl: './branch.component.html',
@@ -29,21 +19,21 @@ const NAMES: string[] = [
 
 })
 export class BranchComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id','name','gender','contact','email','action'];
+  displayedColumns: string[] = ['id','name','address','contact','cityid','action'];
   dataSource: MatTableDataSource<UserData>;
+  data:any =[];
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   @ViewChild(MatSort)
   sort: MatSort = new MatSort;
 
-  constructor() {
+  constructor(public service:EmployeeService) {
     // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
-
+    this.branchData()
     // Assign the data to the data source for the table to render
 
-    this.dataSource = new MatTableDataSource(users);
+    this.dataSource = new MatTableDataSource(this.data);
   }
 
   ngAfterViewInit() {
@@ -59,17 +49,16 @@ export class BranchComponent implements AfterViewInit {
       this.dataSource.paginator.firstPage();
     }
   }
+
+  branchData(){
+
+    this.service.getBranches().subscribe(res=>{
+
+      this.data = res;
+      console.log(res)
+    });
+  }
 }
 
-/** Builds and returns a new User. */
-function createNewUser(id: number): UserData {
-  const name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
 
-  return {
-    id: id.toString(),
-    name: name,
-  
-   
-  };
-}
+

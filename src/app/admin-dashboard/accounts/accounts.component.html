@@ -1,7 +1,7 @@
 <h2 class="p-3 mt-3 text-center" style="color: lightslategray; font-weight: 500;">Bank Accounts</h2>
 <div class="row p-3 mt-2 border m-0">
 
-  <div class="col-md hover-only btn-ripple m-5 p-0 m-0 show-back-btn" routerLink="addaccounts" onclick="displaynone()">
+  <div class="col-md hover-only btn-ripple m-5 p-0 m-0 show-back-btn" routerLink="addaccounts">
 
 
     <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
@@ -10,7 +10,7 @@
       &nbsp;&nbsp;Add Account</button>
 
   </div>
-  <div class="col-md hover-only btn-ripple m-5 p-0 m-0 back-btn" routerLink="viewaccounts" onclick="displaynone()">
+  <div class="col-md hover-only btn-ripple m-5 p-0 m-0 back-btn" routerLink="viewaccounts">
 
 
     <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
@@ -23,7 +23,6 @@
 
 
 </div>
-<div id="hide-me">
-<app-viewaccounts></app-viewaccounts></div>
+
 
 <router-outlet></router-outlet>

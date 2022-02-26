@@ -10,9 +10,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { reactivemodule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { ToastrModule } from 'ngx-toastr';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { AuthInterceptor } from './auth/AuthInterceptor';
+import { EmployeeService } from 'src/shared/employee.service';
+import { AuthGuard } from './auth/auth.guard';
 
 
 
@@ -22,7 +26,7 @@ import { ToastrModule } from 'ngx-toastr';
     routingcomponents,
     usermaincomponent,
     mainroutingcomponent,
-  
+  WelcomeComponent
     
    
     
@@ -49,7 +53,11 @@ import { ToastrModule } from 'ngx-toastr';
   ],
 
   
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

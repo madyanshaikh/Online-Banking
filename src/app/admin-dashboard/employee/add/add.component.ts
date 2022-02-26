@@ -24,7 +24,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AddComponent implements OnInit {
 
   qualification = { inter: 1, graduate: 2, masters: 3, phd: 4 }
-  city = { karachi: 1001, lahore: 1006, islamabad: 1011, faisalabad: 1021 }
+  city = { karachi: 1001, lahore: 1006, islamabad: 1011, faisalabad: 1021 ,muree:6021,rawalpindi :6026}
   department = { Hr: 1001, Complaint: 1002, Quality: 1003, Collection: 1004, CreditCard: 2002, Loan: 2003, iT: 2004 }
   //  genders = { male: 1, female: 0 }
 
@@ -52,6 +52,7 @@ export class AddComponent implements OnInit {
   showSuccessUpdate() {
     this.toastr.success('Successfully updated', 'Employee Updated Successfull');
   }
+
   postRecords(form: NgForm) {
     this.service.postEmployee().subscribe(
       res => {

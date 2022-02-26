@@ -1,50 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import {AfterViewInit,ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import { AfterViewInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { EmployeeService } from 'src/shared/employee.service';
 
 export interface UserData {
-  id: string;
-  name: string;
-  
-  
+
+
 }
 /** Constants used to fill up our data base. */
-const FRUITS: string[] = [
-  'blueberry', 'lychee', 'kiwi', 'mango', 'peach', 'lime', 'pomegranate', 'pineapple'
-];
-const NAMES: string[] = [
-  'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
-  'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
-];
 
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
 
- @Component({
+@Component({
   selector: 'app-viewaccounts',
   templateUrl: './viewaccounts.component.html',
   styleUrls: ['./viewaccounts.component.css']
 })
 export class ViewaccountsComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id','name','gender','contact','email','action'];
+  displayedColumns: string[] = ['id','firstName','lastName','gender','contact','account','action'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   @ViewChild(MatSort)
   sort: MatSort = new MatSort;
+  data: any = [];
 
-  constructor() {
-    // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
-
-    // Assign the data to the data source for the table to render
-
-    this.dataSource = new MatTableDataSource(users);
+  constructor(public service: EmployeeService) {
+    this.dataSource = new MatTableDataSource(this.data);
+    this.accountsData()
   }
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -59,17 +49,14 @@ export class ViewaccountsComponent implements AfterViewInit {
       this.dataSource.paginator.firstPage();
     }
   }
-}
+  accountsData() {
 
-/** Builds and returns a new User. */
-function createNewUser(id: number): UserData {
-  const name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
+    this.service.getAccounts().subscribe(res => {
 
-  return {
-    id: id.toString(),
-    name: name,
-  
-   
-  };
+      this.data = res
+    });
+  }
+
+  /** Builds and returns a new User. */
+
 }

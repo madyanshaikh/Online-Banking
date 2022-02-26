@@ -1,190 +1,324 @@
 <mat-stepper #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-        <form [formGroup]="firstFormGroup">
-            <div class="row p-5">
+    <form #form="ngForm" novalidate (ngSubmit)="onSubmit(form)">
+        <mat-step linear>
 
-
-
-                <ng-template matStepLabel>Personal Information</ng-template>
-                <div class="col-md">
-                    <div class="col-md">
-                        <mat-form-field appearance="legacy">
-
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon" id="person">
-                                person
-                            </mat-icon>
-                            <mat-label>first name</mat-label>
-                            <input matInput placeholder="First name" formControlName="firstCtrl" required>
-                        </mat-form-field>
-                    </div>
-                    <div class="col-md">
-                        <mat-form-field appearance="legacy">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon" id="person">
-                                person
-                            </mat-icon>
-                            <mat-label>Last Name</mat-label>
-                            <input matInput placeholder="Last name" formControlName="first1Ctrl" required>
-                        </mat-form-field> <br>
-                    </div>
-
-                    <div class="col-md">
-                        <mat-form-field appearance="legacy">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">
-                                contacts
-                            </mat-icon>
-                            <mat-label>Contact</mat-label>
-                            <input matInput placeholder="Contact" formControlName="first2Ctrl" required>
-                        </mat-form-field>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="col-md">
-                        <mat-form-field appearance="legacy">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">email
-                            </mat-icon>
-                            <mat-label>Email</mat-label>
-                            <input matInput placeholder="Email" formControlName="first3Ctrl" required>
-                        </mat-form-field> <br>
-                    </div>
-                    <div class="col-md">
-                        <mat-form-field appearance="legacy">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">date_range
-                            </mat-icon>
-
-                            <mat-label>Date Of Birth</mat-label>
-                            <input matInput placeholder="Date Of Birth" formControlName="first4Ctrl" required>
-                        </mat-form-field> <br>
-
-                    </div>
-                    <div class="col-md pt-3">
-                        <mat-radio-group aria-label="Select an option">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon"
-                                style="transform: translate(.10em,0.1em);">wc
-                            </mat-icon>
-                            <mat-radio-button color="warn" value="1">Male</mat-radio-button>
-                            <mat-radio-button color="warn" value="2">Female</mat-radio-button>
-                        </mat-radio-group>
-                        
-                    </div>
-                    <div class="col-md hover-only p-0 m-0 float-right">
-                        <button class="cl" mat-button matStepperNext><i class="clr-icon fas fa-arrow-right"></i>
-                            &nbsp;&nbsp;Next</button>
-                    </div>
-                </div>
-
-            </div>
-
-        </form>
-    </mat-step>
-
-
-
-    <mat-step [stepControl]="secondFormGroup">
-        <form [formGroup]="secondFormGroup">
-
-            <div class="row p-5">
-                <div class="col-md">
-
-                    <ng-template matStepLabel>Professional Information</ng-template>
-                     <div class="col-md hover-only p-0 m-0">
-                        <button class="cl-back" mat-button matStepperPrevious><i class="clr-icon fas fa-arrow-left"></i>
-                            &nbsp;&nbsp;Back</button>
-                    </div>
-                    <div class="col-md">
-                        <mat-form-field appearance="legacy">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">fingerprint
-                            </mat-icon>
-
-                            <mat-label>NIC</mat-label>
-                            <input matInput formControlName="second2Ctrl" placeholder="Qualification" required>
-                        </mat-form-field>
-                    </div>
-                    <div class="col-md">
-                        <mat-form-field appearance="legacy">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">engineering
-                            </mat-icon>
-
-                            <mat-label>Occupation</mat-label>
-                            <input matInput formControlName="second3Ctrl" placeholder="Department" required>
-                        </mat-form-field>
-                    </div>
-                    <div class="col-md">
-                        <mat-form-field appearance="legacy">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">
-                                location_city
-                            </mat-icon>
-
-                            <mat-label>City</mat-label>
-                            <input matInput formControlName="second4Ctrl" placeholder="Salary" required>
-                        </mat-form-field>
-                    </div>
-
-
-
-
-                </div>
-                <div class="col-md border-left p-5">
-                    <img [src]="photoFilePath" alt="Employee Image">
-
-                    <div class="form-group pt-2">
-                        <mat-icon aria-hidden="false" class="fieldIcons" id="img">image</mat-icon>
-
-                        <input type="file" class="form-control-file ml-5" id="exampleFormControlFile1">
-                    </div>
-                    <div class="col-md hover-only p-0 m-0">
-                        <button class="cl" mat-button matStepperNext><i class="clr-icon fas fa-arrow-right"></i>
-                            &nbsp;&nbsp;Next</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </mat-step>
-
-
-    <mat-step>
-        <ng-template matStepLabel>Residential Information</ng-template>
-        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Personal Information</ng-template>
             <div class="row">
-                <div class="col-md-6 text-center">
-                     <div class="col-md hover-only p-0 m-0">
-                        <button class="cl-back" mat-button matStepperPrevious><i class="clr-icon fas fa-arrow-left"></i>
-                            &nbsp;&nbsp;Back</button>
-                    </div>
-                    <div class="col-md">
-                        <mat-form-field appearance="legacy">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">home
-                            </mat-icon>
+                <input type="hidden" name="id" [value]="service.customer.id">
 
-                            <mat-label> Address </mat-label>
-                            <input matInput formControlName="second5Ctrl" placeholder="User Name" required>
-                        </mat-form-field>
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon" id="person">
+                            perm_identity
+                        </mat-icon>
                     </div>
                     <div class="col-md">
 
-                        <mat-form-field appearance="legacy">
-                            <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">
-                                font_download
-                            </mat-icon>
 
-                            <mat-label>Alternative Address</mat-label>
-                            <input matInput formControlName="second6Ctrl" placeholder="Password" required>
-                        </mat-form-field>
-                    </div>
 
-                    <div class="col-md hover-only p-0 m-0">
-                        <button class="cl" mat-button matStepperPrevious><i class="clr-icon fas fa-file"></i>
-                            &nbsp;&nbsp;Save</button>
+                        <input placeholder="First name" name="firstName" class="form-control" #firstName="ngModel"
+                            [(ngModel)]="service.customer.firstName" required maxlength="16" minlength="3"
+                            [class.invalid]="firstName.invalid && firstName.touched">
                     </div>
                 </div>
-                <div class="col-md-6">
+
+
+
+
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon" id="person">
+                            person</mat-icon>
+
+
+
+                    </div>
+                    <div class="col-md">
+
+
+                        <input placeholder="Last Name" name="lastName" class="form-control" #lastName="ngModel"
+                            [(ngModel)]="service.customer.lastName" required maxlength="16" minlength="3"
+                            [class.invalid]="lastName.invalid && lastName.touched">
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">
+                            contacts
+                        </mat-icon>
+                    </div>
+                    <div class="col-md">
+
+
+                        <input placeholder="Contact" name="contact" class="form-control" #contact="ngModel"
+                            [(ngModel)]="service.customer.contact" required maxlength="16" minlength="3"
+                            [class.invalid]="contact.invalid && contact.touched">
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">date_range
+                        </mat-icon>
+
+                    </div>
+                    <div class="col-md">
+
+
+                        <input placeholder="Date Of Birth" type="datetime-local" name="dob" class="form-control" #dob="ngModel"
+                            [(ngModel)]="service.customer.dob" required
+                            [class.invalid]="dob.invalid && dob.touched">
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group col-md-6">
+
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">perm_identity
+                        </mat-icon>
+
+                    </div>
+
+                    <div class="col-md">
+
+
+                        <input placeholder="Age" name="age" class="form-control" #age="ngModel"
+                            [(ngModel)]="service.customer.age" required maxlength="3" minlength="2"
+                            [class.invalid]="age.invalid && age.touched">
+
+                    </div>
+
+                </div>
+                <div class="form-group col-md-6">
+
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">fingerprint
+                        </mat-icon>
+
+                    </div>
+
+                    <div class="col-md">
+
+                        <input placeholder="Nic" name="nic" class="form-control" #nic="ngModel"
+                            [(ngModel)]="service.customer.nic" required maxlength="13" minlength="13"
+                            [class.invalid]="nic.invalid && nic.touched">
+
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">email
+                        </mat-icon>
+
+                    </div>
+                    <div class="col-md">
+
+
+                        <input placeholder="Email" name="email" class="form-control" #email="ngModel"
+                            [(ngModel)]="service.customer.email" required maxlength="100" minlength="3"
+                            [class.invalid]="email.invalid && email.touched">
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">security
+                        </mat-icon>
+                    </div>
+
+                    <div class="col-md">
+
+                        <input type="password" placeholder="Password" name="password" class="form-control"
+                            #password="ngModel" [(ngModel)]="service.customer.password" required maxlength="100"
+                            minlength="3" [class.invalid]="password.invalid && password.touched">
+                    </div>
+
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">wc
+                        </mat-icon>
+                    </div>
+                    <div class="col-md">
+
+                        <mat-radio-group name="gender" class="fieldIcons" #gender="ngModel"
+                            [(ngModel)]="service.formData.gender" required maxlength="16" minlength="2"
+                            [class.invalid]="gender.invalid && gender.touched">
+
+                            <mat-radio-button color="warn" [value]="true">Male</mat-radio-button>
+                            <mat-radio-button color="warn" [value]="false">Female</mat-radio-button>
+
+                        </mat-radio-group>
+                    </div>
+
+                </div>
+
                 <div class="col-md hover-only p-0 m-0 float-right">
-                    <button class="cl" mat-button (click)="stepper.reset()"><i class="clr-icon fas fa-cog"></i>
-                        &nbsp;&nbsp;Reset</button>
+                    <button class="cl" mat-button matStepperNext><i class="clr-icon fas fa-arrow-right"></i>
+                        &nbsp;&nbsp;Next</button>
                 </div>
             </div>
 
+
+
+        </mat-step>
+
+
+
+        <mat-step>
+
+
+
+
+
+            <ng-template matStepLabel>Professional Information</ng-template>
+            <div class="row p-5">
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">work_outline
+                        </mat-icon>
+                    </div>
+
+                    <div class="col-md">
+
+                        <input placeholder="Occupation" name="occupation" class="form-control" #occupation="ngModel"
+                            [(ngModel)]="service.customer.occupation" required maxlength="16" minlength="3"
+                            [class.invalid]="occupation.invalid && occupation.touched">
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">account_circle
+                        </mat-icon>
+                    </div>
+
+                    <div class="col-md">
+
+                        <mat-select placeholder="Account" name="accountId" class="form-control" #accountId="ngModel"
+                            [(ngModel)]="service.customer.accountId" required maxlength="16" minlength="3"
+                            [class.invalid]="accountId.invalid && accountId.touched">
+
+                            <mat-option [value]="account.current">Current Account</mat-option>
+                            <mat-option [value]="account.saving">Saving Account</mat-option>
+                            <mat-option [value]="account.td">Term Deposit</mat-option>
+                            <mat-option [value]="account.fcyAccount">Fcy Account</mat-option>
+
+                        </mat-select>
+                    </div>
+
+                </div>
+
+          
+
+
+
+                <div class="col-md hover-only p-0 m-0">
+                    <button class="cl" mat-button matStepperNext><i class="clr-icon fas fa-arrow-right"></i>
+                        &nbsp;&nbsp;Next</button>
+                </div>
+
             </div>
 
-        </form>
-    </mat-step>
+        </mat-step>
+
+
+        <mat-step>
+            <ng-template matStepLabel>Residential Information</ng-template>
+
+            <div class="row">
+
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">location_on
+                        </mat-icon>
+                    </div>
+
+                    <div class="col-md">
+
+                        <mat-select placeholder="City" name="cityId" class="form-control" #cityId="ngModel"
+                            [(ngModel)]="service.customer.cityId" required maxlength="16" minlength="3"
+                            [class.invalid]="cityId.invalid && cityId.touched">
+
+                            <mat-option [value]="city.karachi">Karachi</mat-option>
+                            <mat-option [value]="city.lahore">Lahore</mat-option>
+                            <mat-option [value]="city.islamabad">Islamabad</mat-option>
+                            <mat-option [value]="city.faisalabad">Faisalabad</mat-option>
+                            <mat-option [value]="city.muree">Muree</mat-option>
+                            <mat-option [value]="city.rawalpindi">Rawalpindi</mat-option>
+                        </mat-select>
+                    </div>
+
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon">business
+                        </mat-icon>
+                    </div>
+
+                    <div class="col-md">
+
+                        <input placeholder="Address" name="address" class="form-control" #address="ngModel"
+                            [(ngModel)]="service.customer.address" required maxlength="100" minlength="10"
+                            [class.invalid]="address.invalid && address.touched">
+                    </div>
+
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="col-md">
+
+                        <mat-icon aria-hidden="false" class="fieldIcons" aria-label="Example home icon"> alternate_email
+                        </mat-icon>
+                    </div>
+
+                    <div class="col-md">
+
+                        <input placeholder="Alternate Address (Optional)" name="alternateAddress" class="form-control"
+                            #alternateAddress="ngModel" [(ngModel)]="service.customer.alternateAddress" required
+                            maxlength="100" minlength="10"
+                            [class.invalid]="alternateAddress.invalid && alternateAddress.touched">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="form-group text-center p-5">
+                <button class="btn btn-info btn-lg text-white" type="Submit" [disabled]="form.invalid"
+                    (click)="form.ngSubmit.emit()">Submit</button>
+            </div>
+
+            <button class="btn btn-secondary" (click)="resetform(form)"> Reset</button>
+        </mat-step>
+       
+    </form>
+
+   
 </mat-stepper>

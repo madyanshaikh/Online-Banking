@@ -7,38 +7,47 @@
 
 <div class="mat-elevation-z8 scroll">
 
-  <table mat-table [dataSource]="dataSource" matSort>
+  <table mat-table [dataSource]="data" matSort>
 
     <!-- ID Column -->
 
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>Id</th>
-      <td mat-cell *matCellDef="let row">{{row.id}} </td>
+      <td mat-cell *matCellDef="let ed">{{ed.id}}</td>
     </ng-container>
 
+    <!-- Progress Column -->
+
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef >First Name</th>
+      <td mat-cell *matCellDef="let ed">{{ed.firstName}}</td>
+    </ng-container>
 
     <!-- Name Column -->
 
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef >Name</th>
-      <td mat-cell *matCellDef="let row"> Shaikh Madyan </td>
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef >Last Name</th>
+      <td mat-cell *matCellDef="let ed"> {{ed.lastName}} </td>
     </ng-container>
 
     <!-- Fruit Column -->
 
     <ng-container matColumnDef="gender">
       <th mat-header-cell *matHeaderCellDef >Gender</th>
-      <td mat-cell *matCellDef="let row">Male</td>
+      <td mat-cell *matCellDef="let ed"> 
+        <div *ngIf="ed.gender === true">Male</div>
+      <div *ngIf="ed.gender === false">Female</div>
+    </td>
     </ng-container>
 
     <ng-container matColumnDef="contact">
       <th mat-header-cell *matHeaderCellDef >Contact</th>
-      <td mat-cell *matCellDef="let row">0332-123456-7</td>
+      <td mat-cell *matCellDef="let ed">{{ed.contact}}</td>
     </ng-container>
     
-    <ng-container matColumnDef="email">
-      <th mat-header-cell *matHeaderCellDef >Email</th>
-      <td mat-cell *matCellDef="let row">madyanshaikh@gmail.com</td>
+    <ng-container matColumnDef="account">
+      <th mat-header-cell *matHeaderCellDef >Account</th>
+      <td mat-cell *matCellDef="let ed">{{ed.account.name}}</td>
     </ng-container>
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef  id="action">Action</th>

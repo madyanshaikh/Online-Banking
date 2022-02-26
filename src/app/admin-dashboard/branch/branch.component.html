@@ -26,7 +26,7 @@
   
   <div class="mat-elevation-z8 scroll">
   
-    <table mat-table [dataSource]="dataSource" matSort>
+    <table mat-table [dataSource]="data" matSort>
   
       <!-- ID Column -->
   
@@ -39,25 +39,32 @@
       <!-- Name Column -->
   
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef > Branch Name</th>
-        <td mat-cell *matCellDef="let row"> industrial Area Branch </td>
+        <th mat-header-cell *matHeaderCellDef> Branch Name</th>
+        <td mat-cell *matCellDef="let row">{{row.name}}</td>
       </ng-container>
   
       <!-- Fruit Column -->
   
-      <ng-container matColumnDef="gender">
+      <ng-container matColumnDef="cityid">
         <th mat-header-cell *matHeaderCellDef>City</th>
-        <td mat-cell *matCellDef="let row">KHI</td>
+        <td mat-cell *matCellDef="let row"> 
+          <div *ngIf="row.cityId == 1001">Karachi</div>  
+          <div *ngIf="row.cityId == 1006">Lahore</div>  
+          <div *ngIf="row.cityId == 1011">Islamabad</div>  
+          <div *ngIf="row.cityId == 1021">Faisalabad</div>  
+          <div *ngIf="row.cityId == 6021">Muree</div>  
+          <div *ngIf="row.cityId == 6026">Rawalpindi</div>  
+        </td>
       </ng-container>
   
       <ng-container matColumnDef="contact">
         <th mat-header-cell *matHeaderCellDef >Contact</th>
-        <td mat-cell *matCellDef="let row">0332-123456-7</td>
+        <td mat-cell *matCellDef="let row">{{row.contact}}</td>
       </ng-container>
       
-      <ng-container matColumnDef="email">
+      <ng-container matColumnDef="address">
         <th mat-header-cell *matHeaderCellDef >Address</th>
-        <td mat-cell *matCellDef="let row">Insutrial Area korangi creek - KHI</td>
+        <td mat-cell *matCellDef="let row">{{row.address}}}</td>
       </ng-container>
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef  id="action">Action</th>

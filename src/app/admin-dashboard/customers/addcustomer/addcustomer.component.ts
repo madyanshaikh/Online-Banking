@@ -1,7 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { EmployeeService } from 'src/shared/employee.service';
+import { customerForm } from 'src/shared/add-employee.model';
+import { ToastrService } from 'ngx-toastr';
 
 
 /**
@@ -16,49 +19,61 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
   }]
 })
 export class AddCustomerComponent implements OnInit {
-  firstFormGroup!: FormGroup;
-  secondFormGroup!: FormGroup;
-  photoFilePath: any
-  photoFileName: any
 
-  constructor(private _formBuilder: FormBuilder) { }
+  account = { current: 1551, saving: 1552, td: 1553, fcyAccount: 1554 }
+  city = { karachi: 1001, lahore: 1006, islamabad: 1011, faisalabad: 1021 ,muree:6021,rawalpindi :6026}
+
+
+  constructor(public service: EmployeeService, public toastr: ToastrService) { }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required],
-      first1Ctrl: ['', Validators.required],
-      first2Ctrl: ['', Validators.required],
-      first3Ctrl: ['', Validators.required],
-      first4Ctrl: ['', Validators.required],
-      first5Ctrl: ['', Validators.required],
-      first6Ctrl: ['', Validators.required],
-      first7Ctrl: ['', Validators.required],
-      first8Ctrl: ['', Validators.required],
-      first9Ctrl: ['', Validators.required],
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required],
-      second1Ctrl: ['', Validators.required],
-      second2Ctrl: ['', Validators.required],
-      second3Ctrl: ['', Validators.required],
-      second4Ctrl: ['', Validators.required],
-      second5Ctrl: ['', Validators.required],
-      second6Ctrl: ['', Validators.required],
-      second7Ctrl: ['', Validators.required],
-      second8Ctrl: ['', Validators.required],
-      second9Ctrl: ['', Validators.required]
-    })
-  }
-  
-  // uploadPhoto(event: { target: { files: any[]; }; })
-  // {
-  //   var file = event.target.files[0];
-  //   const formData:FormData = new FormData();
-  //   formData.append('uploadedfile',file,file.name);
 
-  //   this.service.uploadPhoto(formData).subscribe((data: { toString: () => any; })=>{
-  //     this.photoFileName = data.toString()
-  //     this.photoFilePath = this.service.photoURL+this.photoFileName
-  //   })
-  // }
+  }
+
+
+  onSubmit(form: NgForm) {
+
+    if (this.service.customer.id == null) {
+      this.addCustomer(form);
+
+    }
+    else {
+      this.updateCustomer(form);
+    }
+  }
+
+  addCustomer(form: NgForm) {
+    this.service.postCustomer().subscribe(
+      res => {
+        this.service.customer = new customerForm();
+        form.form.reset();
+        this.showSuccess();
+
+      },
+      err => {
+        console.log(err)
+      })
+
+  }
+  showSuccess() {
+    this.toastr.success('Successfully Added', 'Employee Registration Successfull');
+  }
+  showSuccessUpdate() {
+    this.toastr.success('Successfully updated', 'Employee Updated Successfull');
+  }
+  updateCustomer(form: NgForm) {
+    this.service.putCustomer().subscribe(
+      res => {
+        this.service.customer = new customerForm();
+        form.form.reset();
+        this.showSuccessUpdate();
+      });
+
+  }
+
+  resetform(form:NgForm){
+
+    form.form.reset()
+  }
+
 }

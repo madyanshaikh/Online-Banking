@@ -5,150 +5,158 @@
             src="../../assets/images/Logo/svg/Color logo - no background.svg" alt="">
     </div>
 
+    <form #form='ngForm' (submit)="onlogin_admin(form)">
+        <div class="container">
 
-    <div class="container">
+            <div class="row" style=" height : auto; overflow: hidden; box-sizing: border-box;">
 
-        <div class="row" style=" height : auto; overflow: hidden; box-sizing: border-box;">
+                <!-- ------------------------------- Drop-Admin-Form ------------------------------ -->
 
-            <!-- ------------------------------- Drop-Admin-Form ------------------------------ -->
 
-            <div class="row ani-login-admin p-0 m-0 w-100">
+                <div class="row ani-login-admin p-0 m-0 w-100">
 
-                <div class="text-center col-md-7 p-0 m-0 m-auto form-padding">
-                    <div class="col-md-12 text-center p-0">
-                        <h1 class="p-0" id="login-color-change"></h1>
+
+                    <div class="text-center col-md-7 p-0 m-0 m-auto form-padding">
+                        <div class="col-md-12 text-center p-0">
+                            <h1 class="p-0" id="login-color-change"></h1>
+                        </div>
+                        <mat-form-field appearance="legacy">
+                            <mat-label style="color: turquoise;">Username</mat-label>
+                            <input matInput class="text-center"  #userName="ngModel"
+                                [(ngModel)]="formModel.userName" name="userName">
+                            <mat-hint style="color: rgb(36, 177, 163);">Should be strong</mat-hint>
+
+
+                        </mat-form-field>
+
                     </div>
-                    <mat-form-field appearance="legacy">
-                        <mat-label style="color: turquoise;">Username</mat-label>
-                        <input matInput class="text-center" [(ngModel)]="adminname">
-                        <mat-hint style="color: rgb(36, 177, 163);">Should be strong</mat-hint>
 
+                    <div class="col-md-7 m-auto p-0 m-0 form-padding">
 
-                    </mat-form-field>
+                        <mat-form-field appearance="standard">
 
-                </div>
+                            <mat-label style="color: turquoise;">Password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" class="text-center" 
+                                #password="ngModel" [(ngModel)]="formModel.password" name="password">
 
-                <div class="col-md-7 m-auto p-0 m-0 form-padding">
+                            <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide"
+                                style="color: turquoise;">
+                                {{hide ? 'visibility_off' : 'visibility'}}
+                            </mat-icon>
 
-                    <mat-form-field appearance="standard">
+                            <mat-hint style="color: rgb(36, 177, 163);">Password Contain 1 Upper case 1 symbol Atleast
+                            </mat-hint>
 
-                        <mat-label style="color: turquoise;">Password</mat-label>
-                        <input matInput [type]="hide ? 'password' : 'text'" class="text-center"
-                            [(ngModel)]="adminpassword">
+                        </mat-form-field>
+                        <div class="col-md-7 r-me p-0 m-0">
+                            <span class="check-append-admin"></span>
+                            <span class="form-check-label text-left pl-2" for="exampleCheck1"
+                                style="color: turquoise;">Remember Me</span>
 
-                        <mat-icon mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                            [attr.aria-pressed]="hide" style="color: turquoise;">
-                            {{hide ? 'visibility_off' : 'visibility'}}
-                        </mat-icon>
-
-                        <mat-hint style="color: rgb(36, 177, 163);">Password Contain 1 Upper case 1 symbol Atleast
+                        </div>
+                        <mat-hint align="end"><a href="#" style="color: rgb(9, 201, 182);">Forgot Password</a>
                         </mat-hint>
 
-                    </mat-form-field>
-                    <div class="col-md-7 r-me p-0 m-0">
-                        <span class="check-append-admin"></span>
-                        <span class="form-check-label text-left pl-2" for="exampleCheck1"
-                            style="color: turquoise;">Remember Me</span>
-
                     </div>
-                    <mat-hint align="end"><a href="#" style="color: rgb(9, 201, 182);">Forgot Password</a></mat-hint>
+
 
                 </div>
+                <!-- ------------------------------- Drop-User-Form ------------------------------ -->
+
+                <!-- <div class="row ani-login p-0 m-0">
+
+                    <div class="text-center col-md-7 m-auto p-0 m-0 form-padding">
+                        <div class="col-md-12 text-center p-0">
+                            <h1 class="p-0" id="login-color-change-user"></h1>
+                        </div>
+                        <mat-form-field appearance="legacy" style="background-color: transparent !important;">
+                            <mat-label style="color: rgb(73, 219, 175);">Username</mat-label>
+                            <input matInput class="text-center" [(ngModel)]="UserName">
+                            <mat-hint style="color:rgb(12, 182, 131);">Should be strong</mat-hint>
 
 
-            </div>
-            <!-- ------------------------------- Drop-User-Form ------------------------------ -->
+                        </mat-form-field>
 
-            <div class="row ani-login p-0 m-0">
-
-                <div class="text-center col-md-7 m-auto p-0 m-0 form-padding">
-                    <div class="col-md-12 text-center p-0">
-                        <h1 class="p-0" id="login-color-change-user"></h1>
                     </div>
-                    <mat-form-field appearance="legacy" style="background-color: transparent !important;">
-                        <mat-label style="color: rgb(73, 219, 175);">Username</mat-label>
-                        <input matInput class="text-center" [(ngModel)]="username">
-                        <mat-hint style="color:rgb(12, 182, 131);">Should be strong</mat-hint>
 
+                    <div class="col-md-7 m-auto p-0 m-0 form-padding">
 
-                    </mat-form-field>
+                        <mat-form-field appearance="standard">
+                            <mat-label style="color:rgb(73, 219, 175);">Password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" class="text-center"
+                                [(ngModel)]="Password">
 
-                </div>
+                            <mat-icon mat-icon-button matSuffix (click)="hide = !hide"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide"
+                                style="color: rgb(73, 219, 175);">
+                                {{hide ? 'visibility_off' : 'visibility'}}
+                            </mat-icon>
 
-                <div class="col-md-7 m-auto p-0 m-0 form-padding">
+                            <mat-hint style="color:rgb(12, 182, 131);">Password Contain 1 Upper case 1 symbol Atleast
+                            </mat-hint>
 
-                    <mat-form-field appearance="standard">
-                        <mat-label style="color:rgb(73, 219, 175);">Password</mat-label>
-                        <input matInput [type]="hide ? 'password' : 'text'" class="text-center" [(ngModel)]="password">
-
-                        <mat-icon mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                            [attr.aria-pressed]="hide" style="color: rgb(73, 219, 175);">
-                            {{hide ? 'visibility_off' : 'visibility'}}
-                        </mat-icon>
-
-                        <mat-hint style="color:rgb(12, 182, 131);">Password Contain 1 Upper case 1 symbol Atleast
+                        </mat-form-field>
+                        <mat-hint align="end"><a href="#" style="color: rgb(73, 219, 175);">Forgot Password</a>
                         </mat-hint>
+                        <div class="col-md-7 r-me p-0 m-0">
+                            <span class="check-append-user "></span>
+                            <span class="form-check-label text-left pl-2" for="exampleCheck1"
+                                style="color: rgb(73, 219, 175);">Remember Me</span>
 
-                    </mat-form-field>
-                    <mat-hint align="end"><a href="#" style="color: rgb(73, 219, 175);">Forgot Password</a>
-                    </mat-hint>
-                    <div class="col-md-7 r-me p-0 m-0">
-                        <span class="check-append-user "></span>
-                        <span class="form-check-label text-left pl-2" for="exampleCheck1"
-                            style="color: rgb(73, 219, 175);">Remember Me</span>
-
+                        </div>
                     </div>
+
+
+                </div> -->
+                <!-- ----------------------- Welcome Text ---------------------- -->
+
+                <div class="d-block m-0 p-0 hide-welcome-text w-100 pt-5">
+                    <h1 class="text-center p-0 announce formobile m-auto">Welcome</h1>
+                    <h2 class="p-0 text-center">To</h2>
+                    <h1 class="text-center announce formobile">Online Banking</h1>
                 </div>
 
 
-            </div>
-            <!-- ----------------------- Welcome Text ---------------------- -->
 
-            <div class="d-block m-0 p-0 hide-welcome-text w-100 pt-5">
-                <h1 class="text-center p-0 announce formobile m-auto">Welcome</h1>
-                <h2 class="p-0 text-center">To</h2>
-                <h1 class="text-center announce formobile">Online Banking</h1>
             </div>
-
 
 
         </div>
+        <!-- ---------------------- login Button ----------------- -->
 
-
-    </div>
-    <!-- ---------------------- login Button ----------------- -->
-
-    <div class="row check-btn" style="padding-top: 2em !important;">
-        <button id="btn-option" class="btn btn-m m-auto">Let's Start</button>
-        <button id="btn-option" class="btn btn-u m-auto" (click)="onlogin_user()">Login</button>
-        <button id="btn-option" class="btn btn-a m-auto" (click)="onlogin_admin()">Login</button>
-    </div>
-
-    <!-- -------------------------- Button - USER - ADMIN ------------------------ -->
-
-    <div class="row p-0 card-row" id="show-option">
-        <div class="col-sm-6 m-center-user">
-
-
-            <div class=" card ml-auto show-login-user " id="user">
-                <i class="fas fa-user text-center"></i>
-                <div class="card-title text-center">User</div>
-            </div>
-
+        <div class="row check-btn" style="padding-top: 2em !important;">
+            <button id="btn-option" class="btn btn-m m-auto" type="button">Let's Start</button>
+            <button id="btn-option" class="btn btn-u m-auto" (click)="onlogin_user()">Login</button>
+            <button id="btn-option" class="btn btn-a m-auto" type="submit">Login</button>
         </div>
 
+        <!-- -------------------------- Button - USER - ADMIN ------------------------ -->
 
-        <div class="col-sm-6 m-center-admin">
+        <div class="row p-0 card-row" id="show-option">
+            <div class="col-sm-6 m-center-user">
 
 
-            <div class="card show-login-admin mr-auto" id="admin">
-                <i class="fas fa-shield-alt text-center"></i>
-                <div class="card-title text-center">Admin</div>
+                <div class=" card ml-auto show-login-user " id="user">
+                    <i class="fas fa-user text-center"></i>
+                    <div class="card-title text-center">User</div>
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-6 m-center-admin">
+
+
+                <div class="card show-login-admin mr-auto" id="admin">
+                    <i class="fas fa-shield-alt text-center"></i>
+                    <div class="card-title text-center">Admin</div>
+                </div>
+
             </div>
 
         </div>
 
-    </div>
-
+    </form>
 
 </div>

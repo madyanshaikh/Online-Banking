@@ -26,19 +26,37 @@ import { WelcomeComponent } from '../welcome/welcome.component';
 import { CreditCardComponent } from './department/credit-card/credit-card.component';
 import { CollectionComponent } from './department/collection/collection.component';
 import { LoanDepartComponent } from './department/loan-depart/loan-depart.component';
+import { AuthGuard } from '../auth/auth.guard';
 const routes: Routes = [
   {
-    path: 'admin-dashboard', component: AdminDashboardComponent, children: [
-      { path: 'home', component: HomeComponent,},
-      {path:'employee',component:EmployeeComponent,children:[{path:'add',component:AddComponent},{ path:'view',component: ViewComponent,}] },
-      {path: 'department', component: DepartmentComponent, children: [{ path: 'hr', component: HrComponent },
-      { path: 'quality', component: QualityComponent }, { path: 'complaint', component: ComplaintComponent }, 
-      { path: 'it', component: ItComponent }, { path: 'loanDepart', component: LoanDepartComponent }, { path: 'collection', component: CollectionComponent }, 
+    path: 'admin-dashboard', component: AdminDashboardComponent,canActivate:[AuthGuard], children: [
+      { path: 'home', component: HomeComponent,canActivate:[AuthGuard],},
+      {path:'employee',component:EmployeeComponent,canActivate:[AuthGuard],
+      
+      children:[{path:'add',component:AddComponent},
+      { path:'view',component: ViewComponent,}] 
+    },
+
+      {path: 'department', component: DepartmentComponent,canActivate:[AuthGuard],
+      
+      children: [{ path: 'hr', component: HrComponent },
+      { path: 'quality', component: QualityComponent }, 
+      { path: 'complaint', component: ComplaintComponent }, 
+      { path: 'it', component: ItComponent }, { path: 'loanDepart', component: LoanDepartComponent }, 
+      { path: 'collection', component: CollectionComponent }, 
       { path: 'credit-card', component: CreditCardComponent }]
       },
-      {path:'customer',component:CustomersComponent,children:[{path:'addcustomer',component:AddCustomerComponent},{ path:'viewcustomer',component: ViewCustomerComponent,}] },
-      {path:'branch',component:BranchComponent},
-      {path:'accounts',component:AccountsComponent,children:[{path:'viewaccounts',component:ViewaccountsComponent},{path:'addaccounts',component:AddaccountsComponent}]},
+
+      {path:'customer',component:CustomersComponent,canActivate:[AuthGuard],
+      children:[{path:'addcustomer',component:AddCustomerComponent},
+      { path:'viewcustomer',component: ViewCustomerComponent,}] 
+      },
+
+      {path:'branch',component:BranchComponent,canActivate:[AuthGuard]},
+      {path:'accounts',component:AccountsComponent,canActivate:[AuthGuard],
+      
+      children:[{path:'viewaccounts',component:ViewaccountsComponent},
+      {path:'addaccounts',component:AddaccountsComponent}]},
       {path:'revenue',component:RevenueComponent},
       {path: 'notification',component:NotificationComponent},
       {path:'loan',component:LoanComponent},

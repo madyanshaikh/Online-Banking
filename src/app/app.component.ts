@@ -13,9 +13,14 @@ export class AppComponent {
 
 
   constructor(private router: Router) {
-    var status = sessionStorage.getItem("isloggedin")
-    if (status == null || status != 'True') {
-      router.navigate(['welcome'])
+    var status = localStorage.getItem("token")
+    if (status !== null || status == 'True') {
+      
+      router.navigate(["admin-dashboard/home"])
+    }
+
+    else{
+      router.navigate(["welcome"])
     }
   }
 

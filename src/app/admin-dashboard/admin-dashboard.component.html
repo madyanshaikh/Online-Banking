@@ -23,7 +23,7 @@
 
 
       <img class="rounded-circle p-1" src="../../assets/images/9.jpg" alt="" style="width: 50px;height: 50px; ">
-      <a class="admin-text-nav">Admin</a>
+      <a class="admin-text-nav" *ngFor="let names of name">{{names.firstName+" "+names.lastName}}</a>
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
 
         <mat-icon>more_vert</mat-icon>
@@ -37,7 +37,7 @@
           <mat-icon id="icon-nav">notifications_active</mat-icon>
           <span>Notifcations</span>
         </button>
-        <button mat-menu-item (click)="welcome()">
+        <button mat-menu-item (click)="logOut()">
           <mat-icon id="icon-nav">exit_to_app</mat-icon>
           <span>Log Out</span>
         </button>
@@ -125,7 +125,7 @@
           &nbsp;&nbsp;Department</button>
       </div>
 
-      <div class="col-md-12 hover-only btn-ripple add-media-for-cl" routerLinkActive="active" routerLink="customer">
+      <div class="col-md-12 hover-only btn-ripple add-media-for-cl" routerLinkActive="active" routerLink="customer/viewcustomer">
 
         <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
         <button class="h6 nav-link pt-4 pb-3 cl"> <i class="clr-icon fas fa-users"></i>
@@ -134,7 +134,7 @@
 
 
       </div>
-      <div class="col-md-12 hover-only btn-ripple cl-media-only" routerLink="customer" mat-button
+      <div class="col-md-12 hover-only btn-ripple cl-media-only" routerLink="customer/viewcustomer" mat-button
         (click)="drawer.toggle()">
 
         <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
@@ -164,7 +164,7 @@
 
 
       </div>
-      <div class="col-md-12  hover-only btn-ripple add-media-for-cl " routerLink="accounts">
+      <div class="col-md-12  hover-only btn-ripple add-media-for-cl " routerLink="accounts/viewaccounts">
 
         <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
         <button class="h6 nav-link pt-4 pb-3 cl"> <i class="clr-icon fas fa-chart-bar"></i>
@@ -173,7 +173,7 @@
 
       </div>
 
-      <div class="col-md-12  hover-only btn-ripple cl-media-only" routerLink="accounts" mat-button
+      <div class="col-md-12  hover-only btn-ripple cl-media-only" routerLink="accounts/viewaccounts" mat-button
         (click)="drawer.toggle()">
 
         <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
