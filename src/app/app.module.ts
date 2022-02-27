@@ -17,6 +17,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AuthInterceptor } from './auth/AuthInterceptor';
 import { EmployeeService } from 'src/shared/employee.service';
 import { AuthGuard } from './auth/auth.guard';
+import { AddBranchComponent } from './admin-dashboard/branch/add-branch/add-branch.component';
 
 
 
@@ -26,7 +27,8 @@ import { AuthGuard } from './auth/auth.guard';
     routingcomponents,
     usermaincomponent,
     mainroutingcomponent,
-  WelcomeComponent
+  WelcomeComponent,
+  AddBranchComponent
     
    
     

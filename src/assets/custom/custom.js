@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $('#carousel-example').on('slide.bs.carousel', function (e) {
         /*
             CC 2.0 License Iatek LLC 2018 - Attribution required
@@ -7,12 +7,12 @@ $(document).ready(function(){
         var idx = $e.index();
         var itemsPerSlide = 5;
         var totalItems = $('.carousel-item').length;
-     
-        if (idx >= totalItems-(itemsPerSlide-1)) {
+
+        if (idx >= totalItems - (itemsPerSlide - 1)) {
             var it = itemsPerSlide - (totalItems - idx);
-            for (var i=0; i<it; i++) {
+            for (var i = 0; i < it; i++) {
                 // append slides to end
-                if (e.direction=="left") {
+                if (e.direction == "left") {
                     $('.carousel-item').eq(i).appendTo('.carousel-inner');
                 }
                 else {
@@ -21,9 +21,24 @@ $(document).ready(function(){
             }
         }
 
-        
-    });
-    
-    
-});
 
+    });
+
+
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+    $('#vital').on('click', function () {
+        $('div').each(function () {
+            if ($(this).hasClass('modal-backdrop')) {
+                alert("yes");
+
+            }
+        }
+
+        );
+
+
+    });
+});

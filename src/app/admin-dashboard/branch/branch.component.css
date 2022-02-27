@@ -14,6 +14,9 @@
 .hover-only:hover .clr-icon {
   color: white;
 }
+.modal-backdrop{
+z-index: 0 !important;
+}
 
 .hover-only {
   box-shadow: 0 10px 10px 0px rgba(109, 132, 141, 0.205), 0 10px 10px 0px rgba(121, 142, 146, 0.185);
@@ -144,3 +147,18 @@ mat-label {
   color: lightslategray;
 }
 /* ===================================== */
+
+
+
+
+/* .modal-backdrop {
+  z-index: 0 !important;
+  background-color: aquamarine!important;
+}
+
+.modal-open{
+  background-color: aquamarine!important;
+}
+.modal-backdrop.show {
+  opacity: 0!important;
+} */
