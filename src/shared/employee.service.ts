@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AddEmployee, customerForm, LoginModel } from './add-employee.model';
+import { AddEmployee, Branch, customerForm, LoginModel } from './add-employee.model';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
@@ -16,8 +16,8 @@ export class EmployeeService {
   readonly customerUrl = 'http://localhost:26870/api/Customers'
   formData: AddEmployee = new AddEmployee();
   list: AddEmployee[];
-
-  login : LoginModel = new LoginModel();
+  branchData: Branch = new Branch();
+  login: LoginModel = new LoginModel();
 
   postEmployee() {
 
@@ -30,7 +30,7 @@ export class EmployeeService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
   getList() {
-   return this.http.get(this.apiUrl);
+    return this.http.get(this.apiUrl);
   }
 
   // --------------------- Dashboard-charts --------------------------
@@ -45,63 +45,74 @@ export class EmployeeService {
 
     return this.http.get(this.dashUrl + "Dashboard/getCards");
   }
-  getLastTen(){
-    return this.http.get(this.dashUrl+"Customers/getLast10");
+  getLastTen() {
+    return this.http.get(this.dashUrl + "Customers/getLast10");
   }
 
-  getDepartsEmployee(){
-    return this.http.get(this.dashUrl+"Departments/getDepartsEmployee").subscribe(res=>{
+  getDepartsEmployee() {
+    return this.http.get(this.dashUrl + "Departments/getDepartsEmployee").subscribe(res => {
       this.departs = res;
       console.log(res)
-      
+
     });
-  
-  
+
+
   }
 
 
   // ------------------Customer-----------------
 
 
-  postCustomer(){
+  postCustomer() {
 
-  return this.http.post(this.customerUrl,this.customer);
+    return this.http.post(this.customerUrl, this.customer);
 
   }
-  putCustomer(){
+  putCustomer() {
 
-    return this.http.put(`${this.customerUrl}/${this.customer.id}`,this.customer);
+    return this.http.put(`${this.customerUrl}/${this.customer.id}`, this.customer);
 
-    }
+  }
 
-    getCustomer(){
-      return this.http.get(this.customerUrl)
-      
-    }
-    deleteCustomer(id: number) {
-      return this.http.delete(`${this.customerUrl}/${id}`);
-    }
+  getCustomer() {
+    return this.http.get(this.customerUrl)
 
-
-    // ------------login ---------------
+  }
+  deleteCustomer(id: number) {
+    return this.http.delete(`${this.customerUrl}/${id}`);
+  }
 
 
-    loginEmployee(loginData: any){
+  // ------------login ---------------
 
-      return this.http.post(this.dashUrl+'Auth/Login',loginData)
-    }
 
-    UserProfile() {
-      return this.http.get(this.dashUrl +'Auth');
-    }
+  loginEmployee(loginData: any) {
 
-    // ------------Accounts ---------------
-    getAccounts(){
-    return this.http.get(this.dashUrl+'Accounts/getAccounts')}
+    return this.http.post(this.dashUrl + 'Auth/Login', loginData)
+  }
+
+  UserProfile() {
+    return this.http.get(this.dashUrl + 'Auth');
+  }
+
+  // ------------Accounts ---------------
+  getAccounts() {
+    return this.http.get(this.dashUrl + 'Accounts/getAccounts')
+  }
+
+  // -----------------Branch------------------------
+
+  getBranches() {
+    return this.http.get(this.dashUrl + 'Accounts/getBranch')
+  }
+
+  postBranches() {
+
+    return this.http.post(this.dashUrl +"Branches",this.branchData);
+  }
   
-      // -----------------Branch------------------------
-  
-      getBranches(){
-        return this.http.get(this.dashUrl+'Accounts/getBranch')}
-  
-    }
+}
+
+
+
+
