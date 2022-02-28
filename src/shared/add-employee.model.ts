@@ -64,9 +64,9 @@ export class LoginModel {
 }
 
 export class Branch {
-    Id: number;
-    Name: string ;
-    Address: string ;
-    Contact: string ;
-    CityId: number;
+    id: number;
+    name: string ;
+    address: string ;
+    contact: string ;
+    cityId: number;
 }

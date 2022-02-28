@@ -3,7 +3,7 @@
 <div class="row p-3 mt-2 border m-0">
    
    
-    <div class="col-md hover-only btn-ripple m-5 p-0 m-0 ml-auto">
+    <div class="col-md hover-only btn-ripple m-5 p-0 m-0 ml-auto"mat-button (click)="openDialog()">
 
 
         <!-- --------------------Home ------------- toggle1-------------------starts--------------- -->
@@ -26,7 +26,7 @@
   
   <div class="mat-elevation-z8 scroll">
   
-    <table mat-table [dataSource]="data" matSort>
+    <table mat-table [dataSource]="service.data" matSort>
   
       <!-- ID Column -->
   
@@ -73,10 +73,10 @@
               <mat-icon aria-hidden="false" aria-label="Example home icon">visibility</mat-icon>
           </button>
           <button mat-button>
-              <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+              <mat-icon aria-hidden="false" aria-label="Example home icon"(click)="updateBranches(row)" mat-button (click)="openDialog()">edit</mat-icon>
           </button>
-          <button mat-button color="warn">
-              <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+          <button mat-button color="warn" >
+              <mat-icon aria-hidden="false" aria-label="Example home icon"(click)="onDeletes(row.id)">delete</mat-icon>
           </button>
       </td> 
       </ng-container>
@@ -97,4 +97,4 @@
 
 
 
-  <button mat-button (click)="openDialog()">Launch dialog</button>
+  

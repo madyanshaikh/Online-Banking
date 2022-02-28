@@ -8,12 +8,14 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 export class EmployeeService {
   departs: any;
   customer: customerForm = new customerForm();
+  data: any;
 
   constructor(private http: HttpClient) { }
 
   readonly apiUrl = 'http://localhost:26870/api/Employee'
   readonly dashUrl = 'http://localhost:26870/api/'
   readonly customerUrl = 'http://localhost:26870/api/Customers'
+  readonly branchUrl = 'http://localhost:26870/api/Branches'
   formData: AddEmployee = new AddEmployee();
   list: AddEmployee[];
   branchData: Branch = new Branch();
@@ -103,14 +105,32 @@ export class EmployeeService {
   // -----------------Branch------------------------
 
   getBranches() {
-    return this.http.get(this.dashUrl + 'Accounts/getBranch')
+    return this.http.get(this.branchUrl).subscribe(res => {
+      
+      this.data = res;
+      
+
+    });
   }
 
   postBranches() {
 
-    return this.http.post(this.dashUrl +"Branches",this.branchData);
+    return this.http.post(this.branchUrl,this.branchData);
   }
   
+  updateBranches(){
+
+    return this.http.put(`${this.branchUrl}/${this.branchData.id}`,this.branchData);
+  }
+
+  deleteBranch(id:number){
+
+  return this.http.delete(`${this.branchUrl}/${id}`);
+
+  }
+
+
+
 }
 
 

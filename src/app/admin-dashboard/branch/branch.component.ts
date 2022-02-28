@@ -6,6 +6,9 @@ import { MatTableDataSource } from '@angular/material/table';
 import { EmployeeService } from 'src/shared/employee.service';
 import {MatDialog} from '@angular/material/dialog';
 import { AddBranchComponent } from './add-branch/add-branch.component';
+import { ToastrService } from 'ngx-toastr';
+import { Branch } from 'src/shared/add-employee.model';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 
 export interface UserData {
 
@@ -24,8 +27,7 @@ export interface UserData {
 
 export class BranchComponent implements AfterViewInit {
 
-  url = 'assets/custom/custom.js';  
-  loadAPI!: Promise<unknown>;
+ 
   displayedColumns: string[] = ['id', 'name', 'address', 'contact', 'cityid', 'action'];
   dataSource: MatTableDataSource<UserData>;
   data: any = [];
@@ -37,9 +39,9 @@ export class BranchComponent implements AfterViewInit {
   @ViewChild(MatSort)
   sort: MatSort = new MatSort;
 
-  constructor(public service: EmployeeService,public dialog:MatDialog) {
+  constructor(public service: EmployeeService,public dialog:MatDialog ,public toastr:ToastrService,public router:Router) {
     // Create 100 users
-    this.branchData()
+    this.service.getBranches();
     // Assign the data to the data source for the table to render
 
     this.dataSource = new MatTableDataSource(this.data);
@@ -47,14 +49,7 @@ export class BranchComponent implements AfterViewInit {
   openDialog() {
     this.dialog.open(AddBranchComponent);
   }
-  ngOnInit(): void {
-    this.loadAPI = new Promise(resolve => {
-      console.log("resolving promise...");
-      this.loadScript();
-    });
 
-   
-  }
   
 
   ngAfterViewInit() {
@@ -71,23 +66,29 @@ export class BranchComponent implements AfterViewInit {
     }
   }
 
-  branchData() {
-
-    this.service.getBranches().subscribe(res => {
-
-      this.data = res;
-      console.log(res)
-    });
+updateBranches(records:Branch){
+  this.service.branchData = Object.assign({},records);
+}
+goAdd(){
+  this.router.navigate(['add-branch']);
+  // this.router.navigate(['../add']);
   }
 
-  public loadScript() {
-    console.log("preparing to load...");
-    let node = document.createElement("script");
-    node.src = this.url;
-    node.type = "text/javascript";
-    node.async = true;
-    node.charset = "utf-8";
-    document.getElementsByTagName("head")[0].appendChild(node);
+
+  onDeletes(id:number){
+
+    this.service.deleteBranch(id).subscribe(res=>{
+
+      this.service.getBranches();
+      this.toastr.success("Successfully Deleted");
+    }
+    ,err => {
+      console.log(err);
+      this.toastr.error("Something Went Wrong Try Again");
+    });
+
+    
+
   }
 }
 
