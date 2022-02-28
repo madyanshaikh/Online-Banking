@@ -70,6 +70,7 @@ export class EmployeeService {
     return this.http.post(this.customerUrl, this.customer);
 
   }
+
   putCustomer() {
 
     return this.http.put(`${this.customerUrl}/${this.customer.id}`, this.customer);
@@ -79,6 +80,9 @@ export class EmployeeService {
   getCustomer() {
     return this.http.get(this.customerUrl)
 
+  }
+  getIdCustomer(id:number){
+  return this.http.get(`${this.customerUrl}/${this.customer.id}`);
   }
   deleteCustomer(id: number) {
     return this.http.delete(`${this.customerUrl}/${id}`);

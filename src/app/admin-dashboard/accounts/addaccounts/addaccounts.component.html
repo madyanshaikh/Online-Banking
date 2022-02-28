@@ -2,37 +2,40 @@
     <div class="row p-2">
 
         <div class="col-lg-3 search p-0 m-0">
+           
             <div class="row p-0 m-0 row-flex">
+               
                 <div class="col-lg-2 text-center pt-3">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="col-lg-7 border-left">
                     <mat-form-field appearance="legacy">
                         <mat-label>Customer Id</mat-label>
-                        <input matInput #input maxlength="10">
+                        <input  maxlength="10" name="id" >
                     </mat-form-field>
                 </div>
                 <div class="size-div mt-2"><i class="fas fa-arrow-down"></i></div>
+            
             </div>
             <div class="row p-2">
                 <div class="col-lg h6">ID :</div>
-                <div class="col-lg-8"></div>
+                <div class="col-lg-8">{{data.id}}</div>
             </div>
             <div class="row p-2">
                 <div class="col-lg h6">First Name :</div>
-                <div class="col-lg"></div>
+                <div class="col-lg">{{data.firstName}}</div>
             </div>
             <div class="row p-2">
                 <div class="col-lg h6">Last Name :</div>
-                <div class="col-lg"></div>
+                <div class="col-lg">{{data.lastName}}</div>
             </div>
             <div class="row p-2">
                 <div class="col-lg h6">Contact :</div>
-                <div class="col-lg"></div>
+                <div class="col-lg">{{data.contact}}</div>
             </div>
             <div class="row p-2">
                 <div class="col-lg h6">Cnic :</div>
-                <div class="col-lg"></div>
+                <div class="col-lg">{{data.cnic}}</div>
             </div>
             <div class="row p-2">
                 <div class="col-lg h6">Email :</div>
@@ -40,7 +43,8 @@
             </div>
             <div class="row p-2">
                 <div class="col-lg h6">Gender :</div>
-                <div class="col-lg"></div>
+                <div class="col-lg" *ngIf="data.gender == 'true'">Male</div>
+                <div class="col-lg" *ngIf="data.gender == 'false'">Female</div>
             </div>
         </div>
 
