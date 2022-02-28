@@ -82,7 +82,7 @@ export class EmployeeService {
 
   }
   getIdCustomer(id:number){
-  return this.http.get(`${this.customerUrl}/${this.customer.id}`);
+  return this.http.get(`${this.customerUrl}/${id}`);
   }
   deleteCustomer(id: number) {
     return this.http.delete(`${this.customerUrl}/${id}`);

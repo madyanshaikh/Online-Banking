@@ -7,36 +7,37 @@ import { EmployeeService } from 'src/shared/employee.service';
   styleUrls: ['./addaccounts.component.css']
 })
 export class AddaccountsComponent implements OnInit {
-  data: any;
+  data: any=[];
+  
+userId :any;  
   constructor(public service: EmployeeService) { }
 
   ngOnInit(): void {
-    this.getById(this.data.id);
+    // this.getById(this.data.id);
 
 
   }
 
-  getById(id: number) {
+  getById(id:number) {
 
-    this.service.getCustomer().subscribe(res => {
+    this.service.getIdCustomer(id).subscribe(res => {
 
       this.data = res;
+        id = this.userId;
+        console.log(res)
+    },
+    err => { console.log(err); });
+
+
+
+
+
+
+  }
+
+    clickme(){
+      console.log(this.userId);
 
     }
-      , err => { console.log(err); });
-
-
-
-
-
-
-  }
-  getDimensionsByFind(id: any) {
-    return this.data.find((res: any) => {
-      this.data.id === id;
-    });
-  }
-
-    
 }
 
